@@ -1,0 +1,24 @@
+
+
+
+.brick {
+	display: block;
+	border-top: solid 1px blue;
+	width: 100px;
+	height: 100px;
+}
+
+.even {
+	background-color: #dfe1e7;
+}
+
+.odd {
+	background-color: #eeeff2;
+}
+
+.brick:hover {
+	border: solid 4px black;
+	vertical-align: middle;
+	background-color: #687291;
+}
+
