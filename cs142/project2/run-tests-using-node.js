@@ -8,8 +8,9 @@
 
 /* jshint node: true */
 
-// We need the Node.js file system access module (fs) and the Node.js JavaScript virtual machine
-// access.
+/* We need the Node.js file system access module (fs) 
+ * and the Node.js JavaScript virtual machine access.
+ */
 var fs = require('fs');
 var vm = require('vm');
 

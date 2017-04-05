@@ -20,7 +20,6 @@ var p3Message = 'SUCCESS';
 var varDeclared = ['varDeclared', 'p1Message', 'p2Message', 'p3Message'];
 
 
-
 // ********************* Test cs142filter
 
 if (typeof cs142MakeMultiFilter !== 'function') {
@@ -110,6 +109,20 @@ if (typeof cs142MakeMultiFilter !== 'function') {
 console.log('Test cs142MakeMultiFilter:', p1Message);
 
 // ********************* Test Cs142TemplateProcessor
+
+var Cs142TemplateProcessor = class {
+
+    constructor(template) {
+        this.template = template;
+    }
+
+    fillin(dictionary) {
+        //var pattern = /\{\{[a-Z]*\}\}/;
+        //var matches = pattern.exec(this.template);
+        console.log(matches);
+    }
+
+}
 
 if (typeof Cs142TemplateProcessor !== 'function') {
     console.error('Cs142TemplateProcessor is not a function', Cs142TemplateProcessor);

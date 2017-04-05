@@ -6,7 +6,9 @@
   "dependencies": {
     "jshint": "^2.9.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jshint": "^2.9.4"
+  },
   "scripts": {
     "test": "node run-tests-using-node.js",
     "jshint": "./node_modules/.bin/jshint --config .jshintrc --exclude=node_modules . || exit 0"
