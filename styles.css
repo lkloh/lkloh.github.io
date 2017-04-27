@@ -72,14 +72,16 @@ div#class {
 
 
 h3.fun-facts {
-	font-family: 'Rancho', sans-serif;
 	text-align: center;
 	font-size: 28px;
 }
 
 .fun-facts {
 	text-align: left;
+	font-family: 'Rancho', sans-serif;
+	font-size: 22px;
 }
+
 
 
 
