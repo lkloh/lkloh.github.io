@@ -12,7 +12,8 @@ Most of them are libraries, but they are too quiet and you can't eat or drink an
 
 Recently, I went back to Stanford to visit a friend. Before meeting up,
 I decide to go back to my favorite study spot on campus to snap a shot.
-It's on the third floor of the [English Department](https://english.stanford.edu/about/contact-and-location),
+It's on the third floor of the 
+[English Department](https://english.stanford.edu/about/contact-and-location),
 quiet, peaceful, nice surroundings, 
 plenty of tables to choose from. 
 There's even a vending machine really close by if you get hungry,
