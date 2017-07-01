@@ -8,8 +8,9 @@ categories: jekyll update
 
 
 ![Cracking the Coding Interview](https://{{ site.url }}/assets/2017/June/30/ctci.jpg){:class="img-responsive"}
-* 
-It's not Cracking the Coding Interview! (Photo credit: Amazon) *
+
+{:.image-caption}
+*It's not Cracking the Coding Interview! (Photo credit: Amazon)*
 
 There’s been a lot written about how to prepare for a technical interview. Some of those resources that I’ve personally used are the [above book](http://www.crackingthecodinginterview.com/), [Interview Cake](https://www.interviewcake.com/), [LeetCode](https://leetcode.com/), [HackerRank](https://www.hackerrank.com/), and [CodeFights](https://codefights.com/). 
  
