@@ -5,7 +5,7 @@ date:   2017-06-28 01:57:45 -0700
 categories: places to work
 ---
 
-![The best study spot at Stanford]({{ site.url }}/assets/2017/June/28/overview.JPG)
+![The best study spot at Stanford]({{ site.url }}/assets/2017/June/28/overview.JPG){:class="img-responsive"}
 
 Its not on [this helpful list](http://library.stanford.edu/using/study) provided by Stanford!
 Most of them are libraries, but they are too quiet and you can't eat or drink anything.
