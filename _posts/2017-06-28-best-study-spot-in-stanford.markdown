@@ -11,7 +11,7 @@ Its not on [this helpful list](http://library.stanford.edu/using/study) provided
 Most of them are libraries, but they are too quiet and you can't eat or drink anything.
 
 Recently, I went back to Stanford to visit a friend. Before meeting up,
-I decide to go back to my favorite study spot on campus to snap a shot.
+I decided to revisit my favorite study spot on campus to do a little studying for technical interviews.
 It's on the third floor of the 
 [English Department](https://english.stanford.edu/about/contact-and-location),
 quiet, peaceful, nice surroundings, 
