@@ -2,7 +2,7 @@
 layout: post
 title:  "The most useful resource for technical interview prep"
 date:   2017-06-30 01:57:45 -0700
-categories: jekyll update
+categories: technical interviews
 ---
 
 
@@ -20,7 +20,7 @@ In any case, I used the above to prepare for a phone interview at a very well kn
  
 When I got back to my hotel room after the interview, the first thing I did was to pass out. Being in interview mode for 6 hours is tiring. Then I used one of that company's services to learn about [Pramp](https://pramp.com/#/), which pairs developers who are trying to practice their interviewing skills to practice being interviewed and interviewing others. I also used that service to learn about interviewing.io, which lets developers practice being interviewed. The way it works is that you fill in some information about your technical background, book a one hour slot to practice, and Pramp matches you to someone with a reasonably similar background (a "peer") so that you both can take turns interviewing each other. They also send you a question to ask your peer when it's your turn to be the interviewer. 
  
-Well, my first interview at Pramp didn't go well, but not because the question I was asked was particularly tough. Because I was a new user, Pramp matched me to someone who had used the platform already, and he interviewed me first. I did a decent enough job at answering the question well, and then it was time to switch to me being his interviewer instead. Instead, I stupidly pressed the "end interview" button and terminated the connection permanently. Boy, he must have been pissed. I would be pissed in his place. There was nothing I could do but give him an excellent review, and then contact Pramp to see if they could pass on my apologies to him. They very kindly did, removed his (bad) review of me, and even asked me if there was something with their UI they could improve on to prevent such incidents from occuring. I told them that there wasn't, because it was my own stupid fault for pressing the wrong button. 
+Well, my first interview at Pramp didn't go well, but not because the question I was asked was particularly tough. Because I was a new user, Pramp matched me to someone who had used the platform already, and he interviewed me first. I did a decent enough job at answering the question well, and then it was time to switch to me being his interviewer instead. Instead, I stupidly pressed the "end interview" button and terminated the connection permanently. Boy, he must have been pissed. I would be pissed in his place. There was nothing I could do but give him an excellent review, and then contact Pramp to see if they could pass on my apologies to him. I wrote to `hello@pramp.com` to explain what happened, and one of the cofounders got back to me. He (1) removed the (bad) review of me, and (2) asked me if there was something with their UI they could improve on to prevent such incidents from occuring. I told them that there wasn't, because it was my own stupid fault for pressing the wrong button.
 
 Anyway, I continued using Pramp with more success, and many other interview partners.
 It's a lot easier to focus and push through a hard problem when there 

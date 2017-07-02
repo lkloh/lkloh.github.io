@@ -1,20 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-01T15:07:57-07:00</updated><id>http://localhost:4000/</id><title type="html">LK Loh</title><subtitle>Exploring the tech scene in San Francisco.
-</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/06/30/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-06-30T01:57:45-07:00</published><updated>2017-06-30T01:57:45-07:00</updated><id>http://localhost:4000/jekyll/update/2017/06/30/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/06/30/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-01T17:55:40-07:00</updated><id>http://localhost:4000/</id><title type="html">LK Loh</title><subtitle>Exploring the tech scene in San Francisco.
+</subtitle><entry><title type="html">Interview mode</title><link href="http://localhost:4000/technical/interviews/2017/07/01/interview-mode.html" rel="alternate" type="text/html" title="Interview mode" /><published>2017-07-01T01:57:45-07:00</published><updated>2017-07-01T01:57:45-07:00</updated><id>http://localhost:4000/technical/interviews/2017/07/01/interview-mode</id><content type="html" xml:base="http://localhost:4000/technical/interviews/2017/07/01/interview-mode.html">&lt;p&gt;The last post I wrote was about using &lt;a href=&quot;https://pramp.com/#/&quot;&gt;Pramp&lt;/a&gt; 
+to prepare for technical interviews
+with other people who are also doing the same.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Pramp was awesome for preparation of course, 
+because I could schedule interviews every two hours. 
+Only sad thing was the interviews could only be scheduled between 11am - 11pm
+(I was on the East Coast in Pittsburgh),
+in other to ensure that I had a peer to be matched too.
+It’s likely because most of the users are in California,
+where the headquarters of many tech companies are. 
+While I did get one onsite interview with a hiring manager from Amazon,
+it’s not built specifically for the purpose of matching users
+to places they may be interested in working at.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;Now let’s talk about &lt;a href=&quot;https://interviewing.io/&quot;&gt;interviewing.io&lt;/a&gt;,
+which matches people preparing for technical interviews,
+to experienced engineers to give them proper feedback. 
+Both parties are anonymous during the interview session
+to remove as much unconscious bias as possible.
+After the interview, if both parties want to unmask their identities,
+they can do so. 
+If you do well, you might get invited to onsite interviews
+at the places where those engineers work.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;I tried siging up for it while job hunting, 
+but got an automated message stating that they were still in beta
+and that I would be up later.
+So I emailed &lt;code class=&quot;highlighter-rouge&quot;&gt;hello@interviewing.io&lt;/code&gt;, 
+and one of the cofounders got back to me and let me onto the platform immediately.
+It seems that for small startups of &amp;lt;10 people,
+the cofounders themselves are often monitoring the emails coming in from users,
+so asking for something might actually be pretty effective.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">The most useful resource for technical interview prep</title><link href="http://localhost:4000/jekyll/update/2017/06/30/the-most-useful-resource-for-technical-interview-prep.html" rel="alternate" type="text/html" title="The most useful resource for technical interview prep" /><published>2017-06-30T01:57:45-07:00</published><updated>2017-06-30T01:57:45-07:00</updated><id>http://localhost:4000/jekyll/update/2017/06/30/the-most-useful-resource-for-technical-interview-prep</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/06/30/the-most-useful-resource-for-technical-interview-prep.html">&lt;p&gt;&lt;img src=&quot;https://http://localhost:4000/assets/2017/June/30/ctci.jpg&quot; alt=&quot;Cracking the Coding Interview&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Well, I tried to book a slot, but the earliest one was a week later.
+So I continued practising with Pramp until then.
+The first interviewer gave me a pretty tough problem 
+(that could be solved using a graph traversal algorithm)
+that was a scaled up version of one of the problems I got on Pramp,
+and I took almost 90 min (a.k.a. double the time of a regular 45 min long interview session)
+to solve it. Even then, I’m not sure if I got a complete working solution,
+but the interviewer was sufficiently impressed to ask to be introduced to me.&lt;/p&gt;
+
+&lt;p&gt;I had to wait another week to book the next interview.
+I got a generic dynamic programming question at that one,
+which I should have known how to solve immediately, but didn’t.&lt;/p&gt;
+
+&lt;p&gt;So I had to wait another week to book another interview.
+I was getting annoyed at this point,
+because the site said that it was meant to help people practice their
+technical interviewing skills,
+but waiting a week between each practice isn’t very helpful.
+At the third interview, I got a pretty simple question that was
+a scaled down version of a real world problem&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;It’s not Cracking the Coding Interview! (Photo credit: Amazon) *&lt;/li&gt;
+  &lt;li&gt;how would one generate a unique id for each additional machine added to a data center
+in a scalable way?&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Perhaps I practised technical interviews a bit too much.
+For that question, I stated the obvious:
+to have a global counter tracking the highest numerical id
+of all the machines in the data center.
+When a new machine is added, increment the global counter by 1
+and set that to be the unique id of the new machine. 
+I figured we wouldn’t run into integer overflow problems
+on a modern 64-bit machine because data centers are not that large right now.&lt;/p&gt;
+
+&lt;p&gt;I should have stopped there.
+But instead I tried to be smart and talk about further ways of optimization,
+because the problem reminded me of some hacky technical challenge problem
+I had seen in the past.
+The interviewer actually didn’t like that,
+because he advised me to focus on demonstrating real life engineering skills
+instead of trying to impress people with how clever I was theoretically. 
+He even said he could tell that I was in “interviewing mode” then,
+and advised me to try and act more like a genuine human instead of some
+algorithm solving machine.&lt;/p&gt;
+
+&lt;p&gt;I’m guessing he works for a relatively small start-up.
+At most bigger companies, being in “interviewing mode”
+is exactly what you want to be at to get the job. 
+Because these places have the resources to train you from scratch
+and just care that you know the fundamentals well.&lt;/p&gt;
+
+&lt;p&gt;At smaller start-ups I interview at, 
+I got a lot more focus on real skills that I would be 
+expected to apply if I actually got the job and started working there.
+Things like system design, or code refactoring,
+or HTML/JavaScript specific exercises.&lt;/p&gt;
+
+&lt;p&gt;It’s hard to remain in interview mode for long once you have a job,
+because the types of traditional algorithm challenges given out at
+large companies tend to be far removed from what a software engineer really does.
+Soon after accepting the offer from Mixpanel, 
+I scheduled another practice at interviewing.io just to see how I would do.
+The interviewer told me I “needed more practice”.&lt;/p&gt;</content><author><name></name></author><summary type="html">The last post I wrote was about using Pramp to prepare for technical interviews with other people who are also doing the same.</summary></entry><entry><title type="html">The most useful resource for technical interview prep</title><link href="http://localhost:4000/technical/interviews/2017/06/30/the-most-useful-resource-for-technical-interview-prep.html" rel="alternate" type="text/html" title="The most useful resource for technical interview prep" /><published>2017-06-30T01:57:45-07:00</published><updated>2017-06-30T01:57:45-07:00</updated><id>http://localhost:4000/technical/interviews/2017/06/30/the-most-useful-resource-for-technical-interview-prep</id><content type="html" xml:base="http://localhost:4000/technical/interviews/2017/06/30/the-most-useful-resource-for-technical-interview-prep.html">&lt;p&gt;&lt;img src=&quot;https://http://localhost:4000/assets/2017/June/30/ctci.jpg&quot; alt=&quot;Cracking the Coding Interview&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;image-caption&quot;&gt;&lt;em&gt;It’s not Cracking the Coding Interview! (Photo credit: Amazon)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;There’s been a lot written about how to prepare for a technical interview. Some of those resources that I’ve personally used are the &lt;a href=&quot;http://www.crackingthecodinginterview.com/&quot;&gt;above book&lt;/a&gt;, &lt;a href=&quot;https://www.interviewcake.com/&quot;&gt;Interview Cake&lt;/a&gt;, &lt;a href=&quot;https://leetcode.com/&quot;&gt;LeetCode&lt;/a&gt;, &lt;a href=&quot;https://www.hackerrank.com/&quot;&gt;HackerRank&lt;/a&gt;, and &lt;a href=&quot;https://codefights.com/&quot;&gt;CodeFights&lt;/a&gt;.&lt;/p&gt;
 
@@ -24,7 +107,7 @@
 
 &lt;p&gt;When I got back to my hotel room after the interview, the first thing I did was to pass out. Being in interview mode for 6 hours is tiring. Then I used one of that company’s services to learn about &lt;a href=&quot;https://pramp.com/#/&quot;&gt;Pramp&lt;/a&gt;, which pairs developers who are trying to practice their interviewing skills to practice being interviewed and interviewing others. I also used that service to learn about interviewing.io, which lets developers practice being interviewed. The way it works is that you fill in some information about your technical background, book a one hour slot to practice, and Pramp matches you to someone with a reasonably similar background (a “peer”) so that you both can take turns interviewing each other. They also send you a question to ask your peer when it’s your turn to be the interviewer.&lt;/p&gt;
 
-&lt;p&gt;Well, my first interview at Pramp didn’t go well, but not because the question I was asked was particularly tough. Because I was a new user, Pramp matched me to someone who had used the platform already, and he interviewed me first. I did a decent enough job at answering the question well, and then it was time to switch to me being his interviewer instead. Instead, I stupidly pressed the “end interview” button and terminated the connection permanently. Boy, he must have been pissed. I would be pissed in his place. There was nothing I could do but give him an excellent review, and then contact Pramp to see if they could pass on my apologies to him. They very kindly did, removed his (bad) review of me, and even asked me if there was something with their UI they could improve on to prevent such incidents from occuring. I told them that there wasn’t, because it was my own stupid fault for pressing the wrong button.&lt;/p&gt;
+&lt;p&gt;Well, my first interview at Pramp didn’t go well, but not because the question I was asked was particularly tough. Because I was a new user, Pramp matched me to someone who had used the platform already, and he interviewed me first. I did a decent enough job at answering the question well, and then it was time to switch to me being his interviewer instead. Instead, I stupidly pressed the “end interview” button and terminated the connection permanently. Boy, he must have been pissed. I would be pissed in his place. There was nothing I could do but give him an excellent review, and then contact Pramp to see if they could pass on my apologies to him. I wrote to &lt;code class=&quot;highlighter-rouge&quot;&gt;hello@pramp.com&lt;/code&gt; to explain what happened, and one of the cofounders got back to me. He (1) removed the (bad) review of me, and (2) asked me if there was something with their UI they could improve on to prevent such incidents from occuring. I told them that there wasn’t, because it was my own stupid fault for pressing the wrong button.&lt;/p&gt;
 
 &lt;p&gt;Anyway, I continued using Pramp with more success, and many other interview partners.
 It’s a lot easier to focus and push through a hard problem when there 
@@ -40,7 +123,19 @@ so at some point I ran out of new questions to try on.
 So I emailed Pramp again to adjust my user settings to allow me to continue
 practising as I was still preparing for onsites at that time.&lt;/p&gt;
 
-&lt;p&gt;Soon afterwards, I got the offer at Mixpanel and eventually signed on.&lt;/p&gt;</content><author><name></name></author><summary type="html">It’s not Cracking the Coding Interview! (Photo credit: Amazon) *</summary></entry><entry><title type="html">Clean Slate</title><link href="http://localhost:4000/wiping/your/harddrive/2017/06/29/clean-slate.html" rel="alternate" type="text/html" title="Clean Slate" /><published>2017-06-29T01:57:45-07:00</published><updated>2017-06-29T01:57:45-07:00</updated><id>http://localhost:4000/wiping/your/harddrive/2017/06/29/clean-slate</id><content type="html" xml:base="http://localhost:4000/wiping/your/harddrive/2017/06/29/clean-slate.html">&lt;p&gt;When you work with software, you may end up &lt;a href=&quot;https://medium.com/friendship-dot-js/i-peeked-into-my-node-modules-directory-and-you-wont-believe-what-happened-next-b89f63d21558&quot;&gt;installing a lot of packages&lt;/a&gt;. 
+&lt;p&gt;Soon afterwards, I got the offer at Mixpanel and eventually signed on.&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/06/30/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-06-30T01:57:45-07:00</published><updated>2017-06-30T01:57:45-07:00</updated><id>http://localhost:4000/jekyll/update/2017/06/30/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/06/30/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Clean Slate</title><link href="http://localhost:4000/wiping/your/harddrive/2017/06/29/clean-slate.html" rel="alternate" type="text/html" title="Clean Slate" /><published>2017-06-29T01:57:45-07:00</published><updated>2017-06-29T01:57:45-07:00</updated><id>http://localhost:4000/wiping/your/harddrive/2017/06/29/clean-slate</id><content type="html" xml:base="http://localhost:4000/wiping/your/harddrive/2017/06/29/clean-slate.html">&lt;p&gt;When you work with software, you may end up &lt;a href=&quot;https://medium.com/friendship-dot-js/i-peeked-into-my-node-modules-directory-and-you-wont-believe-what-happened-next-b89f63d21558&quot;&gt;installing a lot of packages&lt;/a&gt;. 
 After a while your computer starts behaving really sluggishly. 
 Also, it’s really hard to erase some software packages completely from your hard drive.
 &lt;code class=&quot;highlighter-rouge&quot;&gt;brew uninstall &amp;lt;clingy-package&amp;gt;&lt;/code&gt; alone won’t cut it. 
