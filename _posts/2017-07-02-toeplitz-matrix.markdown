@@ -59,14 +59,13 @@ However, in the non-Toeplitz matrix, this is not the case.
 Thus we want something like:
 {% highlight ruby %}
 def is_toeplitz_matrix(matrix):
-	[nrows, ncols] = matrix.shape
-	if nrows < 2 or ncols < 2:
-		return True
-
-	for row in range(nrows - 1):
-		if not centers_align(matrix, row, row + 1, ncols):
-			return False
-	return True
+  [nrows, ncols] = matrix.shape
+  if nrows < 2 or ncols < 2:
+    return True
+  for row in range(nrows - 1):
+    if not centers_align(matrix, row, row + 1, ncols):
+      return False
+    return True
 {% endhighlight %}
 
 where `centers_align` checks whether two adjacent rows could be rows of a Toeplitz matrix.
@@ -74,7 +73,7 @@ where `centers_align` checks whether two adjacent rows could be rows of a Toepli
 To check if two adjacent rows are rows of a Toeplitz matrix:
 {% highlight ruby %}
 def centers_align(matrix, row, next_row, ncols):
-	return np.array_equal(matrix[row, 0:(ncols - 1)], matrix[next_row, 1:ncols])
+  return np.array_equal(matrix[row, 0:(ncols - 1)], matrix[next_row, 1:ncols])
 {% endhighlight %}
 
 Putting them together, we get the solution.
