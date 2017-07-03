@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-02T14:41:41-07:00</updated><id>http://localhost:4000/</id><title type="html">LK Loh</title><subtitle>Exploring the tech scene in San Francisco.
-</subtitle><entry><title type="html">Real Technical Interview Question: Detecting a toepliz matrix</title><link href="http://localhost:4000/technical/interview,/toeplitz/matrix/2017/07/02/toeplitz-matrix.html" rel="alternate" type="text/html" title="Real Technical Interview Question: Detecting a toepliz matrix" /><published>2017-07-02T01:57:45-07:00</published><updated>2017-07-02T01:57:45-07:00</updated><id>http://localhost:4000/technical/interview,/toeplitz/matrix/2017/07/02/toeplitz-matrix</id><content type="html" xml:base="http://localhost:4000/technical/interview,/toeplitz/matrix/2017/07/02/toeplitz-matrix.html">&lt;p&gt;Two separate interviewers tried to give me this question
-at a very well known company in Mountain View.
-I answered it the first time round, 
-and told the second that I had already seen this question.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-02T17:23:41-07:00</updated><id>http://localhost:4000/</id><title type="html">LK Loh</title><subtitle>Exploring the tech scene in San Francisco.
+</subtitle><entry><title type="html">Real Technical Interview Question: Detecting a toepliz matrix</title><link href="http://localhost:4000/technical/interview,/toeplitz/matrix,/python/2017/07/02/toeplitz-matrix.html" rel="alternate" type="text/html" title="Real Technical Interview Question: Detecting a toepliz matrix" /><published>2017-07-02T01:57:45-07:00</published><updated>2017-07-02T01:57:45-07:00</updated><id>http://localhost:4000/technical/interview,/toeplitz/matrix,/python/2017/07/02/toeplitz-matrix</id><content type="html" xml:base="http://localhost:4000/technical/interview,/toeplitz/matrix,/python/2017/07/02/toeplitz-matrix.html">&lt;p&gt;Two separate interviewers tried to give me this question when I interviewed
+at a very well known company headquartered in Mountain View.
+I answered it correctly at the phone screen, 
+and told the interviewer at the onsite that I had already seen this question.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Find&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whether&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Toeplitz&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Matrix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -23,8 +23,74 @@ For example,&lt;/p&gt;
 
 &lt;p&gt;is not a Toeplitz matrix.&lt;/p&gt;
 
-&lt;p&gt;To solve this, note that given any two rows in the matrix,
-displacing&lt;/p&gt;</content><author><name></name></author><summary type="html">Two separate interviewers tried to give me this question at a very well known company in Mountain View. I answered it the first time round, and told the second that I had already seen this question.</summary></entry><entry><title type="html">Interview mode</title><link href="http://localhost:4000/technical/interviews/2017/07/01/interview-mode.html" rel="alternate" type="text/html" title="Interview mode" /><published>2017-07-01T01:57:45-07:00</published><updated>2017-07-01T01:57:45-07:00</updated><id>http://localhost:4000/technical/interviews/2017/07/01/interview-mode</id><content type="html" xml:base="http://localhost:4000/technical/interviews/2017/07/01/interview-mode.html">&lt;p&gt;The last post I wrote was about using &lt;a href=&quot;https://pramp.com/#/&quot;&gt;Pramp&lt;/a&gt; 
+&lt;p&gt;Let’s gain an insight by looking at the example of a Toeplitz matrix above.
+Notice that when displacing the rows, we get a pattern:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;      &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+   &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It seems that for any row &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; and row &lt;code class=&quot;highlighter-rouge&quot;&gt;i+1&lt;/code&gt; in a Toeplitz matrix with &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; rows and &lt;code class=&quot;highlighter-rouge&quot;&gt;m&lt;/code&gt; columns
+shifting row &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; by one position would result in
+elements &lt;code class=&quot;highlighter-rouge&quot;&gt;0, 1, ..., m-2&lt;/code&gt; of row &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; being the same
+as elements &lt;code class=&quot;highlighter-rouge&quot;&gt;1, ..., m-1&lt;/code&gt; of row &lt;code class=&quot;highlighter-rouge&quot;&gt;i+1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, in the non-Toeplitz matrix, this is not the case.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;      &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+   &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Thus we want something like:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;is_toeplitz_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nrows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ncols&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shape&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nrows&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ncols&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;True&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nrows&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;centers_align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ncols&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;False&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;True&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;where &lt;code class=&quot;highlighter-rouge&quot;&gt;centers_align&lt;/code&gt; checks whether two adjacent rows could be rows of a Toeplitz matrix.&lt;/p&gt;
+
+&lt;p&gt;To check if two adjacent rows are rows of a Toeplitz matrix:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;centers_align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ncols&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;array_equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ncols&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:ncols&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Putting them together, we get the solution.
+We have to examine almost all the numbers in each row, so this is an &lt;code class=&quot;highlighter-rouge&quot;&gt;O(nm)&lt;/code&gt; solution in time.
+Depending on implementation, the space could be constant if you
+passed the rows of the matrix to &lt;code class=&quot;highlighter-rouge&quot;&gt;centers_align&lt;/code&gt; by reference.&lt;/p&gt;
+
+&lt;p&gt;See the full solution in python with test cases &lt;a href=&quot;https://github.com/lkloh/technical-interview-questions/blob/master/detecting_toepitz_matrix.py&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;That’s only a few lines of code.
+The interviewer next asked me to describe how to scale the solution,
+assuming a very large matrix.&lt;/p&gt;
+
+&lt;p&gt;I said that we could break up the matrix into several contiguous blocks,
+then check each block on a different machine.
+If any of the blocks was not a Toeplitz, then the matrix is not a Toeplitz matrix.
+If each block was also a Toeplitz matrix,
+then we could check if putting them together would make a toeplitz matrix. 
+then merge them together.
+Assuming we broke the matrix into &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; blocks,
+that is &lt;code class=&quot;highlighter-rouge&quot;&gt;n / b&lt;/code&gt; matrices to check on each machine,
+so &lt;code class=&quot;highlighter-rouge&quot;&gt;O(nm / b)&lt;/code&gt; time to check the blocks separately.
+To merge them, we have to merge &lt;code class=&quot;highlighter-rouge&quot;&gt;n / b&lt;/code&gt; blocks,
+so its &lt;code class=&quot;highlighter-rouge&quot;&gt;O(nm / b)&lt;/code&gt; time to merge.
+So you could check this in &lt;code class=&quot;highlighter-rouge&quot;&gt;O(nm / b)&lt;/code&gt; time
+and get time savings depending on what &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; is.&lt;/p&gt;
+
+&lt;p&gt;The interviewer was satisfied with this description, and passed me to the next round. 
+He did say that at the company, 
+engineers typically use inhouse libraries that can do lots of such optimization
+automatically, so such a solution was only theoretical
+and an engineer would be unlikely to need to come up with such an optimization
+during their regular work.&lt;/p&gt;</content><author><name></name></author><summary type="html">Two separate interviewers tried to give me this question when I interviewed at a very well known company headquartered in Mountain View. I answered it correctly at the phone screen, and told the interviewer at the onsite that I had already seen this question.</summary></entry><entry><title type="html">Interview mode</title><link href="http://localhost:4000/technical/interviews/2017/07/01/interview-mode.html" rel="alternate" type="text/html" title="Interview mode" /><published>2017-07-01T01:57:45-07:00</published><updated>2017-07-01T01:57:45-07:00</updated><id>http://localhost:4000/technical/interviews/2017/07/01/interview-mode</id><content type="html" xml:base="http://localhost:4000/technical/interviews/2017/07/01/interview-mode.html">&lt;p&gt;The last post I wrote was about using &lt;a href=&quot;https://pramp.com/#/&quot;&gt;Pramp&lt;/a&gt; 
 to prepare for technical interviews
 with other people who are also doing the same.&lt;/p&gt;
 

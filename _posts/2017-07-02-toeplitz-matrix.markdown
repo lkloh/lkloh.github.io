@@ -2,13 +2,13 @@
 layout: post
 title:  "Real Technical Interview Question: Detecting a toepliz matrix"
 date:   2017-07-02 01:57:45 -0700
-categories: technical interview, toeplitz matrix
+categories: technical interview, toeplitz matrix, python
 ---
 
-Two separate interviewers tried to give me this question
-at a very well known company in Mountain View.
-I answered it the first time round, 
-and told the second that I had already seen this question. 
+Two separate interviewers tried to give me this question when I interviewed
+at a very well known company headquartered in Mountain View.
+I answered it correctly at the phone screen, 
+and told the interviewer at the onsite that I had already seen this question. 
 
 {% highlight ruby %}
 Find out whether a matrix is a Toeplitz Matrix.
@@ -35,8 +35,81 @@ is a Toeplitz matrix, but
 
 is not a Toeplitz matrix.
 
-To solve this, note that given any two rows in the matrix,
-displacing 
+Let's gain an insight by looking at the example of a Toeplitz matrix above.
+Notice that when displacing the rows, we get a pattern: 
+
+{% highlight ruby %}
+      1, 8, 7, 5
+   2, 1, 8, 7
+3, 2, 1, 8
+{% endhighlight %}
+
+It seems that for any row `i` and row `i+1` in a Toeplitz matrix with `n` rows and `m` columns
+shifting row `i` by one position would result in
+elements `0, 1, ..., m-2` of row `i` being the same
+as elements `1, ..., m-1` of row `i+1`.
+
+However, in the non-Toeplitz matrix, this is not the case.
+{% highlight ruby %}
+      1, 8, 7, 5
+   2, 1, 9, 7
+3, 2, 1, 8
+{% endhighlight %}
+
+Thus we want something like:
+{% highlight ruby %}
+def is_toeplitz_matrix(matrix):
+	[nrows, ncols] = matrix.shape
+	if nrows < 2 or ncols < 2:
+		return True
+
+	for row in range(nrows - 1):
+		if not centers_align(matrix, row, row + 1, ncols):
+			return False
+	return True
+{% endhighlight %}
+
+where `centers_align` checks whether two adjacent rows could be rows of a Toeplitz matrix.
+
+To check if two adjacent rows are rows of a Toeplitz matrix:
+{% highlight ruby %}
+def centers_align(matrix, row, next_row, ncols):
+	return np.array_equal(matrix[row, 0:(ncols - 1)], matrix[next_row, 1:ncols])
+{% endhighlight %}
+
+Putting them together, we get the solution.
+We have to examine almost all the numbers in each row, so this is an `O(nm)` solution in time.
+Depending on implementation, the space could be constant if you
+passed the rows of the matrix to `centers_align` by reference. 
+
+See the full solution in python with test cases [here](https://github.com/lkloh/technical-interview-questions/blob/master/detecting_toepitz_matrix.py). 
+
+That's only a few lines of code.
+The interviewer next asked me to describe how to scale the solution,
+assuming a very large matrix. 
+
+I said that we could break up the matrix into several contiguous blocks,
+then check each block on a different machine.
+If any of the blocks was not a Toeplitz, then the matrix is not a Toeplitz matrix.
+If each block was also a Toeplitz matrix,
+then we could check if putting them together would make a toeplitz matrix. 
+then merge them together.
+Assuming we broke the matrix into `b` blocks,
+that is `n / b` matrices to check on each machine,
+so `O(nm / b)` time to check the blocks separately.
+To merge them, we have to merge `n / b` blocks,
+so its `O(nm / b)` time to merge.
+So you could check this in `O(nm / b)` time
+and get time savings depending on what `b` is. 
+
+The interviewer was satisfied with this description, and passed me to the next round. 
+He did say that at the company, 
+engineers typically use inhouse libraries that can do lots of such optimization
+automatically, so such a solution was only theoretical
+and an engineer would be unlikely to need to come up with such an optimization
+during their regular work. 
+
+
 
 
 
