@@ -1,0 +1,28 @@
+
+# Staticman
+comments:
+
+  allowedFields: ['name', 'email', 'comment']
+
+  allowedOrigins: ["localhost", "lkloh.github.io"]
+
+  branch: comment_branch
+
+  commitMessage: "Hey human, here is a new comment."
+
+  path: "_data/comments/options.slug"
+
+  # Destination path (filename) for the data files.
+  filename: "comment{@timestamp}"
+
+  format: yaml
+
+  moderation: true
+
+  # Name of the site. Used in notification emails.
+  name: "lkloh.github.io"
+
+  notifications:
+    enabled: true
+
+  requiredFields: ['name', 'email', comment']
