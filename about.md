@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+![At a fruit market](https://{{ site.url }}/assets/about/fruitmarket.jpg){:class="img-responsive"}
+
 I'm an incoming software engineer at [Mixpanel](https://mixpanel.com/).
 
 Before, I was a research assistant at [CyLab](https://www.cylab.cmu.edu/),
@@ -18,18 +20,19 @@ of conciseness after grading the homework of 120 students.
 
 Between college and grad school, I was a front-end engineer at Dwellers, 
 an ecommerce company that provided a recurring subscription for commonly used household groceries.
-After failing to compete with several other well-known ecommerce companies,
+After figuring out that the ecommerce space was already overcrowded,
 Dwellers became MathCrunch, 
 which provides personalized mathematics tutoring to high school students. 
 I also worked as a contractor for [Edfinity](https://edfinity.com/), 
-which provides some of the problems drives student traffic to MathCrunch. 
+which helps drives student traffic to MathCrunch by providing
+challenge problems for teachers to pass on to their students. 
 Sometime after I left, MathCrunch rebranded as [Yup Technologies](https://www.yup.com/),
 and now offers tutoring in multiple subjects.
 
 Previously, I studied math and computer science at Stanford University, 
-where I was treasurer for the [Singaporeans at Stanford Society](https://sas.stanford.edu/).
+where I was the treasurer for the [Singaporeans at Stanford Society](https://sas.stanford.edu/).
 
 And before that, I attended [NUS High School](http://www.nushigh.edu.sg/), 
-where I could really have used Yup if it had existed then. 
+where I could really have used Yup if it had existed back then. 
 
 
