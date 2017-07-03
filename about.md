@@ -36,11 +36,11 @@ And before that, I attended [NUS High School](http://www.nushigh.edu.sg/),
 where I could really have used Yup if it had existed then. 
 
 Some fun facts about me: 
-(0) My mother's maiden name is "Na". Once when filling out parental information 
+1. My mother's maiden name is "Na". Once when filling out parental information 
     on a form, I was chided for stating that her maiden name was *Not Applicable*.
-(1) It took me 6 tries in three different states and two different countries to get a driver's license,
-(2) Despite the above fact, two of my friends still wanted me to teach them to drive,
-	and I helped them get their license after only two attempts,
+2. It took me 6 tries in three different states and two different countries to get a driver's license.
+3. Despite (2), two of my friends still wanted me to teach them to drive,
+	and I helped them get their license after only two attempts.
  
 
 
