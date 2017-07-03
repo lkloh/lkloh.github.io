@@ -30,3 +30,22 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# Staticman
+staticman:
+ allowedFields: ['name', 'email', 'comment']
+ branch: comment_branch
+ commitMessage: "Hey human, here is a new comment."
+ filename: "comment{@timestamp}"
+ moderation: true
+ path: "_comments"
+ requiredFields: ['name', 'comment']
+
+
+
+
+
+
+
+
+

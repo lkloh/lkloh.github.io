@@ -122,21 +122,20 @@ as elements <code class="highlighter-rouge">1, ..., m-1</code> of row <code clas
 <p>Thus we want something like:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">is_toeplitz_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
-	<span class="p">[</span><span class="n">nrows</span><span class="p">,</span> <span class="n">ncols</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">.</span><span class="nf">shape</span>
-	<span class="k">if</span> <span class="n">nrows</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="n">or</span> <span class="n">ncols</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-		<span class="k">return</span> <span class="no">True</span>
-
-	<span class="k">for</span> <span class="n">row</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">nrows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-		<span class="k">if</span> <span class="n">not</span> <span class="n">centers_align</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="p">):</span>
-			<span class="k">return</span> <span class="no">False</span>
-	<span class="k">return</span> <span class="no">True</span></code></pre></figure>
+  <span class="p">[</span><span class="n">nrows</span><span class="p">,</span> <span class="n">ncols</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">.</span><span class="nf">shape</span>
+  <span class="k">if</span> <span class="n">nrows</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="n">or</span> <span class="n">ncols</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">return</span> <span class="no">True</span>
+  <span class="k">for</span> <span class="n">row</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">nrows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">not</span> <span class="n">centers_align</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="p">):</span>
+      <span class="k">return</span> <span class="no">False</span>
+    <span class="k">return</span> <span class="no">True</span></code></pre></figure>
 
 <p>where <code class="highlighter-rouge">centers_align</code> checks whether two adjacent rows could be rows of a Toeplitz matrix.</p>
 
 <p>To check if two adjacent rows are rows of a Toeplitz matrix:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">centers_align</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">next_row</span><span class="p">,</span> <span class="n">ncols</span><span class="p">):</span>
-	<span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="nf">array_equal</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">0</span><span class="p">:(</span><span class="n">ncols</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">matrix</span><span class="p">[</span><span class="n">next_row</span><span class="p">,</span> <span class="mi">1</span><span class="ss">:ncols</span><span class="p">])</span></code></pre></figure>
+  <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="nf">array_equal</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">0</span><span class="p">:(</span><span class="n">ncols</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">matrix</span><span class="p">[</span><span class="n">next_row</span><span class="p">,</span> <span class="mi">1</span><span class="ss">:ncols</span><span class="p">])</span></code></pre></figure>
 
 <p>Putting them together, we get the solution.
 We have to examine almost all the numbers in each row, so this is an <code class="highlighter-rouge">O(nm)</code> solution in time.
