@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-03T14:15:55-07:00</updated><id>http://localhost:4000/</id><title type="html">LK Loh</title><subtitle>Exploring the tech scene in San Francisco.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-03T14:38:40-07:00</updated><id>http://localhost:4000/</id><title type="html">LK Loh</title><subtitle>Exploring the tech scene in San Francisco.
 </subtitle><entry><title type="html">Real Technical Interview Question: Detecting a toepliz matrix</title><link href="http://localhost:4000/technical/interview,/toeplitz/matrix,/python/2017/07/02/toeplitz-matrix.html" rel="alternate" type="text/html" title="Real Technical Interview Question: Detecting a toepliz matrix" /><published>2017-07-02T01:57:45-07:00</published><updated>2017-07-02T01:57:45-07:00</updated><id>http://localhost:4000/technical/interview,/toeplitz/matrix,/python/2017/07/02/toeplitz-matrix</id><content type="html" xml:base="http://localhost:4000/technical/interview,/toeplitz/matrix,/python/2017/07/02/toeplitz-matrix.html">&lt;p&gt;Two separate interviewers tried to give me this question when I interviewed
 at a very well known company headquartered in Mountain View.
 I answered it correctly at the phone screen, 
@@ -269,7 +269,7 @@ and I spent way more money at it than I should have.&lt;/p&gt;</content><author>
 
 &lt;section class=&quot;comment&quot;&gt;
 &lt;h3&gt;Write a comment&lt;/h3&gt;
-&lt;form method=&quot;POST&quot; action=&quot;https://api.staticman.net/v2/entry/lkloh/lkloh.github.io/comment_branch/comments&quot;&gt;
+&lt;form method=&quot;post&quot; action=&quot;https://api.staticman.net/v2/entry/lkloh/lkloh.github.io/comment_branch&quot;&gt;
   &lt;input name=&quot;options[redirect]&quot; type=&quot;hidden&quot; value=&quot;https://lkloh.github.io&quot; /&gt;
   &lt;input name=&quot;options[slug]&quot; type=&quot;hidden&quot; value=&quot;welcome-to-jekyll&quot; /&gt;
   &lt;label&gt;&lt;input name=&quot;fields[name]&quot; type=&quot;text&quot; /&gt;Name&lt;/label&gt;
