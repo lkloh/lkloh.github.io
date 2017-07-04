@@ -35,4 +35,4 @@ comments:
   notifications:
     enabled: true
 
-  requiredFields: ['name', 'email', comment']
+  requiredFields: ['name', 'comment']
