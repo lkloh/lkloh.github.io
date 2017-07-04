@@ -31,11 +31,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-# Staticman
-staticmanUrl: https://api.staticman.net/v2/entry/lkloh/lkloh.github.io/master
-
-
-
+ 
 
 
 

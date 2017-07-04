@@ -1,8 +1,8 @@
 
-# Staticman
+# Staticman, property COMMENTS
 comments:
 
-  allowedFields: ['name', 'email', 'comment']
+  allowedFields: ['name', 'email', 'message']
 
   allowedOrigins: ["localhost", "lkloh.github.io"]
 
@@ -36,4 +36,4 @@ comments:
   # Destination path (directory) for the data files. Accepts placeholders.
   path: "_data/comments/{options.slug}"
 
-  requiredFields: ["name", "comment"]
+  requiredFields: ["name", "message"]
