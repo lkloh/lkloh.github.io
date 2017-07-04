@@ -6,7 +6,7 @@ comments:
 
   allowedOrigins: ["localhost", "lkloh.github.io"]
 
-  branch: comment_branch
+  branch: master
 
   commitMessage: "Hey human, here is a new comment."
 
