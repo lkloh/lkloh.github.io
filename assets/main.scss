@@ -4,7 +4,36 @@
 
 @import "minima";
 
+$dawn-pink: #f2ece4;
+$pale-sky: #6b717f;
+$bouquet: #b37399;
+$olive-green: rgba(120, 123, 53, 1.0);
+$maroon: #660033;
+
 body {
-	background: gray;
+	background: $dawn-pink;
 }
 
+/**
+ * Links
+ */
+a {
+  color: $olive-green;
+
+  &:visited {
+    color: darken($olive-green, 10%);
+  }
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+
+    .username {
+      text-decoration: underline;
+    }
+  }
+}

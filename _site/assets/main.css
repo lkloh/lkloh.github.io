@@ -470,4 +470,19 @@ pre {
     color: #099; }
 
 body {
-  background: gray; }
+  background: #f2ece4; }
+
+/**
+ * Links
+ */
+a {
+  color: #787b35; }
+  a:visited {
+    color: #555726; }
+  a:hover {
+    color: #111;
+    text-decoration: underline; }
+  .social-media-list a:hover {
+    text-decoration: none; }
+    .social-media-list a:hover .username {
+      text-decoration: underline; }
