@@ -19,6 +19,11 @@ layout: default
     {{ content }}
   </div>
 
+   <section class="comment">
+    <h3>Write a comment</h3>
+    {% include comment.html %}
+  </section>
+
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
