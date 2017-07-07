@@ -34,6 +34,6 @@ comments:
   name: "lkloh.github.io"
 
   # Destination path (directory) for the data files. Accepts placeholders.
-  path: "_data/comments/{options.slug}"
+  path: "_data/comments/{options.post_slug}"
 
   requiredFields: ["name", "message"]
