@@ -4,15 +4,12 @@
 	<div class="constrain--body">
 		<h2 class="comments__heading heading-2">Comments</h2>
 			
-		{% if !site.data.comments.2017-06-27-welcome-to-jekyll.nil? %}
+		{% assign comments = site.data.comments.2017-06-27-welcome-to-jekyll | sort %}
+		{% for comment in comments reversed %}
+			{% assign commentData = comment[1] %}
+			<p> {{ commentData.name }} </p>
+		{% endfor %}
 
-			{% assign comments = site.data.comments.2017-06-27-welcome-to-jekyll | sort %}
-			{% for comment in comments reversed %}
-				{% assign commentData = comment[1] %}
-				<p> commentData.title </p>
-			{% endfor %}
-
-		{% endif %}
 
 		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		{% include partials/post-new-comment.html %}
