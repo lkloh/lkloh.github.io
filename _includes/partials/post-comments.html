@@ -3,12 +3,19 @@
 <section class="comments">
 	<div class="constrain--body">
 		<h2 class="comments__heading heading-2">Comments</h2>
-			
-		{% assign comments = site.data.comments.2017-06-27-welcome-to-jekyll | sort %}
-		{% for comment in comments reversed %}
-			{% assign commentData = comment[1] %}
-			<p> {{ commentData.name }} </p>
-		{% endfor %}
+
+		<div class="comments__existing js-comments" {% if site.data.comments[post_slug] == null %}aria-hidden="true"{% endif %}>
+			{% if site.data.comments[post_slug] %}
+				{% assign comments = site.data.comments[post_slug] | sort %}
+				{% for comment in comments reversed %}
+					{% assign commentData = comment[1] %}
+					{% assign name = commentData.name %}
+					{% assign email = commentData.email %}
+					{% assign message = commentData.message %}
+					{% include partials/post-comment.html index=forloop.index email=email name=name message=message %}
+				{% endfor %}
+			{% endif %}
+		</div> 
 
 
 		<h2 class="comments__heading heading-2">Leave a comment</h2>
