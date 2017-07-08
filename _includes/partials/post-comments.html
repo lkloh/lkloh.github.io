@@ -10,9 +10,10 @@
 				{% for comment in comments reversed %}
 					{% assign commentData = comment[1] %}
 					{% assign name = commentData.name %}
+					{% assign url = commentData.url %}
 					{% assign email = commentData.email %}
 					{% assign message = commentData.message %}
-					{% include partials/post-comment.html index=forloop.index email=email name=name message=message %}
+					{% include partials/post-comment.html index=forloop.index email=email url=url name=name message=message %}
 				{% endfor %}
 			{% endif %}
 		</div> 
