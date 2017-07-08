@@ -1,28 +1,18 @@
-{% capture post_slug %}
-{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}
-{% endcapture %}
+{% capture post_slug %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}{% endcapture %}
 
 <section class="comments">
-	<p> TESTING: {{ post_slug }} </p>
 	<div class="constrain--body">
-		<div class="comments__existing js-comments" {% if site.data.comments[post_slug] == null %} aria-hidden="true"{% endif %} >
+		<h2 class="comments__heading heading-2">Comments</h2>
+			
+		{% if !site.data.comments.2017-06-27-welcome-to-jekyll.nil? %}
 
-			<h2 class="comments__heading heading-2">Comments</h2>
+			{% assign comments = site.data.comments.2017-06-27-welcome-to-jekyll | sort %}
+			{% for comment in comments reversed %}
+				{% assign commentData = comment[1] %}
+				<p> commentData.title </p>
+			{% endfor %}
 
-			{% if site.data.comments[post_slug] %}
-				{% assign comments = site.data.comments[post_slug] | sort %}
-				
-				{% for comment in comments %}
-					{% assign email = comment[1].email %}
-					{% assign name = comment[1].name %}
-					{% assign url = comment[1].url %}
-					{% assign date = comment[1].date %}
-					{% assign message = comment[1].message %}
-
-					{% include partials/post-comment.html index=forloop.index email=email name=name url=url date=date message=message %}
-				{% endfor %}
-			{% endif %}
-		</div>
+		{% endif %}
 
 		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		{% include partials/post-new-comment.html %}
