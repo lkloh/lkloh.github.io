@@ -10,7 +10,7 @@
   <meta name="description" content="Two separate interviewers tried to give me this question when I interviewed at a very well known company headquartered in Mountain View. I answered it correc...">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/technical/interview,/toeplitz/matrix,/python/2017/07/02/toeplitz-matrix.html">
+  <link rel="canonical" href="http://localhost:4000/technical/interview,/toeplitz/matrix,/python/2017/07/03/toeplitz-matrix.html">
   <link rel="alternate" type="application/rss+xml" title="LK Loh" href="/feed.xml">
   
   
@@ -69,9 +69,9 @@
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Real Technical Interview Question: Detecting a toepliz matrix</h1>
     <p class="post-meta">
-      <time datetime="2017-07-02T01:57:45-07:00" itemprop="datePublished">
+      <time datetime="2017-07-03T01:57:45-07:00" itemprop="datePublished">
         
-        Jul 2, 2017
+        Jul 3, 2017
       </time>
       </p>
   </header>
@@ -82,31 +82,39 @@ at a very well known company headquartered in Mountain View.
 I answered it correctly at the phone screen, 
 and told the interviewer at the onsite that I had already seen this question.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Find</span> <span class="n">out</span> <span class="n">whether</span> <span class="n">a</span> <span class="n">matrix</span> <span class="n">is</span> <span class="n">a</span> <span class="no">Toeplitz</span> <span class="no">Matrix</span><span class="o">.</span></code></pre></figure>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Find</span> <span class="n">out</span> <span class="n">whether</span> <span class="n">a</span> <span class="n">matrix</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">Toeplitz</span> <span class="n">Matrix</span><span class="o">.</span>
+</code></pre>
+</div>
 
 <p>A <a href="https://en.wikipedia.org/wiki/Toeplitz_matrix">Toeplitz matrix</a> 
 has the same integers on all of its diagonals.
 It can be of any dimension, not necessarily square.
 For example,</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
 <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span>
-<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span></code></pre></figure>
+<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
+</code></pre>
+</div>
 
 <p>is a Toeplitz matrix, but</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
 <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span>
-<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span></code></pre></figure>
+<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
+</code></pre>
+</div>
 
 <p>is not a Toeplitz matrix.</p>
 
 <p>Let’s gain an insight by looking at the example of a Toeplitz matrix above.
 Notice that when displacing the rows, we get a pattern:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">      <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>      <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
    <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span>
-<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span></code></pre></figure>
+<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
+</code></pre>
+</div>
 
 <p>It seems that for any row <code class="highlighter-rouge">i</code> and row <code class="highlighter-rouge">i+1</code> in a Toeplitz matrix with <code class="highlighter-rouge">n</code> rows and <code class="highlighter-rouge">m</code> columns
 shifting row <code class="highlighter-rouge">i</code> by one position would result in
@@ -114,21 +122,23 @@ elements <code class="highlighter-rouge">0, 1, ..., m-2</code> of row <code clas
 as elements <code class="highlighter-rouge">1, ..., m-1</code> of row <code class="highlighter-rouge">i+1</code>.</p>
 
 <p>However, in the non-Toeplitz matrix, this is not the case.</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">      <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>      <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
    <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span>
-<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span></code></pre></figure>
+<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
+</code></pre>
+</div>
 
 <p>Thus we want something like:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">is_toeplitz_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
-  <span class="p">[</span><span class="n">nrows</span><span class="p">,</span> <span class="n">ncols</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">.</span><span class="nf">shape</span>
-  <span class="k">if</span> <span class="n">nrows</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="n">or</span> <span class="n">ncols</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="k">return</span> <span class="no">True</span>
-  <span class="k">for</span> <span class="n">row</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">nrows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">not</span> <span class="n">centers_align</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="p">):</span>
-      <span class="k">return</span> <span class="no">False</span>
-    <span class="k">return</span> <span class="no">True</span></code></pre></figure>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">is_toeplitz_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+  <span class="p">[</span><span class="n">nrows</span><span class="p">,</span> <span class="n">ncols</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span>
+  <span class="k">if</span> <span class="n">nrows</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">ncols</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">True</span>
+  <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">centers_align</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</code></pre>
+</div>
 
 <p>where <code class="highlighter-rouge">centers_align</code> checks whether two adjacent rows could be rows of a Toeplitz matrix.</p>
 
@@ -186,9 +196,9 @@ during their regular work.</p>
 		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/lkloh/lkloh.github.io/master/comments" method="post">
     <input type="hidden" name="options[redirect]" value="https://lkloh.github.io">
-    <input type="hidden" name="options[post_slug]" value="2017-07-02-real-technical-interview-question-detecting-a-toepliz-matrix">
-    <input type="hidden" name="options[parent]" value="2017-07-02-real-technical-interview-question-detecting-a-toepliz-matrix">
-    <input type="hidden" name="options[origin]" value="http://localhost:4000/technical/interview,/toeplitz/matrix,/python/2017/07/02/toeplitz-matrix.html">
+    <input type="hidden" name="options[post_slug]" value="2017-07-03-real-technical-interview-question-detecting-a-toepliz-matrix">
+    <input type="hidden" name="options[parent]" value="2017-07-03-real-technical-interview-question-detecting-a-toepliz-matrix">
+    <input type="hidden" name="options[origin]" value="http://localhost:4000/technical/interview,/toeplitz/matrix,/python/2017/07/03/toeplitz-matrix.html">
     
     <input type="text" name="company" class="text-field" style="display: none">
     <input class="form__field text-field" type="text" name="fields[name]" placeholder="Name" required/>

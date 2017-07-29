@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Real Technical Interview Question: Detecting a toepliz matrix"
-date:   2017-07-02 01:57:45 -0700
+date:   2017-07-03 01:57:45 -0700
 categories: technical interview, toeplitz matrix, python
 ---
 
@@ -10,39 +10,39 @@ at a very well known company headquartered in Mountain View.
 I answered it correctly at the phone screen, 
 and told the interviewer at the onsite that I had already seen this question. 
 
-{% highlight ruby %}
+```python
 Find out whether a matrix is a Toeplitz Matrix.
-{% endhighlight %}
+```
 
 A [Toeplitz matrix](https://en.wikipedia.org/wiki/Toeplitz_matrix) 
 has the same integers on all of its diagonals.
 It can be of any dimension, not necessarily square.
 For example, 
 
-{% highlight ruby %}
+```python
 1, 8, 7, 5
 2, 1, 8, 7
 3, 2, 1, 8
-{% endhighlight %}
+```
 
 is a Toeplitz matrix, but 
 
-{% highlight ruby %}
+```python
 1, 8, 7, 5
 2, 1, 9, 7
 3, 2, 1, 8
-{% endhighlight %}
+```
 
 is not a Toeplitz matrix.
 
 Let's gain an insight by looking at the example of a Toeplitz matrix above.
 Notice that when displacing the rows, we get a pattern: 
 
-{% highlight ruby %}
+```python
       1, 8, 7, 5
    2, 1, 8, 7
 3, 2, 1, 8
-{% endhighlight %}
+```
 
 It seems that for any row `i` and row `i+1` in a Toeplitz matrix with `n` rows and `m` columns
 shifting row `i` by one position would result in
@@ -50,14 +50,14 @@ elements `0, 1, ..., m-2` of row `i` being the same
 as elements `1, ..., m-1` of row `i+1`.
 
 However, in the non-Toeplitz matrix, this is not the case.
-{% highlight ruby %}
+```python
       1, 8, 7, 5
    2, 1, 9, 7
 3, 2, 1, 8
-{% endhighlight %}
+```
 
 Thus we want something like:
-{% highlight ruby %}
+```python
 def is_toeplitz_matrix(matrix):
   [nrows, ncols] = matrix.shape
   if nrows < 2 or ncols < 2:
@@ -66,7 +66,7 @@ def is_toeplitz_matrix(matrix):
     if not centers_align(matrix, row, row + 1, ncols):
       return False
     return True
-{% endhighlight %}
+```
 
 where `centers_align` checks whether two adjacent rows could be rows of a Toeplitz matrix.
 
