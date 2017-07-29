@@ -19,7 +19,7 @@ consider being my roommate!
 ![Building](https://{{ site.url }}/assets/2017/July/29/potrero-1010-apartments-dining-room.jpg){:class="img-responsive"}
 
 {:.image-caption}
-*The kitchen (Photo credit: Equity Apartments)*
+*Kitchen (Photo credit: Equity Apartments)*
 
 I'm moving to a 2 bedroom apartment in [Potrero 1010](http://www.equityapartments.com/san-francisco/potrero-hill/potrero-1010-apartments) 
 with a [friend](http://www.juliaguenther.co/#/) I knew from Stanford.
@@ -36,13 +36,19 @@ We'll ask for a one month deposit that will be refunded on move out.
 Email me if that sounds like a fit! 
 Our lease starts on August 1, 2017, so we're looking for someone ASAP.
 
-![Building](https://{{ site.url }}/assets/2017/July/29/potrero-1010-apartments-rooftop-deck.jpg){:class="img-responsive"}
-
+![Rooftop](https://{{ site.url }}/assets/2017/July/29/potrero-1010-apartments-rooftop-deck.jpg){:class="img-responsive"}
 {:.image-caption}
-*The rooftop (Photo credit: Equity Apartments)*
+*Rooftop (Photo credit: Equity Apartments)*
 
-The apartment itself is amazing, in a residential district 
-but with grocery stores, cafes, and retailers within a walking distance. 
+Amenities include the above rooftop and the gym below. 
+
+![Gym](https://{{ site.url }}/assets/2017/July/29/potrero-1010-apartments-fitness-center.jpg){:class="img-responsive"}
+{:.image-caption}
+*Gym (Photo credit: Equity Apartments)*
+
+The apartment itself is in an amazing location, in a residential district 
+but with grocery stores, cafes, [boba tea shops](http://www.bobaguys.com/), 
+and retailers within a walking distance. 
 Its also close to SoMa and FiDi where many of the many tech companies are.
 Its an easy commute there, next to many buslines, 
 though you could also bike as the route to SoMa is mostly flat.
