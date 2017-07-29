@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Be our roommate"
-date:   2017-07-28 01:57:45 -0700
+date:   2017-07-29 01:57:45 -0700
 categories: python, coding style
 ---
 
