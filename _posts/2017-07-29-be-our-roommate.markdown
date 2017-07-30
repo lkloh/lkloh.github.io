@@ -26,13 +26,12 @@ with a [friend](http://www.juliaguenther.co/#/) I knew from Stanford.
 We were in the same freshman year dorm at 
 [Lagunita Court](https://rde.stanford.edu/studenthousing/lagunita-court).
 She works as a software engineer at Cisco; I work as a software engineer at Mixpanel.
-So we will both be out of the house from 9am - 5pm on weekdays, most likely longer
-due to the commute time. 
+So we will both be out of the house from at least 9am - 5pm on weekdays, likely longer. 
 
 We're both quiet, clean, and respectful,
 and hope to fine a like-minded person to take the converted living room.
 We're asking $1450/month and will split the cost of utilities and wifi evenly.
-We'll ask for a one month deposit that will be refunded on move out. 
+Your one month deposit will be refunded on move out. 
 Email me if that sounds like a fit! 
 Our lease starts on August 1, 2017, so we're looking for someone ASAP.
 
@@ -50,9 +49,9 @@ The apartment itself is in an amazing location, in a residential district
 but with grocery stores, cafes, [boba tea shops](http://www.bobaguys.com/), 
 and retailers within a walking distance. 
 Its also close to SoMa and FiDi where many of the many tech companies are.
-Its an easy commute there, next to many buslines, 
-though you could also bike as the route to SoMa is mostly flat.
-There is space for bike storage in the garage of the building. 
+If you're not a fan of public transport you could bike there easily 
+as the route to SoMa is mostly flat,
+and there is space for bike storage in the garage of the building. 
 
 If you are interested, [email me](lkloh2410@gmail.com) with a bit about yourself, a link
 to your Facebook/LinkedIn profile, and we can talk! 
