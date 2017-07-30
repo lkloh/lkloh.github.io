@@ -6,7 +6,7 @@ permalink: /about/
 
 ![At a fruit market](https://{{ site.url }}/assets/about/fruitmarket.jpg){:class="img-responsive"}
 
-I'm an incoming software engineer at [Mixpanel](https://mixpanel.com/).
+I'm a product engineer at [Mixpanel](https://mixpanel.com/).
 
 Before, I was a research assistant at [CyLab](https://www.cylab.cmu.edu/),
 where one of the things I was to use formal techniques to prove that software systems are secure under 

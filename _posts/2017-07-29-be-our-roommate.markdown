@@ -53,7 +53,7 @@ If you're not a fan of public transport you could bike there easily
 as the route to SoMa is mostly flat,
 and there is space for bike storage in the garage of the building. 
 
-If you are interested, [email me](lkloh2410@gmail.com) with a bit about yourself, a link
+If you are interested, email me at <lkloh2410@gmail.com> with a bit about yourself, a link
 to your Facebook/LinkedIn profile, and we can talk! 
 
 
