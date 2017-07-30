@@ -5,7 +5,7 @@ date:   2017-07-29 01:57:45 -0700
 categories: python, coding style
 ---
 
-This blog will primarily be technical, but I'll sometime post
+This blog will primarily be technical, but I'll occasionally post
 on other topics as well.
 
 ![Building](https://{{ site.url }}/assets/2017/July/29/potrero-1010-apartments-exterior.jpg){:class="img-responsive"}
@@ -54,14 +54,6 @@ as the route to SoMa is mostly flat,
 and there is space for bike storage in the garage of the building. 
 
 If you are interested, email me at <lkloh2410@gmail.com> with a bit about yourself, a link
-to your Facebook/LinkedIn profile, and we can talk! 
-
-
-
-
-
-
-
-
+to your Facebook/LinkedIn/website, and we can talk! 
 
 

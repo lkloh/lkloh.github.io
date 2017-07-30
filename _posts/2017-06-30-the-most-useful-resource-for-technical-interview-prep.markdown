@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The most useful resource for technical interview prep"
+title:  "The most helpful resource for my technical interview preparations"
 date:   2017-06-30 01:57:45 -0700
 categories: technical interviews
 ---
@@ -10,11 +10,42 @@ categories: technical interviews
 ![Cracking the Coding Interview](https://{{ site.url }}/assets/2017/June/30/ctci.jpg){:class="img-responsive"}
 
 {:.image-caption}
-*It's not Cracking the Coding Interview! (Photo credit: Amazon)*
+*It wasn't Cracking the Coding Interview! (Photo credit: Amazon)*
 
-There’s been a lot written about how to prepare for a technical interview. Some of those resources that I’ve personally used are the [above book](http://www.crackingthecodinginterview.com/), [Interview Cake](https://www.interviewcake.com/), [LeetCode](https://leetcode.com/), [HackerRank](https://www.hackerrank.com/), and [CodeFights](https://codefights.com/). 
+There's been a lot written about how to prepare for technical interviews,
+which essentially boils down to three points:
+* Know the common data structures and algorithms well
+* Understand the fundamentals of computer systems and their limitations
+* Practice the above in front of a whiteboard
+
+Even more has been written about how to do the above. 
+People have built [businesses](https://www.interviewcake.com/) 
+and [careers](http://www.gayle.com/) around helping job seekers to prepare for such interviews. 
+And I'm personally used quite a few of those resources to help me prepare. 
+
+Some of those resources that I’ve personally used are the [above book](http://www.crackingthecodinginterview.com/), 
+[Interview Cake](https://www.interviewcake.com/), 
+[LeetCode](https://leetcode.com/), [HackerRank](https://www.hackerrank.com/), 
+and [CodeFights](https://codefights.com/). 
  
-The thing about all the above, is that either way you're practicing alone. Most of the problems offered are theoretically interesting, but doing a lot of them gets repetitive really quick. And its easy to lose focus once that happens. Or you feel like giving up after hacking at a hard problem for an hour and the online judge keeps saying your test case doesn't pass due to this weird edge case. 
+The thing about all the above, is that either way you're practicing alone. 
+Most of the problems offered are theoretically interesting, 
+but doing a lot of them gets repetitive really quick. 
+And unless you've got really strong willpower,
+its fairly easy to lose focus once that happens. 
+Or you feel like giving up after hacking at a hard problem for an hour
+and the online judge keeps saying your test case doesn't pass due to this weird edge case. 
+
+I would love to proclaim that I have really strong willpower
+and can keep hacking on problem solving non-stop,
+but the fact is that I often rely on external factors to motivate me.
+Heck, on the weekends when I have work to do,
+I wouldn't work at home because there are too many lazy distractions there,
+but would spend money to coffee at a cafe so that I can sit there and work instead.
+I need to be surrounded by other people who are working as well
+to push myself to get stuff done.
+Many of my friends feel the same way,
+
  
 In any case, I used the above to prepare for a phone interview at a very well known company in Mountain View, and then the onsite interview as well. I thought I knew all the data structures and algorithms that were likely to come up in a technical interview nailed, but I was wrong. It was really hard to come up with things on the fly and explain in properly. I already knew I was going to get rejected by the midway point on the onsite. 
  
