@@ -51,15 +51,20 @@ And unless you've got really strong willpower,
 its fairly easy to lose focus once that happens. 
 Or you feel like giving up after hacking at a hard problem for an hour
 and the online judge keeps saying your test case doesn't pass due to this weird edge case. 
+At the end of the day, technical interview questions are just theoretical exercises, 
+meaning there are no real world consequences if you don't figure them out.
+So, it may be hard to find the motivation to really drill down
+and power through such questions.
 
 I would _love_ to proclaim that I have really strong willpower
-and can keep hacking on problems non-stop, but... that just isn't true.
+and can keep hacking on such problems non-stop,
+but... that just isn't true.
 Heck, on weekends, I wouldn't work at home because there are too many distractions.
 Instead, I'll spend $3 on coffee at a cafe so that I can sit there and work instead.
 I need to be surrounded by other people who are working as well
 to push myself to get stuff done.
 Some people may say I'm throwing $3 into the rubbish bin,
-but I prefer to say that I'm investing in productivity.
+but I prefer to say that I'm investing in my productivity.
 Besides, I'm supporting local businesses in the process!
 I did have a roommate in grad school who could concentrate just as intensely
 at home as in the office, but most of us don't have that particular superpower.
