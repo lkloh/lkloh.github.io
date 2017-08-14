@@ -176,8 +176,8 @@ Great idea in theory... but then there is the balancing issue.
 As you might expect, there are a lot more people looking for jobs 
 then there are hiring managers on the site,
 so it got really difficult to schedule interviews.
-I got _maybe_ one interview per week on interviewing.io, 
-while I could schedule interviews every two hours on Pramp.
+I got _maybe_ one interview per _week_ on interviewing.io, 
+while I could schedule interviews every _two hours_ on Pramp.
 
 Can't blame interviewing.io, obviously. 
 Their end goal is to connect developers with hiring managers,
@@ -189,7 +189,7 @@ Heck, I told Pramp that I would write this article after I started
 a job at a software engineer
 (thanks in no small part due to them!),
 and it ended up taking me _two weeks_ to push it out.
-Between working full-time and arranging for affordable housing in San Francisco 
+Between starting a new job and arranging for affordable housing in San Francisco 
 (that's worth a different article unto itself...)
 I didn't have much mental energy left to write this up until now.
 Forever sorry, Pramp.
