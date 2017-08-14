@@ -5,8 +5,11 @@ date:   2017-06-30 01:57:45 -0700
 categories: technical interviews
 ---
 
-I'm LK Loh, and I just started a position as a software engineer 
-in San Francisco after spending several weeks
+Author introduction: 
+I'm LK Loh. I just got a master's degree in Computer Engineering
+from Carnegie Mellon University and
+recently started a position as a software engineer in San Francisco,
+after spending several weeks
 preparing for technical interviews using Pramp and other resources.
 
 ***
@@ -78,8 +81,7 @@ what a typical graduate student makes.
 By the time I flew out for the onsite interview,
 I thought I had it nailed.
 After all, I had spent the better part of a month
-practicing problems on LeetCode -- 
-but boy I was wrong.
+practicing problems on LeetCode -- but boy I was wrong.
 It was really hard to come up with things on the fly and explain them well.
 I thought I had practiced a lot with nailing the most optimal
 solutions in a variety of scenarios,
@@ -87,10 +89,11 @@ but explaining it clearly to another human being was very difficult,
 especially since I was obviously in a pretty stressful situation.
 By the midway point, I already knew I was going to be rejected.
  
-Anyway, after I got back to my hotel room after the interview,
-the first thing I did was to pass out. 
+After the interview, 
+the first thing I did was to pass out in my hotel room. 
 Being in interview mode for six hours is tiring.
-Then, I used one of that company's services to learn about [Pramp](https://pramp.com/#/),
+Then, I used one of that company's services 
+to learn about [Pramp](https://pramp.com/#/),
 which (as you should know if you're reading this),
 lets you get interview by a real human being for free.
 In particular, Pramp pairs you with another human being (a.k.a. a peer) who
@@ -98,7 +101,7 @@ is searching for a software engineering position as well,
 so you can both take turns interviewing each other.
 I saw a couple of good reviews on Reddit about Pramp, 
 so I decided to test them out later.
-Additionally, I also learnt about [interviewing.io](),
+Additionally, I also learnt about [interviewing.io](https://interviewing.io/),
 which lets you get interviewed by a human being for free.
 I couldn't find many reviews about them,
 but decided to check them out later anyway.
@@ -153,8 +156,7 @@ to be helpful and respectful during my practice sessions.
 
 The only complaint about Pramp I had
 was that there are a limited number of questions (~50) in their database,
-so once I started running low on questions on Pramp,
-I turned to interviewing.io.
+so once I started running low on questions on Pramp, I turned to interviewing.io.
 They are also a platform for practicing technical interview questions,
 but your interviewer is a professional software engineer who already has a job,
 who picks any question he wants to ask.
@@ -170,7 +172,9 @@ I got maybe one interview per week on interviewin.io,
 while I could schedule interviews every two hours on Pramp.
 
 Can't blame interviewing.io, obviously. 
-People who already have a full-time job
+Their ultimate goal is to connect job seekers with hiring managers,
+and giving people the chance to practice is just a nice side effect of their business model. 
+The problem is that people who already have a full-time job
 have more important things to do than interview random people on the internet.
 Heck, I told Pramp that I would write this article after I started my job
 (thanks in no small part due to them!),
@@ -183,7 +187,8 @@ Still, it just shows that Pramp's way to help job-seekers practice
 is a really good idea, because they've found a way to ensure
 everyone interviewing has a strong motivation to do their best
 and help others do their best as well.
-
+If you're looking for a software engineering position,
+you should definitely check them out!
 
 
 
