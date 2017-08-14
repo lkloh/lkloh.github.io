@@ -5,14 +5,15 @@ date:   2017-06-30 01:57:45 -0700
 categories: technical interviews
 ---
 
-Author introduction: 
-I'm LK Loh. I just got a master's degree in Computer Engineering
-from Carnegie Mellon University and
-recently started a position as a software engineer in San Francisco,
+Author SummaryL 
+I'm [LK Loh](https://www.linkedin.com/in/lk-loh-b5931a23/),
+who just got a master's degree in Computer Engineering
+from Carnegie Mellon University. 
+I recently started a position as a software engineer in San Francisco,
 after spending several weeks
 preparing for technical interviews using Pramp and other resources.
 
-***
+---
 
 ![Cracking the Coding Interview](https://{{ site.url }}/assets/2017/June/30/ctci.jpg){:class="img-responsive"}
 
