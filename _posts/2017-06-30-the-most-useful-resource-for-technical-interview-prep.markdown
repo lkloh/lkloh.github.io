@@ -176,7 +176,7 @@ Great idea in theory... but then there is the balancing issue.
 As you might expect, there are a lot more people looking for jobs 
 then there are hiring managers on the site,
 so it got really difficult to schedule interviews.
-I got _maybe_ one interview per week on interviewin.io, 
+I got _maybe_ one interview per week on interviewing.io, 
 while I could schedule interviews every two hours on Pramp.
 
 Can't blame interviewing.io, obviously. 
