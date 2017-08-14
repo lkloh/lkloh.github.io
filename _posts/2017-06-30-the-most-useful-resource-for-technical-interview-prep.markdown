@@ -36,19 +36,22 @@ Some of those resources that I've personally used are the [above book](http://ww
 [LeetCode](https://leetcode.com/), [HackerRank](https://www.hackerrank.com/), 
 and [CodeFights](https://codefights.com/).
 They are certainly necessary if you need to learn the fundamentals
-of data structures and algorithms
+of data structures and algorithms,
 but if you already know that stuff (as I did),
-then they aren't so valuable.
+then they shouldn't be the only resource you turn to if you're
+preparing for technical interviews.
 
-The thing about all the above, is that either way you're practicing alone. 
-Most of the problems offered are theoretically interesting, 
+Assuming you already know your algorithms, 
+the problem with using only the above resources
+is that either way, you're practicing alone. 
+Most of the problems they offer are theoretically interesting, 
 but doing a lot of them gets repetitive really quick. 
 And unless you've got really strong willpower,
 its fairly easy to lose focus once that happens. 
 Or you feel like giving up after hacking at a hard problem for an hour
 and the online judge keeps saying your test case doesn't pass due to this weird edge case. 
 
-I would love to proclaim that I have really strong willpower
+I would **love** to proclaim that I have really strong willpower
 and can keep hacking on problem solving non-stop,
 but the fact is that I often rely on external factors to motivate me.
 Heck, on weekends, 
@@ -173,7 +176,9 @@ while I could schedule interviews every two hours on Pramp.
 
 Can't blame interviewing.io, obviously. 
 Their ultimate goal is to connect job seekers with hiring managers,
-and giving people the chance to practice is just a nice side effect of their business model. 
+and giving people the chance to practice
+is just a nice side effect of their business model. 
+Plus, they were still in beta when I signed up for them. 
 The problem is that people who already have a full-time job
 have more important things to do than interview random people on the internet.
 Heck, I told Pramp that I would write this article after I started my job
