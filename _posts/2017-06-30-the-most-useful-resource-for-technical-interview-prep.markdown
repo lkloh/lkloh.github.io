@@ -90,8 +90,8 @@ It was really hard to come up with things on the fly and explain them well.
 I thought I had practiced a lot with nailing the most optimal
 solutions in a variety of scenarios,
 but explaining it clearly to another human being was very difficult,
-especially since I was obviously in a pretty stressful situation.
-By the midway point, I already knew I was going to be rejected.
+especially during a stressful situation.
+By the the halfway mark, I already knew I was going to be rejected.
  
 After the interview, 
 the first thing I did was to pass out in my hotel room. 
@@ -169,26 +169,27 @@ Job seekers can anonymously have a practice session with hiring managers,
 and if they do well, the hiring manager can invite them for an onsite interview.
 Great idea in theory... but then there is the balancing issue.
 As you might expect, there are a lot more people looking for jobs 
-then there are hiring managers
-so it got really difficult to schedule interviews with them.
+then there are hiring managers on the site,
+so it got really difficult to schedule interviews.
 I got _maybe_ one interview per week on interviewin.io, 
 while I could schedule interviews every two hours on Pramp.
 
 Can't blame interviewing.io, obviously. 
-Their end goal is to connect job seekers with hiring managers,
-and giving people the chance to practice is just a nice side effect. 
+Their end goal is to connect developers with hiring managers,
+and giving them the chance to practice is just a nice side effect. 
 Plus, they were still in beta when I signed up for them. 
 The problem is that people who already have a full-time job
 have more important things to do than interview random people on the internet.
-Heck, I told Pramp that I would write this article after I started my job
+Heck, I told Pramp that I would write this article after I started 
+a job at a software engineer
 (thanks in no small part due to them!),
-and it ended up taking me two weeks to push it out.
+and it ended up taking me _two weeks_ to push it out.
 Between working full-time and arranging for affordable housing in San Francisco 
-(that's worth a different article in itself...)
+(that's worth a different article unto itself...)
 I didn't have much mental energy left to write this up until now.
 Forever sorry, Pramp.
 
-Still, it just shows that Pramp's way to help job-seekers practice
+Still, it just shows that Pramp's way to help developers practice
 is a really good idea, because they've found a way to ensure that
 everyone interviewing has a strong motivation to do their best,
 and help others do their best as well.
