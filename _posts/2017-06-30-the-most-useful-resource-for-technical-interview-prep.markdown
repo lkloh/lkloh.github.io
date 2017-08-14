@@ -5,9 +5,9 @@ date:   2017-06-30 01:57:45 -0700
 categories: technical interviews
 ---
 
-Author SummaryL 
-I'm [LK Loh](https://www.linkedin.com/in/lk-loh-b5931a23/),
-who just got a master's degree in Computer Engineering
+_Author Summary_: 
+Hi, I'm [LK Loh](https://www.linkedin.com/in/lk-loh-b5931a23/).
+I just got a master's degree in Computer Engineering
 from Carnegie Mellon University. 
 I recently started a position as a software engineer in San Francisco,
 after spending several weeks
