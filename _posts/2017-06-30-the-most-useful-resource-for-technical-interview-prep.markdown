@@ -79,7 +79,7 @@ up on concepts I was weak at.
 Because I'm really bad at doing hard focus in my apartment,
 I invested a lot of money (perhaps $8 a day) to sit at local coffee shops while studying. 
 At least, $8 is a lot of money when you're earning
-what a typical graduate student makes.
+[what a typical graduate student makes](http://blogs.discovermagazine.com/intersection/files/2009/08/phd082109s.gif).
 
 By the time I flew out for the onsite interview,
 I thought I had it nailed.
@@ -125,7 +125,7 @@ and (2) asked me if there was something problematic UI that caused that incident
 I told him that there wasn't,
 because it was my own stupid fault for pressing the wrong button.
 
-Anyway, I continued using Pramp for more practice sessions with more success.
+Anyway, I continued using Pramp with more success.
 It's a lot easier to focus and push through a hard problem when there 
 is a real human being there judging you,
 so you want to focus and give your very best at each and every practice session.
@@ -135,7 +135,7 @@ Some people might say that a [rubber ducky](https://en.wikipedia.org/wiki/Rubber
 would work just as well,
 but for me, strong and silent gets boring really quick.
 
-While most of the people I was paired with were job seekers like myself,
+While most of the people I was paired with were _obviously_ looking for a job as well,
 one of my interview partners turned out to be a hiring manager from Amazon.
 He told me he had used Pramp to prepare for interviews,
 and liked it so much he wanted to use it to search for candidates.
