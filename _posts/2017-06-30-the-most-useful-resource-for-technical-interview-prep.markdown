@@ -194,10 +194,9 @@ Between working full-time and arranging for affordable housing in San Francisco
 I didn't have much mental energy left to write this up until now.
 Forever sorry, Pramp.
 
-Still, it just shows that Pramp's way to help developers practice
-is a really good idea, because they've found a way to ensure that
-everyone interviewing has a strong motivation to do their best,
-and help others do their best as well.
+Still, it just shows that Pramp's method of helping developers practice
+is a really solid, as they've figured out a way to ensure 
+high quality _and_ high availabilty. 
 If you're looking for a software engineering position,
 you should definitely check them out!
 
