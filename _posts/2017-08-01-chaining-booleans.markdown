@@ -35,7 +35,40 @@ we have a variable `x` to handle where `x` could be `None`, or
 a valid value, such as a non-empty string.
 Unfortunately, we could just as easily check whether `x is None` or not.
 It's just easier this way.
+
 I tried coding up [an example](https://github.com/lkloh/playground-for-python/blob/master/operator_library.py) using `operator.truth` to check for null values,
-and it didn't work, I still needed a specific case where I exlicitly checked 
-whether a value was None or a boolean.
+and it didn't work.
+I still needed a specific case where I exlicitly checked 
+whether a value was `None` or a `boolean`.
+
+This example is simple:
+create a dictionary with some fields describing a person,
+and pass it into a function to transform all non-null fields of the dictionary into a string.
+We use booleans to represent the gender of the person:
+`True` for male and `False` for female,
+I couldn't use `operator.truth` to test whether the value of the person's
+gender was recorded, or it would cause problems as
+`operator.truth(None) = False` and `operator.truth(False) = False`.
+So if the gender is `False`,
+then we want to transform the new dictionary's value to `female`,
+but this would not get processed.
+
+Of course, this could be solved with refactoring in the example provided,
+but if I refactored everything
+I didn't like in a collaborative setting, I'll never get anything done.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
