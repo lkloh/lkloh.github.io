@@ -19,6 +19,13 @@ Here's the previous example on unit testing a function to determine if
 a given year is a leap year in 
 [BDD style](https://github.com/lkloh/javascriptPlayground/blob/master/mochaTestExample_aug2_2017/test_bdd.js).
 
+Oh and since `describe` and `context` are aliases for each other,
+if you use several layers of nesting,
+it is considered good style to use `describe` for the outermost layer
+and `context` for the inner one to seperate things more clearly.
+Contrast [using `describe` for everything](https://github.com/lkloh/javascriptPlayground/blob/master/mochaTestExample_aug2_2017/test_good.js) that is not a test,
+and [using both keywords](https://github.com/lkloh/javascriptPlayground/blob/master/mochaTestExample_aug2_2017/test_bdd.js) in nesting different sets of tests.
+
 ## TDD (Test-driven development)
 
 General idea is to write the tests for expected behavior, 
