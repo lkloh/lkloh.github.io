@@ -6,7 +6,8 @@ permalink: /about/
 
 ![At a fruit market](https://{{ site.url }}/assets/about/fruitmarket.jpg){:class="img-responsive"}
 
-I'm a [software engineer](https://mixpanel.com/) in San Francisco.
+I'm a [software engineer](https://mixpanel.com/) in San Francisco,
+where I help the world understand its data.
 
 Before that, I was in [grad school](http://www.cmu.edu/), 
 where I used formal techniques to prove that software systems are secure under 
@@ -15,8 +16,7 @@ You can read more [here](http://dl.acm.org/citation.cfm?id=3035926)
 and [here](http://dl.acm.org/citation.cfm?id=2790516).
 I also served as a teaching assistant for two classes,
 Introduction to Information Security and [Foundations of Privacy](https://www.ece.cmu.edu/~ece734/).
-That was when I truly understood the important
-of conciseness after grading the homework of 120 students. 
+
 
 And before grad school, I helped fuel the growth of two ed-tech companies at the same time.
 [One of them](https://edfinity.com/) provided hard math questions for teachers to assign to their students,
@@ -32,7 +32,7 @@ Fun facts:
 2. It took me 6 tries in three different states and 
 	two different countries to get a driver's license.
 3. Despite (2), two of my friends still wanted me to teach them to drive,
-	and I helped them get their license after only two attempts.
+	and they both got their licences within two attempts.
  
 
 
