@@ -4,6 +4,8 @@ title:  "Accessing dictionary values in Javascript"
 date:   2017-09-02 10:38:34 -0700
 ---
 
+Scripts for this are [here](https://github.com/lkloh/javascriptPlayground/blob/master/accessingDictValues.js).
+
 Given some dictionary in Javascript, such as
 
 ```js
