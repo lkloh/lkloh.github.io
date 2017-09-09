@@ -6,10 +6,10 @@ permalink: /about/
 
 ![At a fruit market](https://{{ site.url }}/assets/about/fruitmarket.jpg){:class="img-responsive"}
 
-I'm a product engineer at [Mixpanel](https://mixpanel.com/).
+I'm a [software engineer](https://mixpanel.com/) in San Francisco.
 
-Before, I was a research assistant at [CyLab](https://www.cylab.cmu.edu/),
-where one of the things I was to use formal techniques to prove that software systems are secure under 
+Before that, I was in [grad school](http://www.cmu.edu/), 
+where I used formal techniques to prove that software systems are secure under 
 a particular set of idealized, usually short-lived assumptions.
 You can read more [here](http://dl.acm.org/citation.cfm?id=3035926) 
 and [here](http://dl.acm.org/citation.cfm?id=2790516).
@@ -18,27 +18,19 @@ Introduction to Information Security and [Foundations of Privacy](https://www.ec
 That was when I truly understood the important
 of conciseness after grading the homework of 120 students. 
 
-Between college and grad school, I was a front-end engineer at Dwellers, 
-an ecommerce company that provided a recurring subscription for commonly used household groceries.
-After figuring out that the ecommerce space was already overcrowded,
-Dwellers became MathCrunch, 
-which provides personalized mathematics tutoring to high school students. 
-I also worked as a contractor for [Edfinity](https://edfinity.com/), 
-which helps drives student traffic to MathCrunch by providing
-challenge problems for teachers to pass on to their students. 
-Sometime after I left, MathCrunch rebranded as [Yup Technologies](https://www.yup.com/),
-and now offers tutoring in multiple subjects.
+And before grad school, I helped fuel the growth of two ed-tech companies at the same time.
+[One of them](https://edfinity.com/) provided hard math questions for teachers to assign to their students,
+and [the other](https://www.yup.com/) 
+matched students with tutors when they had trouble with their homework.
 
-Previously, I studied math and computer science at Stanford University, 
-where I was the treasurer for the [Singaporeans at Stanford Society](https://sas.stanford.edu/).
+I first came to the United States from Singapore in 2010 to attend 
+[college](https://www.stanford.edu/).
 
-And before that, I attended [NUS High School](http://www.nushigh.edu.sg/), 
-where I could really have used Yup if it had existed then. 
-
-Some fun facts about me: 
+Fun facts: 
 1. My mother's maiden name is "Na". Once when filling out parental information 
     on a form, I was chided for stating that her maiden name was *Not Applicable*.
-2. It took me 6 tries in three different states and two different countries to get a driver's license.
+2. It took me 6 tries in three different states and 
+	two different countries to get a driver's license.
 3. Despite (2), two of my friends still wanted me to teach them to drive,
 	and I helped them get their license after only two attempts.
  
