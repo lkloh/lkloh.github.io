@@ -1,15 +1,20 @@
 ---
 layout: post
-title:  "How I became a minimalist"
+title:  "Think before you buy"
 date:   2017-09-02 11:05:37 -0700
 ---
 
-Since moving from Singapore to the United States 7 years ago,
+For [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) reasons and others,
+software engineers are strongly advised 
+to think and plan before they write code.
+The same should apply to all other aspects of life.
+
+Since moving from Singapore to the United States seven years ago,
 I've had to move around a lot,
 mostly on my own with no help.
 
 The biggest thing moving around has taught me,
-is to only buy something you'll definitely start using repeatedly this week.
+is to only buy something you'll definitely use repeatedly, starting this week.
 Not next month, not next year, not next season,
 not when you lose weight or gain weight. Right now.
 Anything that you won't use right now will probably never get used,
@@ -31,8 +36,9 @@ dress shirt and pants
 (thrown away because they were too lose after losing the Freshman Fifteen), 
 extra bottles of shampoo so I wouldn't need to run to the store so often without a car..
 
-Honestly, they were actually quite reasonable compared to many other parents.
-Some people's parents bought them a mini-fridge for their dorm room.
+Honestly, they were quite reasonable compared to many other parents.
+One of my friend's parents bought them a mini-fridge for their dorm room,
+and she threw it out after a year of not using it.
 I had a roommate in grad school whose mother bought her at least 20 pairs of shoes,
 and a giant wardrobe as well.
 It caused her a huge pain when she had to put everything into 
@@ -54,33 +60,22 @@ back to San Francisco in California for a new position,
 I had only two suitcases with me -- the same two suitcases
 I had brought with me seven years ago from Singapore during my
 initial move to college.
-All my furniture had been sold for almost nothing/ given away,
-and I had given two enormous trash bags of clothing that I rarely wore to Goodwill.
-Somehow I managed to accumulate two enormous bags of clothes,
-despite clothes shopping about once a year on average.
-I had booked temporary housing in Berkeley for six weeks
+Since I had booked temporary housing in Berkeley for six weeks
 to give me time to search for semi-permanent housing (a.k.a. a one-year lease)
-in San Francisco, meaning I would have to move again in California.
+in San Francisco, I would have to move again in California.
+To minimize the amount of effort required to move, 
+I sold my furniture in Pittsburgh for next to nothing,
+and gave Goodwill two enormous bags full of rarely worn clothes.
 
-It's kind of scary how much stuff I manage to accumulate every few months,
+Looking back, its kind of scary how much stuff I manage to accumulate every few months,
 even with me consciously thinking before buying anything.
 I was so careful about only buying stuff I would use multiple times,
-that I slept on a pile of clothes for 10 days after moving to a new apartment in 
-San Francisco while waiting for a mattress to arrive,
-so I didn't need to get a sleeping bag.
+that I slept on a pile of clothes for 10 days after moving to a new apartment 
+while waiting for my mattress to arrive,
+so I could avoid getting a sleeping bag that would contribute to clutter.
+Maybe I'm taking my minimalist ways to the extreme.
 
-And most people are far worse at parting with stuff than I am.
-My mother still has all my Enid Blyton books,
+On the other side of the spectrum,
+my mother has kept our Enid Blyton storybooks for over twenty years,
 awaiting the day my sister or I decide to procreate.
-Maybe I'll sneak them to a used books store the next time I'm back.
-
-
-
-
-
-
-
-
-
-
-
+Perhaps I'll sneak them to a used books store the next time I visit.
