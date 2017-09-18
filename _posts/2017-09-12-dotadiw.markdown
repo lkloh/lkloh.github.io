@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "DOTADIW"
+date:   2017-09-12 11:05:37 -0700
+---
+
+Because the machine representaion of floats is not exact,
+somethings you get something like this in Python:
+```python
+x = 0.1 + 0.2 + 0.30
+print x
+```
+and get `0.6000000000000001` as your output.
+
+Or at least I got that in Python 2 on my laptop.
+
+If you wanted to make sure that `x = 0.6` for some reason, then you may have a bit of trouble,
+because `0.6000000000000001 != 0.6`.
+
+To fix this, we could do something like this:
+
+```python
+def check_for_equality(values):
+	'''
+	values: list of floats, guaranteed to have at most one decimal place
+	'''
+	return sum([float(f) * 10 for f in values]) == (0.6 * 10)
+```
+
+But this would only work properly for the particular use case in which 
+there is at most one decimal place.
+
+A better way to rewrite this in a way that can be used anywhere, repeatedly, is:
+```python
+def assert_near_equality(expected_value, values, epsilon=0.001):
+	'''
+	values: list of floats
+	'''
+	return abs(sum(values) - expected_value) <= epsilon
+```
+
+Now there are no restrictions imposed on `values`
+
+
+
+
+
+
+
+
+
