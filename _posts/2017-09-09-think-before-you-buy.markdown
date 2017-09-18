@@ -1,13 +1,8 @@
 ---
 layout: post
 title:  "Think before you buy"
-date:   2017-09-02 11:05:37 -0700
+date:   2017-09-09 11:05:37 -0700
 ---
-
-For [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) reasons and others,
-software engineers are strongly advised 
-to think and plan before they write code.
-The same should apply to all other aspects of life.
 
 Since moving from Singapore to the United States seven years ago,
 I've had to move around a lot,
@@ -33,7 +28,7 @@ simple black high heel shoes
 several pairs of jeans 
 (thrown away because they were too tight after gaining the Freshman Fifteen),
 dress shirt and pants 
-(thrown away because they were too lose after losing the Freshman Fifteen), 
+(thrown away because they were too loose after losing the Freshman Fifteen), 
 extra bottles of shampoo so I wouldn't need to run to the store so often without a car..
 
 Honestly, they were quite reasonable compared to many other parents.
