@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Real Technical Interview Question: Detecting a toepliz matrix"
+title:  "Detecting a toepliz matrix"
 date:   2017-07-03 01:57:45 -0700
-categories: technical interview, toeplitz matrix, python
 ---
 
 Two separate interviewers tried to give me this same question.

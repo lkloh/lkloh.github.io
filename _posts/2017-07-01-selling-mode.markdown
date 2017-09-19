@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Interview mode"
+title:  "Sell mode"
 date:   2017-07-01 01:57:45 -0700
-categories: technical interviews
 ---
 
 The last post I wrote was about using [Pramp](https://pramp.com/#/) 
@@ -97,25 +96,7 @@ or HTML/JavaScript specific exercises.
 It's hard to remain in interview mode for long once you have a job,
 because the types of traditional algorithm challenges given out at
 large companies tend to be far removed from what a software engineer really does.
-Soon after accepting the offer from Mixpanel, 
+Soon after accepting an offer, 
 I scheduled another practice at interviewing.io just to see how I would do.
 The interviewer told me I "needed more practice".
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
