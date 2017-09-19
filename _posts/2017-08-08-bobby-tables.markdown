@@ -4,7 +4,7 @@ title:  "Little Bobby Tables"
 date:   2017-08-07 01:57:45 -0700
 ---
 
-[Little Bobby Tables](https://xkcd.com/327/)
+![Little Bobby Tables](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)
 
 `MySQLCursor.execute()` does the sanitization for you, mostly.
 
