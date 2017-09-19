@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Look at Lodash first"
-date:   2017-08-05 01:57:45 -0700
+date:   2017-08-06 01:57:45 -0700
 ---
 
 Once I had to refactor a JavaScript function
@@ -26,14 +26,17 @@ lots of commonly used functions,
 such as checking if an object is defined,
 or whether a number falls within a certain range, etc.
 
-We could likely have used (https://www.npmjs.com/package/lodash.isundefined)
-with a little negative,
-instead of writing a brand new function.
+We could likely have used 
+[this](https://www.npmjs.com/package/lodash.isundefined)
+with a little negation,
+instead of going through the trouble of having
+someone(s) write a brand new function,
+and another one to refactor it.
 
 Since JavaScript is so popular,
-some multilingual people decided to translate it to 
+its unsurprising that some multilingual people decided to translate it to 
 [Python](https://github.com/dgilland/pydash) as well.
-There's probably an analogy for most of the popular languages,
+There's probably an analogy for most of the popular languages;
 look it up before writing your own function to perform a popular action.
 
 

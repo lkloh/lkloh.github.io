@@ -26,7 +26,8 @@ I don’t need to do anything else.
  
 Now to reinstalling everything I need for your my environment. Xcode, LaTeX, Github, Sublime Text are some of the must haves. There are cloud-based frameworks that abstract away the annoying installations for many of these, but it’s hard to get serious work done with them. 
 Of course, it means I'll have to 
-generate a add a new ssh key to [Github](https://help.github.com/articles/connecting-to-github-with-ssh/)
+generate a add a new ssh key to 
+[Github](https://help.github.com/articles/connecting-to-github-with-ssh/)
  and [Bitbucket](https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html). 
  
 Eventually I’ll repeat this after another 6 months. 
