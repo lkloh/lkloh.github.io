@@ -67,7 +67,7 @@ so at some point I ran out of new questions to try on.
 So I emailed Pramp again to adjust my user settings to allow me to continue
 practising as I was still preparing for onsites at that time. 
 
-Soon afterwards, I got the offer at Mixpanel and eventually signed on. 
+Soon afterwards, I got an offer and signed on. 
 
 
 

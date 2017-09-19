@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git force push makes comments disappear"
+title:  "Git force push forces comments to disappear"
 date:   2017-09-11 11:05:37 -0700
 ---
 
