@@ -47,7 +47,6 @@ I've done that more than once.
 And obviously a wrong comment is worst than no comment because it just confuses
 other people who read it.
 
-
 Instead, its better to refactor the code until its self-explanatory.
 No need to update comments, and the code base is kept as lean as possible.
 
@@ -68,17 +67,13 @@ def body(self):
     return self._body
 ```
 
-Obviously do add comments if a particular implementation is really obscure,
-and there's no way to make it more obvious. 
+Obviously add comments if a particular implementation is really obscure,
+and there's no easy way to make it more obvious. 
 Or if several other contributors demand you to add it in because they think its obsure.
-But in general its best to err on the side of avoiding comments.
+But in general it's best to err on the side of avoiding comments.
 
 Now if only when in college,
 I didn't spend 2 hours after getting my code to compile, 
 writing extra comments on code I was never going to reuse,
 I would have gotten more sleep.
-
-
-
-
 

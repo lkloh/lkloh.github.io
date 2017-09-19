@@ -8,7 +8,7 @@ Or when you get an `EADDRINUSE`
 because you didn't shut down your server properly,
 to find out what the processes still running on that port are, do
 
-`lsof -i <port-num>`.
+`lsof -i :<port-num>`.
 
 This will print all of the processes and their PIDs, so you can do
 
