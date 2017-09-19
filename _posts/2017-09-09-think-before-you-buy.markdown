@@ -29,12 +29,13 @@ several pairs of jeans
 (thrown away because they were too tight after gaining the Freshman Fifteen),
 dress shirt and pants 
 (thrown away because they were too loose after losing the Freshman Fifteen), 
-extra bottles of shampoo so I wouldn't need to run to the store so often without a car..
+extra bottles of shampoo so I wouldn't need to run to the store so often without a car.
 
-Honestly, they were quite reasonable compared to many other parents.
-One of my friend's parents bought them a mini-fridge for their dorm room,
-and she threw it out after a year of not using it.
-I had a friend in grad school whose mother bought her at least 20 pairs of shoes,
+Honestly, they were quite reasonable compared to some other parents.
+One of my friend's parents bought them a mini-fridge for their dorm room
+that they never used,
+and I had a friend in grad school whose mother
+bought her at least 20 pairs of shoes,
 and a giant wardrobe as well.
 It caused her a huge pain when she moved.
 
@@ -52,10 +53,10 @@ And to buy furniture that I wouldn't mind throwing away after one year
 By the time I moved from Pennsylvania in grad school
 back to San Francisco in California for a new position,
 I had only two suitcases with me -- the same two suitcases
-I had brought with me seven years ago from Singapore during my
+I had brought with me seven years ago during my
 initial move to college.
 Since I had booked temporary housing in Berkeley for six weeks
-to give me time to search for semi-permanent housing (a.k.a. a one-year lease)
+to give me time to search for somewhere I could sign a lease on
 in San Francisco, I would have to move again in California.
 To minimize the amount of effort required to move, 
 I sold my furniture in Pittsburgh for next to nothing,

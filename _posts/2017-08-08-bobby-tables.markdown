@@ -11,24 +11,25 @@ date:   2017-08-07 01:57:45 -0700
 If you've got a query to run, you may want to do
 
 ```python
-query = (
-  "SELECT id, first_name, last_name, birthday
-  FROM my_table"
-  "WHERE age < %d"
-)
+query = '''
+	SELECT id, first_name, last_name, birthday
+	FROM my_table
+	WHERE age < %d
+'''
 cursor.execute(insert_stmt % 42)
 ```
 since `42` is a number, not a string.
+And there's only one variable, so why not just stick it into the query string?
 
 But you should instead do
 
 ```python
-query = (
-  "SELECT id, first_name, last_name, birthday
-  FROM my_table"
-  "WHERE age < %s"
-)
-cursor.execute(insert_stmt, [42])
+query = '''
+	SELECT id, first_name, last_name, birthday
+	FROM my_table
+	WHERE age < %s"
+'''
+cursor.execute(insert_stmt, (42))
 ```
 to help avoid similar scenarios.
 
