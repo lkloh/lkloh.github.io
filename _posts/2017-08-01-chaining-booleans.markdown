@@ -54,21 +54,6 @@ then we want to transform the new dictionary's value to `female`,
 but this would not get processed.
 
 Of course, this could be solved with refactoring in the example provided,
-but if I refactored everything
-I didn't like in a collaborative setting, I'll never get anything done.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+but if I refactored everything I didn't like, I'll never get anything done.
 
 

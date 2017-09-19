@@ -15,6 +15,7 @@ making it easier to understand what any one variable is for,
 and thus better for long term maintainence.
 
 `let` allows variable reassignment.
-If you find yourself using `let` for any reason,
-it probably means you need to do some refactoring to simplify things.
+You might want to use it to declare a loop iterator.
+Outside of that, if you use `let`,
+it probably means you need to do some refactoring.
 

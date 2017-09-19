@@ -65,13 +65,3 @@ def get_fibonacci_number(n):
 	return get_fibonacci_number(n - 1) + get_fibonacci_number(n - 2)
 ```
 
-
-
-
-
-
-
-
-
-
-
