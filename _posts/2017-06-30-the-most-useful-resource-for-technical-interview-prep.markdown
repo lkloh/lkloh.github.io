@@ -35,17 +35,6 @@ And unless you've got really strong willpower,
 its fairly easy to lose focus once that happens. 
 Or you feel like giving up after hacking at a hard problem for an hour
 and the online judge keeps saying your test case doesn't pass due to this weird edge case. 
-
-I would love to proclaim that I have really strong willpower
-and can keep hacking on problem solving non-stop,
-but the fact is that I often rely on external factors to motivate me.
-Heck, on the weekends when I have work to do,
-I wouldn't work at home because there are too many lazy distractions there,
-but would spend money to coffee at a cafe so that I can sit there and work instead.
-I need to be surrounded by other people who are working as well
-to push myself to get stuff done.
-Many of my friends feel the same way,
-
  
 In any case, I used the above to prepare for a phone interview at a very well known company in Mountain View, and then the onsite interview as well. I thought I knew all the data structures and algorithms that were likely to come up in a technical interview nailed, but I was wrong. It was really hard to come up with things on the fly and explain in properly. I already knew I was going to get rejected by the midway point on the onsite. 
  

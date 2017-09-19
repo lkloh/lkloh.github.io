@@ -5,8 +5,7 @@ date:   2017-07-03 01:57:45 -0700
 categories: technical interview, toeplitz matrix, python
 ---
 
-Two separate interviewers tried to give me this question when I interviewed
-at a very well known company headquartered in Mountain View.
+Two separate interviewers tried to give me this same question.
 I answered it correctly at the phone screen, 
 and told the interviewer at the onsite that I had already seen this question. 
 

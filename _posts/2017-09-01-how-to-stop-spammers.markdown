@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hitting spammers where it hurts"
+title:  "Stopping Spammers"
 date:   2017-09-01 01:57:45 -0700
 ---
 
@@ -23,7 +23,7 @@ Almost all the email service providers rely on those.
 So the spammer is further deterred use some other email provider such as 
 `annoying-domain-version-2.com` to spam you. 
 
-Or you could also their ISP and complain directly to them.
+Or you could also complain directly to their ISP.
 That would probably get you a really quick response.
 
 

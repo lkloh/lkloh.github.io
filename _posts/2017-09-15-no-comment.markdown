@@ -74,22 +74,9 @@ Or if several other contributors demand you to add it in because they think its 
 But in general its best to err on the side of avoiding comments.
 
 Now if only when in college,
-I didn't spend 2 hours after finishing my assignments writing
-extra comments on code I was never going to reuse,
+I didn't spend 2 hours after getting my code to compile, 
+writing extra comments on code I was never going to reuse,
 I would have gotten more sleep.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

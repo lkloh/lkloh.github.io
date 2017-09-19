@@ -5,11 +5,6 @@ date:   2017-07-02 01:57:45 -0700
 categories: technical interviews, computer architecture
 ---
 
-I got this question at the onsite interview at a company in Mountain View.
-I no longer remember all the questions I got, 
-but this once was particularly memorable,
-as I didn't get the answer (though I should have).
-
 "What is the best way find the approximate median of a huge stream of numbers,
 so large that they can't all fit into memory at the same time?"
 
