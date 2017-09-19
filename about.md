@@ -7,16 +7,15 @@ permalink: /about/
 ![At a fruit market](https://{{ site.url }}/assets/about/fruitmarket.jpg){:class="img-responsive"}
 
 I'm a [software engineer](https://mixpanel.com/) in San Francisco,
-where I help the world understand its data.
+helping the world understand its data.
 
 Before that, I was in [grad school](http://www.cmu.edu/), 
 where I used formal techniques to prove that software systems are secure under 
 a particular set of idealized, usually short-lived assumptions.
 You can read more [here](http://dl.acm.org/citation.cfm?id=3035926) 
 and [here](http://dl.acm.org/citation.cfm?id=2790516).
-I also served as a teaching assistant for two classes,
-Introduction to Information Security and [Foundations of Privacy](https://www.ece.cmu.edu/~ece734/).
-
+I also served as a teaching assistant for [two](https://www.ece.cmu.edu/courses/items/18631.html) 
+[classes](https://www.ece.cmu.edu/~ece734/),
 
 And before grad school, I helped fuel the growth of two ed-tech companies at the same time.
 [One of them](https://edfinity.com/) provided hard math questions for teachers to assign to their students,

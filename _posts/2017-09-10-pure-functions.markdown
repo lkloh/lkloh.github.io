@@ -43,7 +43,7 @@ def test_ceo_is_not_changed():
 	}
 	assert capitalize_dict__pure(company_people) != company_people
 	expected_company_people = {
-		'CEO': 'alice',
+		'CEO': 'alice', 
 		'COO': 'Bob',
 		'Manager': 'Charlie'
 	}

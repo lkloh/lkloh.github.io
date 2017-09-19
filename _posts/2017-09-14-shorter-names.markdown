@@ -47,5 +47,5 @@ def sell_excess_produce(n):
         n--;
         sell_crate()
 ```
-would be the best.
+would be better.
 

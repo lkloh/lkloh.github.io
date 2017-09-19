@@ -34,15 +34,14 @@ extra bottles of shampoo so I wouldn't need to run to the store so often without
 Honestly, they were quite reasonable compared to many other parents.
 One of my friend's parents bought them a mini-fridge for their dorm room,
 and she threw it out after a year of not using it.
-I had a roommate in grad school whose mother bought her at least 20 pairs of shoes,
+I had a friend in grad school whose mother bought her at least 20 pairs of shoes,
 and a giant wardrobe as well.
-It caused her a huge pain when she had to put everything into 
-storage for a summer internship.
+It caused her a huge pain when she moved.
 
 Even then, I had 10 boxes of stuff at the end of freshman year.
 It was a real pain to arrange for storage and move everything again.
 Repeat several more times for each year of college,
-the first year of work,
+the first year after graduating,
 the move to grad school in a new state,
 then the move back to California after grad school...
 I learnt very quickly only to buy things I would definitely use very often. 
