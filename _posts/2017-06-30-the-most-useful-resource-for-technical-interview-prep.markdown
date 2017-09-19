@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  "The most helpful resource for my technical interview preparations"
+title:  "The most helpful engineering resource"
 date:   2017-06-30 01:57:45 -0700
 categories: technical interviews
 ---
-
-
 
 ![Cracking the Coding Interview](https://{{ site.url }}/assets/2017/June/30/ctci.jpg){:class="img-responsive"}
 
