@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "The Python debugger"
+date:   2017-07-10 01:57:45 -0700
+---
+
+Sure I've got by a lot with just looking at the error output of a Python program,
+but [PDB](https://docs.python.org/2/library/pdb.html) is essentially 
+[GDB](https://www.gnu.org/software/gdb/) for Python.
+
+Insert
+```
+import pdb
+pdb.set_trace()
+```
+into the region of the program you want to break at and you can step through.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
