@@ -79,13 +79,11 @@ We have to examine almost all the numbers in each row, so this is an `O(nm)` sol
 Depending on implementation, the space could be constant if you
 passed the rows of the matrix to `centers_align` by reference. 
 
-See the full solution in python with test cases [here](https://github.com/lkloh/technical-interview-questions/blob/master/detecting_toepitz_matrix.py). 
+See the full solution in python with test cases 
+[here](https://github.com/lkloh/technical-interview-questions/blob/master/detecting_toepitz_matrix.py). 
 
-That's only a few lines of code.
-I was asked to describe how to scale the solution,
-assuming a very large matrix. 
-
-I said that we could break up the matrix into several contiguous blocks,
+To scale the solution when given a very large matrix, one way is to
+break up the matrix into several contiguous blocks,
 then check each block on a different machine.
 If any of the blocks was not a Toeplitz, then the matrix is not a Toeplitz matrix.
 If each block was also a Toeplitz matrix,

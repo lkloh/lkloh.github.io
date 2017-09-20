@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Chmod"
+date:   2017-07-05 01:57:45 -0700
+---
+
+`chmod` on files should be used sparingly,
+even if it's more convenient to give everyone access to the files.
+
+Causes lots of issues with security 
+(anyone with user access can read and execute files),
+and its hard to recover the system when something goes wrong.
+
+Example [here](https://askubuntu.com/questions/43621/what-if-i-accidentally-run-command-chmod-r-on-system-directories-etc):
+someone ran `sudo chmod 755 -R /` and started getting permissions issues on everything.
+He basically had to reinstall the system,
+because resetting all permissions back to exactly what they were like before
+(and allowing too many privileges somewhere) is too hard to be worth it.
+

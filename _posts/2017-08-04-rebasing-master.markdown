@@ -28,3 +28,45 @@ Do not commit before fixing everything.
 Afterwards, you should get a message saying that all conflicts are resolved.
 
 And now do `git push origin dev` to get your updated branch reviewed and merged. 
+
+## Pitfalls
+
+Given a workflow that looks like this:
+```
+         E --- F --- G --- H --- I --- J --- K --- L --- M --- N --- P (branchA)
+        /                 /
+       /                 /    
+master ---------------- D 
+       \               /
+        \             /
+         A --- B --- C  (branchB)
+```
+If the merge conflict occured at point D due to branchB's merged changes,
+and you later want to rebase branchA with master,
+you'll have to merge the conflicts for ALL the comments until the divergence point D
+in branchA.
+
+This means you may have a never ending round of rebasing commits
+if you made lots of new changes since the divergence point.
+
+Its ok to commit often, so the workarounds are:
+
+1. If there are not too many conflicts: update the conflicts in branchA manually.
+	This is easiest to do. 
+2. Squash all the commits in branchA, then you only need to rebase once. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
