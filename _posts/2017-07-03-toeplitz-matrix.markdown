@@ -82,7 +82,7 @@ passed the rows of the matrix to `centers_align` by reference.
 See the full solution in python with test cases [here](https://github.com/lkloh/technical-interview-questions/blob/master/detecting_toepitz_matrix.py). 
 
 That's only a few lines of code.
-The interviewer next asked me to describe how to scale the solution,
+I was asked to describe how to scale the solution,
 assuming a very large matrix. 
 
 I said that we could break up the matrix into several contiguous blocks,
@@ -98,46 +98,4 @@ To merge them, we have to merge `n / b` blocks,
 so its `O(nm / b)` time to merge.
 So you could check this in `O(nm / b)` time
 and get time savings depending on what `b` is. 
-
-The interviewer was satisfied with this description, and passed me to the next round. 
-He did say that at the company, 
-engineers typically use inhouse libraries that can do lots of such optimization
-automatically, so such a solution was only theoretical
-and an engineer would be unlikely to need to come up with such an optimization
-during their regular work. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

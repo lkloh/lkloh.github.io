@@ -40,7 +40,7 @@ that will return a new object, `jane`, which has form:
 {
 	firstName: `Jane`,
 	lastName: `Doe`,
-	gender: `Feale`,
+	gender: `Female`,
 	college: `Harvard`,
 	citizenship: `Utopia`,
 }
