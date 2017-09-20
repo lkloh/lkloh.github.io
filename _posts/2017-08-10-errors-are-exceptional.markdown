@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "Errors are exceptional"
+title:  "Errors are expected"
 date:   2017-08-10 01:57:45 -0700
 ---
 
-All other "things going wrong" should be _expected_.
+You should _expect_ things to go wrong.
+
+Thus, you only throw javascript errors if things are really, exceptionally wrong.
 
 More is outlined [here](https://martinfowler.com/articles/replaceThrowWithNotification.html),
 but the summary is:

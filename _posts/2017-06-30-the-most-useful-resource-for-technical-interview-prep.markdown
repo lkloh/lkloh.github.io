@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The most helpful engineering resource"
+title:  "The most useful engineering resource"
 date:   2017-06-30 01:57:45 -0700
 categories: technical interviews
 ---
@@ -47,7 +47,7 @@ One of my interview partners even turned out to be a hiring manager from Amazon,
 and I must have impressed him sufficiently as he 
 later recommended me for an onsite interview at Amazon!
 So, users of Pramp, treat every interview like its a real one -- 
-because I essentially got to bypass the phone screen at Amazon through Pramp. 
+because it just might be. 
 
 Unfortunately they only have about 50 questions in their database, 
 so at some point I ran out of new questions to try on.
@@ -55,22 +55,3 @@ So I emailed Pramp again to adjust my user settings to allow me to continue
 practising as I was still preparing for onsites at that time. 
 
 Soon afterwards, I got an offer and signed on. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
