@@ -16,6 +16,11 @@ and thus better for long term maintainence.
 
 `let` allows variable reassignment.
 You might want to use it to declare a loop iterator.
-Outside of that, if you use `let`,
+It is also scoped within the block
+Outside of that, if you use `let` instead of `const`
 it probably means you need to do some refactoring.
+
+`var` should be depreciated. It causes terrible scoping confusion
+and doesn't communicate anything to the user about how a variable declared
+with `var` is going to be used.
 
