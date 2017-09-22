@@ -25,7 +25,7 @@ performSexChangeSurgery(isMale = true): Person {
 }
 ```
 
-And this bit of code uses the model, but is in JavaScript:
+And this bit of code uses that TypeScript model, but is written in JavaScript:
 ```js
 const femaleAlex = new Person({
     firstName: `Alex`,
@@ -36,7 +36,7 @@ const femaleAlex = new Person({
 const maleAlex = performSexChangeSurgery({isMale: true});
 ```
 
-Then the code will compile and work fine.
+Then the code will compile and work just fine.
 
 The problem is that this is wrongly typed.
 `performSexChangeSurgery` is called with a JavaScript object `{isMale: true}`,
@@ -45,6 +45,8 @@ but the function signature (in TypeScript) requires the argument to be a boolean
 But this bit of code is not caught by the compiler,
 since JavaScript is dynamically typed, and this `performSexChangeSurgery`
 just needs to be given some sort of Object.
+And the function `performSexChangeSurgery` demands an argument that is an object.
+In particular, it demands a boolean, which is a JavaScript Object.
 
 The right way to write the JavaScript portion is
 
@@ -58,6 +60,7 @@ const femaleAlex = new Person({
 const maleAlex = performSexChangeSurgery(true);
 ```
 
+The pains of transitioning to new technology halfway in a large codebase.
 
 
 

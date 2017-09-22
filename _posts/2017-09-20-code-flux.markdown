@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "How often should you rebase your branch with master?"
+date:   2017-09-20 11:05:37 -0700
+---
+
+[According](https://stackoverflow.com/questions/32681850/is-there-a-fast-way-to-rebase-a-long-history-of-commits-to-master-branch) 
+to the [internet](https://coderwall.com/p/7aymfa/please-oh-please-use-git-pull-rebase), 
+you should do it at least once a day.
+Or more often.
+Reason being that its better to fix your conflicts in stages
+(divide up the hard labor),
+than do it all at once.
+
+Problem is, sometimes it's unavoidable that two people or more
+are touching the same bits of code.
+Perhaps you didn't realize that there was so much interdependence
+when the tasks were assigned, 
+and it's too late when you did: everyone's already done too much work in parallel.
+
+If there's a lot of code changing that affects what you're working on,
+it may be better to just work off a dev branch and not rebase until you are done with
+your bit, then squash all your commits into one commit and rebase with master.
+
+Obviously try to get smaller and more frequent pull requests out when
+working on an active project with lots of developers.
+In that case code churn should probably be expected.
+
+Reserve your large pull requests (sometimes that's unavoidable too!) 
+for when you know no one else is likely
+working the same bits of code.
