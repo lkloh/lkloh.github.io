@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Variable naming"
-date:   2017-07-04 01:57:45 -0700
+date:   2017-07-04
 ---
 
 Different from the name of a library name/function.

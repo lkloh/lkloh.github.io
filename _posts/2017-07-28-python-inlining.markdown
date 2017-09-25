@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Python inlining"
-date:   2017-07-28 01:57:45 -0700
-categories: python, coding style
+date:   2017-07-28
 ---
 
 Python inlining makes code more readable. 

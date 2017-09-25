@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Designing Interfaces"
-date:   2017-09-22 11:46:37 -0700
+date:   2017-09-22
 ---
 
 Interfaces should be designed to abstract 

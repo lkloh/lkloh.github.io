@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Viewing client requests in the browser"
-date:   2017-08-15 01:57:45 -0700
+date:   2017-08-15
 ---
 
 ![Network inspector](https://{{ site.url }}/assets/2017/August/15/network_inspector){:class="img-responsive"}

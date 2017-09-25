@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The most useful engineering resource"
-date:   2017-06-30 01:57:45 -0700
+date:   2017-06-30
 categories: technical interviews
 ---
 

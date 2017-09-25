@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Deploy during the real workweek"
-date:   2017-07-17 04:42:23 -0700
+date:   2017-07-17
 ---
 
 Everyone knows the Friday is a holiday,

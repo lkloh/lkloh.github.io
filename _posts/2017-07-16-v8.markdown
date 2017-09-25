@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "V8"
-date:   2017-07-16 04:42:23 -0700
+date:   2017-07-16
 ---
 
 [V8](https://github.com/v8/v8/wiki) is a JavaScript engine developed by Google,

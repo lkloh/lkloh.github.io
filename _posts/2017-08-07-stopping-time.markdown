@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Stopping Time"
-date:   2017-08-07 01:57:45 -0700
+date:   2017-08-07
 ---
 
 Sort of. 

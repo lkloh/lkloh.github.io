@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Killing Ports"
-date:   2017-08-05 01:57:45 -0700
+date:   2017-08-05
 ---
 
 Or when you get an `EADDRINUSE` 

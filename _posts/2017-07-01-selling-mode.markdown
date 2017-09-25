@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sell mode"
-date:   2017-07-01 01:57:45 -0700
+date:   2017-07-01
 ---
 
 The last post I wrote was about using [Pramp](https://pramp.com/#/) 

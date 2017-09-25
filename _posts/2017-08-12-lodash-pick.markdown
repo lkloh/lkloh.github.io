@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Useful Lodash function: Pick"
-date:   2017-08-12 01:57:45 -0700
+date:   2017-08-12
 ---
 
 Given a dictionary like

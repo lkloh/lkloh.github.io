@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Enclosing strings in JavaScript"
-date:   2017-07-23 11:05:37 -0700
+date:   2017-07-23
 ---
 
 In JavaScript, you could use enclose a string in three ways:

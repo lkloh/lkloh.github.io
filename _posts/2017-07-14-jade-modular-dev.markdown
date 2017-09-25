@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Modular Development in Jade"
-date:   2017-07-14 04:42:23 -0700
+date:   2017-07-14
 ---
 
 [Jade](https://webapplog.com/jade/) is a template language,

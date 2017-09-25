@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Describing mocha tests properly"
-date:   2017-08-02 01:57:45 -0700
+date:   2017-08-02
 ---
 
 There's more [here](http://samwize.com/2014/02/08/a-guide-to-mochas-describe-it-and-setup-hooks/) 

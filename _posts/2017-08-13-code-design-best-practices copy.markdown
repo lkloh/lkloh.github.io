@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Code design best practices"
-date:   2017-08-13 01:57:45 -0700
+date:   2017-08-13
 ---
 
 Things that are obviously good to do,

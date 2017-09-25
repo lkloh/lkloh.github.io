@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Generic libraries that check whether a value is truthy are useless"
-date:   2017-08-01 01:57:45 -0700
+date:   2017-08-01
 ---
 
 Python's [operator library](https://docs.python.org/2/library/operator.html)

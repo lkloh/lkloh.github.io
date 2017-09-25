@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Python debugger"
-date:   2017-07-10 01:57:45 -0700
+date:   2017-07-10
 ---
 
 Sure I've got by a lot with just looking at the error output of a Python program,

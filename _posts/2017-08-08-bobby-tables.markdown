@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Little Bobby Tables"
-date:   2017-08-08 01:57:45 -0700
+date:   2017-08-08
 ---
 
 ![Little Bobby Tables](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)

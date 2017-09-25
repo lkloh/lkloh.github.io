@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How often should you rebase your branch with master?"
-date:   2017-09-20 11:05:37 -0700
+date:   2017-09-20
 ---
 
 [According](https://stackoverflow.com/questions/32681850/is-there-a-fast-way-to-rebase-a-long-history-of-commits-to-master-branch) 

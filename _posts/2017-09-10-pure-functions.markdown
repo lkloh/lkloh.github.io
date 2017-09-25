@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pure functions"
-date:   2017-09-10 11:05:37 -0700
+date:   2017-09-10
 ---
 
 [Pure functions](https://www.sitepoint.com/functional-programming-pure-functions/)

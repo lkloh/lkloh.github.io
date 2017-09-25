@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Clean Slate"
-date:   2017-06-29 01:57:45 -0700
+date:   2017-06-29
 categories: wiping your harddrive
 ---
 

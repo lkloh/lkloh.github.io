@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Stopping Spammers"
-date:   2017-09-01 01:57:45 -0700
+date:   2017-09-01
 ---
 
 When you receive lots of mail from a `<xxx@annoying-domain.com>`,

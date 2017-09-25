@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The real cause of climate change"
-date:   2017-09-23 11:46:37 -0700
+date:   2017-09-23
 ---
 
 They don't make them like theY used to... 

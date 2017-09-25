@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Git Squash"
-date:   2017-09-19 11:05:37 -0700
+date:   2017-09-19
 ---
 
 It's probably a lot easier to squash lots of commits together,

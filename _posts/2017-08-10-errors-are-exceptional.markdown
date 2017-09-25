@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Errors are expected"
-date:   2017-08-10 01:57:45 -0700
+date:   2017-08-10
 ---
 
 You should _expect_ things to go wrong.

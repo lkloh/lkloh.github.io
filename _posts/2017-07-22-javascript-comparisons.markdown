@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Javascript: Use === and !=="
-date:   2017-07-22 11:05:37 -0700
+date:   2017-07-22
 ---
 
 Javascript has three ways to 

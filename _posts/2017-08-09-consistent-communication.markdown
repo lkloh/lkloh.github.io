@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Consistency"
-date:   2017-08-09 01:57:45 -0700
+date:   2017-08-09
 ---
 
 Recently I added a new error message as part of a

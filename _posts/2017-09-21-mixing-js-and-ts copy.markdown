@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mixing Javascript and Typescript"
-date:   2017-09-21 11:05:37 -0700
+date:   2017-09-21
 ---
 
 Suppose this is in TypeScript: 

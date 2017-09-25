@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why escape was deprecated in JavaScript."
-date:   2017-09-24 11:46:37 -0700
+date:   2017-09-24
 ---
 
 According to its [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape),

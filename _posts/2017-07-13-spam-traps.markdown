@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spam Traps"
-date:   2017-07-13 01:57:45 -0700
+date:   2017-07-13
 ---
 
 [Spam traps](https://help.campaignmonitor.com/spam-trap-email-addresses) 

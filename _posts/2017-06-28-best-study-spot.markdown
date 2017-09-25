@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The best study spot"
-date:   2017-06-28 01:57:45 -0700
+date:   2017-06-28
 categories: places to work
 ---
 

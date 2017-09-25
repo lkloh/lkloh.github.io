@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Unix Philosophy"
-date:   2017-08-23 11:05:37 -0700
+date:   2017-08-23
 ---
 
 There's a long list [here](https://github.com/timoxley/best-practices)

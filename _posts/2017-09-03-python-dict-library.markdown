@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Accessing dictionary values in Python"
-date:   2017-09-03 10:37:34 -0700
+date:   2017-09-03
 ---
 
 The last post was about dictionaries in Javascript.

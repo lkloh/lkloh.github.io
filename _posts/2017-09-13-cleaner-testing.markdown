@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Cleaner Testing"
-date:   2017-09-13 11:05:37 -0700
+date:   2017-09-13
 ---
 
 When there is a large suite of tests,

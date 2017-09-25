@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Median of a long running stream"
-date:   2017-07-02 01:57:45 -0700
-categories: technical interviews, computer architecture
+date:   2017-07-02
 ---
 
 "What is the best way find the approximate median of a huge stream of numbers,

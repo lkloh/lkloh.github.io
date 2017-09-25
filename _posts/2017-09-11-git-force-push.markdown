@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Git force push forces comments to disappear"
-date:   2017-09-11 11:05:37 -0700
+date:   2017-09-11
 ---
 
 I've used `git --force push` to forcefully push commits to master

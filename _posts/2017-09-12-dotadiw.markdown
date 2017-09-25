@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DOTADIW"
-date:   2017-09-12 11:05:37 -0700
+date:   2017-09-12
 ---
 
 Because the machine representaion of floats is not exact,

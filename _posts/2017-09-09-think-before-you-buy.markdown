@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Think before you buy"
-date:   2017-09-09 11:05:37 -0700
+date:   2017-09-09
 ---
 
 Since moving from Singapore to the United States seven years ago,

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Returning an updated Javascript Dictionary/object"
-date:   2017-08-14 01:57:45 -0700
+date:   2017-08-14
 ---
 
 Given this object:

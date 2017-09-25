@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Get and Post formatting in Javascript"
-date:   2017-07-21 11:05:37 -0700
+date:   2017-07-21
 ---
 
 ## Get

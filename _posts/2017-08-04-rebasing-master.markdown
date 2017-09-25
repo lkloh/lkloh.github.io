@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rebasing with master on Git"
-date:   2017-08-04 01:57:45 -0700
+date:   2017-08-04
 ---
 
 ## No conflicts

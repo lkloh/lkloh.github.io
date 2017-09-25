@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Shorter names in programs"
-date:   2017-09-14 11:05:37 -0700
+date:   2017-09-14
 ---
 
 Magic numbers are not good for maintainance. Clearly
