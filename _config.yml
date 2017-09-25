@@ -24,7 +24,12 @@ github_username: lkloh
 
 markdown: kramdown
 
-plugins_dir: ["jekyll-paginate"]
+
+
+plugins_dir: 
+  - jekyll-paginate
+
+
 paginate: 10
 paginate_path: "/blog/page:num/"
 
@@ -39,6 +44,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
 
  
 

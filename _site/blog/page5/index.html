@@ -10,7 +10,7 @@
   <meta name="description" content="but somehow only just learnt">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/posts/page5/">
+  <link rel="canonical" href="http://localhost:4000/blog/page5/">
   <link rel="alternate" type="application/rss+xml" title="Things I Should Know" href="/feed.xml">
   
   
@@ -80,6 +80,44 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <!-- This loops through the paginated posts -->
+
+  <h1><a href="/2017/07/16/v8.html">V8</a></h1>
+  <p class="author">
+    <span class="date">2017-07-16 04:42:23 -0700</span>
+  </p>
+  <div class="content">
+    <p><a href="https://github.com/v8/v8/wiki">V8</a> is a JavaScript engine developed by Google,
+for the purpose of executing JavaScript quickly.
+That speed is achieve by compiling JavaScript to machine code.
+Other interpreters compile it done to bytecode and interpret it instead (e.g. Rhino).</p>
+
+<p>JavaScript is the most popular language,
+but Python and Ruby are also very widely used.
+<a href="https://stackoverflow.com/questions/5168718/what-blocks-ruby-python-to-get-javascript-v8-speed">Here</a>
+are some reasons why Python/Ruby compilers don’t work as fast as V8. The summary is that:</p>
+<ul>
+  <li>JavaScript is meant to be run in real time while a 
+  human being is impatiently waiting to see the results live. 
+  Python/Ruby is not.</li>
+  <li>Google is paying people with decades of experience very well to develop V8,
+  while Python/Ruby is mostly developed by the open source community.</li>
+  <li>V8 developers’ only goal is to run JavaScript quickly, while the Python/Ruby developers’
+  also develop other libraries and features.</li>
+</ul>
+
+<p>One gotcha with V8 is that <code class="highlighter-rouge">delete</code> works slowly,
+as described in more detail <a href="https://www.nearform.com/blog/node-js-is-getting-a-new-v8-with-turbofan/">here</a>.
+It’s because V8 makes properly objects compile quickly 
+by depending on knowing what attributes they have.
+If an attribute is added/removed, the shape changes,
+so V8 can’t used it to execute quickly.
+Instead, it has to rely on a slower hash table lookup.</p>
+
+<p>So for fast performance on V8, instead of deleting an attribute, 
+set it to <code class="highlighter-rouge">undefined</code>.</p>
+
+
+  </div>
 
   <h1><a href="/2017/07/15/es6-speed.html">ES6 Feature Performance</a></h1>
   <p class="author">
@@ -361,115 +399,15 @@ even if scoping ensures it won’t cause problems.</p>
 
   </div>
 
-  <h1><a href="/2017/07/03/toeplitz-matrix.html">Detecting a toepliz matrix</a></h1>
-  <p class="author">
-    <span class="date">2017-07-03 01:57:45 -0700</span>
-  </p>
-  <div class="content">
-    <p>Two separate interviewers tried to give me this same question.
-I answered it correctly at the phone screen, 
-and told the interviewer at the onsite that I had already seen this question.</p>
-
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Find</span> <span class="n">out</span> <span class="n">whether</span> <span class="n">a</span> <span class="n">matrix</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">Toeplitz</span> <span class="n">Matrix</span><span class="o">.</span>
-</code></pre>
-</div>
-
-<p>A <a href="https://en.wikipedia.org/wiki/Toeplitz_matrix">Toeplitz matrix</a> 
-has the same integers on all of its diagonals.
-It can be of any dimension, not necessarily square.
-For example,</p>
-
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
-<span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span>
-<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
-</code></pre>
-</div>
-
-<p>is a Toeplitz matrix, but</p>
-
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
-<span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span>
-<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
-</code></pre>
-</div>
-
-<p>is not a Toeplitz matrix.</p>
-
-<p>Let’s gain an insight by looking at the example of a Toeplitz matrix above.
-Notice that when displacing the rows, we get a pattern:</p>
-
-<div class="language-python highlighter-rouge"><pre class="highlight"><code>      <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
-   <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span>
-<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
-</code></pre>
-</div>
-
-<p>It seems that for any row <code class="highlighter-rouge">i</code> and row <code class="highlighter-rouge">i+1</code> in a Toeplitz matrix with <code class="highlighter-rouge">n</code> rows and <code class="highlighter-rouge">m</code> columns
-shifting row <code class="highlighter-rouge">i</code> by one position would result in
-elements <code class="highlighter-rouge">0, 1, ..., m-2</code> of row <code class="highlighter-rouge">i</code> being the same
-as elements <code class="highlighter-rouge">1, ..., m-1</code> of row <code class="highlighter-rouge">i+1</code>.</p>
-
-<p>However, in the non-Toeplitz matrix, this is not the case.</p>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code>      <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
-   <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span>
-<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
-</code></pre>
-</div>
-
-<p>Thus we want something like:</p>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">is_toeplitz_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
-  <span class="p">[</span><span class="n">nrows</span><span class="p">,</span> <span class="n">ncols</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span>
-  <span class="k">if</span> <span class="n">nrows</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">ncols</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="k">return</span> <span class="bp">True</span>
-  <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">centers_align</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="p">):</span>
-      <span class="k">return</span> <span class="bp">False</span>
-    <span class="k">return</span> <span class="bp">True</span>
-</code></pre>
-</div>
-
-<p>where <code class="highlighter-rouge">centers_align</code> checks whether two adjacent rows could be rows of a Toeplitz matrix.</p>
-
-<p>To check if two adjacent rows are rows of a Toeplitz matrix:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">centers_align</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">next_row</span><span class="p">,</span> <span class="n">ncols</span><span class="p">):</span>
-  <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="nf">array_equal</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">0</span><span class="p">:(</span><span class="n">ncols</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">matrix</span><span class="p">[</span><span class="n">next_row</span><span class="p">,</span> <span class="mi">1</span><span class="ss">:ncols</span><span class="p">])</span></code></pre></figure>
-
-<p>Putting them together, we get the solution.
-We have to examine almost all the numbers in each row, so this is an <code class="highlighter-rouge">O(nm)</code> solution in time.
-Depending on implementation, the space could be constant if you
-passed the rows of the matrix to <code class="highlighter-rouge">centers_align</code> by reference.</p>
-
-<p>See the full solution in python with test cases 
-<a href="https://github.com/lkloh/technical-interview-questions/blob/master/detecting_toepitz_matrix.py">here</a>.</p>
-
-<p>To scale the solution when given a very large matrix, one way is to
-break up the matrix into several contiguous blocks,
-then check each block on a different machine.
-If any of the blocks was not a Toeplitz, then the matrix is not a Toeplitz matrix.
-If each block was also a Toeplitz matrix,
-then we could check if putting them together would make a toeplitz matrix. 
-then merge them together.
-Assuming we broke the matrix into <code class="highlighter-rouge">b</code> blocks,
-that is <code class="highlighter-rouge">n / b</code> matrices to check on each machine,
-so <code class="highlighter-rouge">O(nm / b)</code> time to check the blocks separately.
-To merge them, we have to merge <code class="highlighter-rouge">n / b</code> blocks,
-so its <code class="highlighter-rouge">O(nm / b)</code> time to merge.
-So you could check this in <code class="highlighter-rouge">O(nm / b)</code> time
-and get time savings depending on what <code class="highlighter-rouge">b</code> is.</p>
-
-
-  </div>
-
 
 <!-- Pagination links -->
 <div class="pagination">
   
-    <a href="/posts/page4/" class="previous">Previous</a>
+    <a href="/blog/page4/" class="previous">Previous</a>
   
   <span class="page_number ">Page: 5 of 6</span>
   
-    <a href="/posts/page6/" class="next">Next</a>
+    <a href="/blog/page6/" class="next">Next</a>
   
 </div>
       </div>

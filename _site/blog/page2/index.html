@@ -10,7 +10,7 @@
   <meta name="description" content="but somehow only just learnt">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/posts/page2/">
+  <link rel="canonical" href="http://localhost:4000/blog/page2/">
   <link rel="alternate" type="application/rss+xml" title="Things I Should Know" href="/feed.xml">
   
   
@@ -80,6 +80,21 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <!-- This loops through the paginated posts -->
+
+  <h1><a href="/2017/09/11/git-force-push.html">Git force push forces comments to disappear</a></h1>
+  <p class="author">
+    <span class="date">2017-09-11 11:05:37 -0700</span>
+  </p>
+  <div class="content">
+    <p>I’ve used <code class="highlighter-rouge">git --force push</code> to forcefully push commits to master
+after rebasing with other people’s changes.
+Unfortunately this tends to make earlier comments disappear.
+There are certainly <a href="https://stackoverflow.com/questions/3973994/how-can-i-recover-from-an-erronous-git-push-f-origin-master">ways to recover it</a>,
+but its really troublesome to have to dig into it.
+I think I’ll stick with saving comments I may want to go back and take a look by
+taking a screenshot instead.</p>
+
+  </div>
 
   <h1><a href="/2017/09/10/pure-functions.html">Pure functions</a></h1>
   <p class="author">
@@ -613,30 +628,6 @@ I would used <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Re
 
   </div>
 
-  <h1><a href="/2017/08/13/code-design-best-practices-copy.html">Code design best practices</a></h1>
-  <p class="author">
-    <span class="date">2017-08-13 01:57:45 -0700</span>
-  </p>
-  <div class="content">
-    <p>Things that are obviously good to do,
-but harder to implement in practice.</p>
-
-<ul>
-  <li>If anything is used twice, see if there’s a way to refactor it into a common function.
-  That will make it easier to avoid tweaking things if the code diverges.</li>
-  <li>Functions that are called multiple times should try to be pure functions,
-  those used only once can then easily use those pure functions.</li>
-  <li>If something is potentially reusable in more than once place,
-  even if you are only using it once now,
-  see if you can pull it out to a more accessible location
-  where it is more reusable.</li>
-  <li>If you need something else someone is working on that has not been merged it,
-  you can always copy their code if its not too long,
-  so you don’t get blocked on it.</li>
-</ul>
-
-  </div>
-
 
 <!-- Pagination links -->
 <div class="pagination">
@@ -645,7 +636,7 @@ but harder to implement in practice.</p>
   
   <span class="page_number ">Page: 2 of 6</span>
   
-    <a href="/posts/page3/" class="next">Next</a>
+    <a href="/blog/page3/" class="next">Next</a>
   
 </div>
       </div>

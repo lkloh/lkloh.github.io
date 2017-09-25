@@ -10,7 +10,7 @@
   <meta name="description" content="but somehow only just learnt">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/posts/page4/">
+  <link rel="canonical" href="http://localhost:4000/blog/page4/">
   <link rel="alternate" type="application/rss+xml" title="Things I Should Know" href="/feed.xml">
   
   
@@ -80,6 +80,50 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <!-- This loops through the paginated posts -->
+
+  <h1><a href="/2017/08/03/mocha-testing-interfaces.html">Different ways to write unit tests in Mocha</a></h1>
+  <p class="author">
+    <span class="date">2017-08-03 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>Continuing from the <a href="https://lkloh.github.io/2017/08/02/unit-testing-mocha.html">previous post</a> on unit testing in Mocha:
+there are several types of <a href="https://mochajs.org/#interfaces">Mocha interfaces</a>
+to chose from.</p>
+
+<h2 id="bdd-behavior-driven-development">BDD (Behavior-driven development)</h2>
+
+<p>Apparently this is the recommended one,
+because it lets you specify the desired behavior
+and not implementation details,
+as there may be many different solutions to arrive at the same desired behavior.
+Here’s the previous example on unit testing a function to determine if
+a given year is a leap year in 
+<a href="https://github.com/lkloh/javascriptPlayground/blob/master/mochaTestExample_aug2_2017/test_bdd.js">BDD style</a>.</p>
+
+<p>Oh and since <code class="highlighter-rouge">describe</code> and <code class="highlighter-rouge">context</code> are aliases for each other,
+if you use several layers of nesting,
+it is considered good style to use <code class="highlighter-rouge">describe</code> for the outermost layer
+and <code class="highlighter-rouge">context</code> for the inner one to seperate things more clearly.
+Contrast <a href="https://github.com/lkloh/javascriptPlayground/blob/master/mochaTestExample_aug2_2017/test_good.js">using <code class="highlighter-rouge">describe</code> for everything</a> that is not a test,
+and <a href="https://github.com/lkloh/javascriptPlayground/blob/master/mochaTestExample_aug2_2017/test_bdd.js">using both keywords</a> in nesting different sets of tests.</p>
+
+<h2 id="tdd-test-driven-development">TDD (Test-driven development)</h2>
+
+<p>General idea is to write the tests for expected behavior, 
+then write the function that makes the tests pass.
+Supposedly not as good as BDD because you
+may be tempted to just get the tests to pass and be happy.
+Doesn’t force you to optimize for conciseness and design
+as much as BDD does.</p>
+
+<h2 id="others">Others</h2>
+
+<p>Haven’t really used the others yet, but you can read about them 
+<a href="https://mochajs.org/#exports">here</a>.
+Seems like they would be fine for either BDD or TDD,
+you can chose one or another based on syntax/compilation preferences.</p>
+
+  </div>
 
   <h1><a href="/2017/08/02/unit-testing-mocha.html">Describing mocha tests properly</a></h1>
   <p class="author">
@@ -540,53 +584,15 @@ and thus you should only ship code when <a href="https://stackoverflow.com/quest
 
   </div>
 
-  <h1><a href="/2017/07/16/v8.html">V8</a></h1>
-  <p class="author">
-    <span class="date">2017-07-16 04:42:23 -0700</span>
-  </p>
-  <div class="content">
-    <p><a href="https://github.com/v8/v8/wiki">V8</a> is a JavaScript engine developed by Google,
-for the purpose of executing JavaScript quickly.
-That speed is achieve by compiling JavaScript to machine code.
-Other interpreters compile it done to bytecode and interpret it instead (e.g. Rhino).</p>
-
-<p>JavaScript is the most popular language,
-but Python and Ruby are also very widely used.
-<a href="https://stackoverflow.com/questions/5168718/what-blocks-ruby-python-to-get-javascript-v8-speed">Here</a>
-are some reasons why Python/Ruby compilers don’t work as fast as V8. The summary is that:</p>
-<ul>
-  <li>JavaScript is meant to be run in real time while a 
-  human being is impatiently waiting to see the results live. 
-  Python/Ruby is not.</li>
-  <li>Google is paying people with decades of experience very well to develop V8,
-  while Python/Ruby is mostly developed by the open source community.</li>
-  <li>V8 developers’ only goal is to run JavaScript quickly, while the Python/Ruby developers’
-  also develop other libraries and features.</li>
-</ul>
-
-<p>One gotcha with V8 is that <code class="highlighter-rouge">delete</code> works slowly,
-as described in more detail <a href="https://www.nearform.com/blog/node-js-is-getting-a-new-v8-with-turbofan/">here</a>.
-It’s because V8 makes properly objects compile quickly 
-by depending on knowing what attributes they have.
-If an attribute is added/removed, the shape changes,
-so V8 can’t used it to execute quickly.
-Instead, it has to rely on a slower hash table lookup.</p>
-
-<p>So for fast performance on V8, instead of deleting an attribute, 
-set it to <code class="highlighter-rouge">undefined</code>.</p>
-
-
-  </div>
-
 
 <!-- Pagination links -->
 <div class="pagination">
   
-    <a href="/posts/page3/" class="previous">Previous</a>
+    <a href="/blog/page3/" class="previous">Previous</a>
   
   <span class="page_number ">Page: 4 of 6</span>
   
-    <a href="/posts/page5/" class="next">Next</a>
+    <a href="/blog/page5/" class="next">Next</a>
   
 </div>
       </div>
