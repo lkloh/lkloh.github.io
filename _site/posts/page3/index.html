@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Things I Should Know</title>
+  <meta name="description" content="but somehow only just learnt">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/posts/page3/">
+  <link rel="alternate" type="application/rss+xml" title="Things I Should Know" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Things I Should Know</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!-- This loops through the paginated posts -->
+
+  <h1><a href="/2017/08/12/lodash-pick.html">Useful Lodash function: Pick</a></h1>
+  <p class="author">
+    <span class="date">2017-08-12 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>Given a dictionary like</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="na">firstName</span><span class="p">:</span> <span class="err">`</span><span class="nx">John</span><span class="err">`</span><span class="p">,</span>
+	<span class="na">lastName</span><span class="p">:</span> <span class="err">`</span><span class="nx">Doe</span><span class="err">`</span><span class="p">,</span>
+	<span class="na">gender</span><span class="p">:</span> <span class="err">`</span><span class="nx">Male</span><span class="err">`</span><span class="p">,</span>
+	<span class="na">college</span><span class="p">:</span> <span class="err">`</span><span class="nx">Harvard</span><span class="err">`</span><span class="p">,</span>
+	<span class="na">citizenship</span><span class="p">:</span> <span class="err">`</span><span class="nx">United</span> <span class="nx">States</span><span class="err">`</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+
+<p>If you wanted a subset of the object’s keys, say <code class="highlighter-rouge">firstName</code>, <code class="highlighter-rouge">lastName</code>, and <code class="highlighter-rouge">college</code>, 
+you could do:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getSubset</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="p">{</span>
+		<span class="na">firstName</span><span class="p">:</span> <span class="nx">person</span><span class="p">.</span><span class="nx">firstName</span><span class="p">,</span> 
+		<span class="na">lastName</span><span class="p">:</span> <span class="nx">person</span><span class="p">.</span><span class="nx">lastName</span><span class="p">,</span> 
+		<span class="na">college</span><span class="p">:</span> <span class="nx">person</span><span class="p">.</span><span class="nx">college</span><span class="p">,</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Or you could refactor with the <code class="highlighter-rouge">pick</code> function from 
+<a href="https://lodash.com/docs/4.17.4#pick">lodash</a> to be</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getSubset</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">pick</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span> <span class="p">[</span><span class="err">`</span><span class="nx">firstName</span><span class="err">`</span><span class="p">,</span> <span class="err">`</span><span class="nx">lastName</span><span class="err">`</span><span class="p">,</span> <span class="err">`</span><span class="nx">college</span><span class="err">`</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+
+  </div>
+
+  <h1><a href="/2017/08/11/catching-errors.html">Catching errors</a></h1>
+  <p class="author">
+    <span class="date">2017-08-11 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>What’s wrong with this?</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getResponse</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">obtainNetworkResponse</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span>
+		<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+		<span class="p">})</span>
+		<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+			<span class="k">this</span><span class="p">.</span><span class="nx">notify</span><span class="p">(</span><span class="err">`</span><span class="nx">something</span> <span class="nx">went</span> <span class="nx">wrong</span><span class="err">`</span><span class="p">);</span>
+			<span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+		<span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>the <code class="highlighter-rouge">catch</code> method is called when the network request fails,
+and an error gets throw.
+That gets handled in the <code class="highlighter-rouge">catch</code> block.
+So there’s no need to throw an error again within that block.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getResponse</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">obtainNetworkResponse</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span>
+		<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+		<span class="p">})</span>
+		<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+			<span class="k">this</span><span class="p">.</span><span class="nx">notify</span><span class="p">(</span><span class="err">`</span><span class="nx">something</span> <span class="nx">went</span> <span class="nx">wrong</span><span class="err">`</span><span class="p">);</span>
+		<span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<p>is sufficient.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/08/10/errors-are-exceptional.html">Errors are expected</a></h1>
+  <p class="author">
+    <span class="date">2017-08-10 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>You should <em>expect</em> things to go wrong.</p>
+
+<p>Thus, you only throw javascript errors if things are really, exceptionally wrong.</p>
+
+<p>More is outlined <a href="https://martinfowler.com/articles/replaceThrowWithNotification.html">here</a>,
+but the summary is:</p>
+
+<p>When doing something like</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">validate_phone_number</span><span class="p">(</span><span class="n">phone</span><span class="p">):</span>
+	<span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">r'^(</span><span class="err">\</span><span class="s">d{3})-(</span><span class="err">\</span><span class="s">d{3})-(</span><span class="err">\</span><span class="s">d{4})$'</span><span class="p">)</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">phone</span><span class="p">):</span>
+		<span class="k">return</span> <span class="bp">True</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="s">'Wrongly formatted phone number'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>We don’t want to throw an exception here,
+because when taking in user input, 
+it should be expected to some users will provide invalid input.</p>
+
+<p>Thus something like</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">validate_phone_number</span><span class="p">(</span><span class="n">phone</span><span class="p">):</span>
+	<span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">r'^(</span><span class="err">\</span><span class="s">d{3})-(</span><span class="err">\</span><span class="s">d{3})-(</span><span class="err">\</span><span class="s">d{4})$'</span><span class="p">)</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">phone</span><span class="p">):</span>
+		<span class="k">return</span> <span class="bp">True</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">notify_error</span><span class="p">(</span><span class="sb">`Invalid phone number`</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>would be what you want to do.</p>
+
+<p>You should only raise an exception when something happens that is truly unexpected,
+such as when <code class="highlighter-rouge">/usr/bin</code> is not present,
+since it is expected that a unix system should have that directory.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/08/09/consistent-communication.html">Consistency</a></h1>
+  <p class="author">
+    <span class="date">2017-08-09 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>Recently I added a new error message as part of a
+series of messages on a website.
+It used active voice while the rest used passive voice.
+I really should have made it passive voice as well,
+just to be consistent with the rest of the user-facing communications,
+even though the passive voice is considered bad.
+Or checked with someone else about changing everything to active voice.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/08/08/bobby-tables.html">Little Bobby Tables</a></h1>
+  <p class="author">
+    <span class="date">2017-08-08 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p><img src="https://imgs.xkcd.com/comics/exploits_of_a_mom.png" alt="Little Bobby Tables" /></p>
+
+<p><code class="highlighter-rouge">MySQLCursor.execute()</code> does the sanitization for you, mostly.</p>
+
+<p>If you’ve got a query to run, you may want to do</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">query</span> <span class="o">=</span> <span class="s">'''
+	SELECT id, first_name, last_name, birthday
+	FROM my_table
+	WHERE age &lt; </span><span class="si">%</span><span class="s">d
+'''</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">insert_stmt</span> <span class="o">%</span> <span class="mi">42</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>since <code class="highlighter-rouge">42</code> is a number, not a string.
+And there’s only one variable, so why not just stick it into the query string?</p>
+
+<p>But you should instead do</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">query</span> <span class="o">=</span> <span class="s">'''
+	SELECT id, first_name, last_name, birthday
+	FROM my_table
+	WHERE age &lt; </span><span class="si">%</span><span class="s">s"
+'''</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">insert_stmt</span><span class="p">,</span> <span class="p">(</span><span class="mi">42</span><span class="p">))</span>
+</code></pre>
+</div>
+<p>to help avoid similar scenarios.</p>
+
+<p>And to make it easier to change to another database,
+since the interfaces for various databases mainly follow the
+<a href="https://www.python.org/dev/peps/pep-0249/">Python standard database</a>.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/08/07/stopping-time.html">Stopping Time</a></h1>
+  <p class="author">
+    <span class="date">2017-08-07 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>Sort of.</p>
+
+<p>If there’s a time-dependent Python function you want to test, you don’t really want to write</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>from datetime import datetime, timedelta
+import time
+
+def test_request(self):
+	time_before = datetime.now()
+	time.sleep(5)
+	time_request_finished = make_request(self.params)
+	assert (time_after - time_before).total_seconds() &lt;= 5
+</code></pre>
+</div>
+
+<p>Then you’ll have to wait a long time for the test to finish running.</p>
+
+<p>Instead, with the <a href="https://github.com/spulec/freezegun">freezegun</a> library,
+you could instead run the test immediately by writing</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>from datetime import datetime, timedelta
+import time
+
+def test_delivered_cookies_within_20_min(self):
+	time_before = datetime.now()
+	advanced_time = time_before + timedelta(seconds=5)
+	with freeze_time(initial_datetime) as frozen_datetime:
+		frozen_datetime.move_to(advanced_time)
+		time_request_finished = make_request(self.params)
+		assert (time_request_finished - time_before).total_seconds() &lt;= 5
+</code></pre>
+</div>
+
+<p>Now your test doesn’t actually need to take 5 seconds (or more) to run.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/08/06/look-at-lodash-first.html">Look at Lodash first</a></h1>
+  <p class="author">
+    <span class="date">2017-08-06 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>Once I had to refactor a JavaScript function
+some people were using.
+Someone else had already wrote it,
+and we wanted the code to do something like:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>valIsDefined(``) = True;
+valIsDefined(0) = True;
+valIsDefined(42) = True;
+valIsDefined(NaN) = False;
+valIsDefined(null) = False;
+valIsDefined(undefined) = False;
+</code></pre>
+</div>
+
+<p>Problem was, the code didn’t really need to be writte in the first place.
+What should probably have been done was to go look for something like that in 
+<a href="https://lodash.com/">Lodash</a>,
+which is a well-known JavaScript library that implements
+lots of commonly used functions,
+such as checking if an object is defined,
+or whether a number falls within a certain range, etc.</p>
+
+<p>We could likely have used 
+<a href="https://www.npmjs.com/package/lodash.isundefined">this</a>
+with a little negation,
+instead of going through the trouble of having
+someone(s) write a brand new function,
+and another one to refactor it.</p>
+
+<p>Since JavaScript is so popular,
+its unsurprising that some multilingual people decided to translate it to 
+<a href="https://github.com/dgilland/pydash">Python</a> as well.
+There’s probably an analogy for most of the popular languages;
+look it up before writing your own function to perform a popular action.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/08/05/killing-ports.html">Killing Ports</a></h1>
+  <p class="author">
+    <span class="date">2017-08-05 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>Or when you get an <code class="highlighter-rouge">EADDRINUSE</code> 
+because you didn’t shut down your server properly,
+to find out what the processes still running on that port are, do</p>
+
+<p><code class="highlighter-rouge">lsof -i :&lt;port-num&gt;</code>.</p>
+
+<p>This will print all of the processes and their PIDs, so you can do</p>
+
+<p><code class="highlighter-rouge">kill PID</code> to kill a particular process.</p>
+
+<p>If there are lots of processes on that port and you want to kill them all, do</p>
+
+<p><code class="highlighter-rouge">kill $(lsof -t -i:&lt;port-num&gt;)</code>.</p>
+
+<p>Thanks <a href="https://stackoverflow.com/questions/11583562/how-to-kill-a-process-running-on-particular-port-in-linux">Stack</a> 
+<a href="https://stackoverflow.com/questions/3855127/find-and-kill-process-locking-port-3000-on-mac">Overflow</a>!</p>
+
+  </div>
+
+  <h1><a href="/2017/08/04/rebasing-master.html">Rebasing with master on Git</a></h1>
+  <p class="author">
+    <span class="date">2017-08-04 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <h2 id="no-conflicts">No conflicts</h2>
+
+<p>Lets call your branch <code class="highlighter-rouge">dev</code>.</p>
+
+<p><code class="highlighter-rouge">git checkout dev</code> to go to your branch.</p>
+
+<p><code class="highlighter-rouge">git fetch</code> to fetch the updates from master.</p>
+
+<p><code class="highlighter-rouge">git rebase origin master</code> to replay your changes on top of what other people have done and 
+committed to master.</p>
+
+<h2 id="with-conflicts">With conflicts</h2>
+
+<p>After running the last command, you will get an error message saying you can’t merge.
+Fix ALL the conflicts on the files that git complained about,
+and do <code class="highlighter-rouge">git add &lt;path-to-file-with-conflict&gt;</code> on each file that had conflicts 
+(that you just fixed).</p>
+
+<p>Once you have fixed ALL the conflicts in the code base, now you can do
+<code class="highlighter-rouge">git commit -m 'Fixed merge conflict'</code>.
+Do not commit before fixing everything.
+Afterwards, you should get a message saying that all conflicts are resolved.</p>
+
+<p>And now do <code class="highlighter-rouge">git push origin dev</code> to get your updated branch reviewed and merged.</p>
+
+<h2 id="pitfalls">Pitfalls</h2>
+
+<p>Given a workflow that looks like this:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>         E --- F --- G --- H --- I --- J --- K --- L --- M --- N --- P (branchA)
+        /                 /
+       /                 /    
+master ---------------- D 
+       \               /
+        \             /
+         A --- B --- C  (branchB)
+</code></pre>
+</div>
+<p>If the merge conflict occured at point D due to branchB’s merged changes,
+and you later want to rebase branchA with master,
+you’ll have to merge the conflicts for ALL the comments until the divergence point D
+in branchA.</p>
+
+<p>This means you may have a never ending round of rebasing commits
+if you made lots of new changes since the divergence point.</p>
+
+<p>Its ok to commit often, so the workarounds are:</p>
+
+<ol>
+  <li>If there are not too many conflicts: update the conflicts in branchA manually.
+ This is easiest to do.</li>
+  <li>Squash all the commits in branchA, then you only need to rebase once.</li>
+</ol>
+
+
+  </div>
+
+  <h1><a href="/2017/08/03/mocha-testing-interfaces.html">Different ways to write unit tests in Mocha</a></h1>
+  <p class="author">
+    <span class="date">2017-08-03 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>Continuing from the <a href="https://lkloh.github.io/2017/08/02/unit-testing-mocha.html">previous post</a> on unit testing in Mocha:
+there are several types of <a href="https://mochajs.org/#interfaces">Mocha interfaces</a>
+to chose from.</p>
+
+<h2 id="bdd-behavior-driven-development">BDD (Behavior-driven development)</h2>
+
+<p>Apparently this is the recommended one,
+because it lets you specify the desired behavior
+and not implementation details,
+as there may be many different solutions to arrive at the same desired behavior.
+Here’s the previous example on unit testing a function to determine if
+a given year is a leap year in 
+<a href="https://github.com/lkloh/javascriptPlayground/blob/master/mochaTestExample_aug2_2017/test_bdd.js">BDD style</a>.</p>
+
+<p>Oh and since <code class="highlighter-rouge">describe</code> and <code class="highlighter-rouge">context</code> are aliases for each other,
+if you use several layers of nesting,
+it is considered good style to use <code class="highlighter-rouge">describe</code> for the outermost layer
+and <code class="highlighter-rouge">context</code> for the inner one to seperate things more clearly.
+Contrast <a href="https://github.com/lkloh/javascriptPlayground/blob/master/mochaTestExample_aug2_2017/test_good.js">using <code class="highlighter-rouge">describe</code> for everything</a> that is not a test,
+and <a href="https://github.com/lkloh/javascriptPlayground/blob/master/mochaTestExample_aug2_2017/test_bdd.js">using both keywords</a> in nesting different sets of tests.</p>
+
+<h2 id="tdd-test-driven-development">TDD (Test-driven development)</h2>
+
+<p>General idea is to write the tests for expected behavior, 
+then write the function that makes the tests pass.
+Supposedly not as good as BDD because you
+may be tempted to just get the tests to pass and be happy.
+Doesn’t force you to optimize for conciseness and design
+as much as BDD does.</p>
+
+<h2 id="others">Others</h2>
+
+<p>Haven’t really used the others yet, but you can read about them 
+<a href="https://mochajs.org/#exports">here</a>.
+Seems like they would be fine for either BDD or TDD,
+you can chose one or another based on syntax/compilation preferences.</p>
+
+  </div>
+
+
+<!-- Pagination links -->
+<div class="pagination">
+  
+    <a href="/posts/page2/" class="previous">Previous</a>
+  
+  <span class="page_number ">Page: 3 of 6</span>
+  
+    <a href="/posts/page4/" class="next">Next</a>
+  
+</div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Things I Should Know</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              LK Loh
+            
+            </li>
+            
+            <li><a href="mailto:lkloh2410@gmail.com">lkloh2410@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/lkloh"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">lkloh</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/lkloh1024"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">lkloh1024</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>but somehow only just learnt</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

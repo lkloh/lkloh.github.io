@@ -24,9 +24,9 @@ github_username: lkloh
 
 markdown: kramdown
 
-plugins: jekyll-paginate
+plugins_dir: ["jekyll-paginate"]
 paginate: 10
-paginate_path: "/_layouts/page:num/"
+paginate_path: "/posts/page:num/"
 
 kramdown:
   input: GFM
@@ -34,6 +34,8 @@ kramdown:
 
 gems:
   - jekyll-feed
+  - jekyll-paginate
+
 exclude:
   - Gemfile
   - Gemfile.lock

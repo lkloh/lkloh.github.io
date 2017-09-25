@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Things I Should Know</title>
+  <meta name="description" content="but somehow only just learnt">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/posts/page2/">
+  <link rel="alternate" type="application/rss+xml" title="Things I Should Know" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Things I Should Know</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!-- This loops through the paginated posts -->
+
+  <h1><a href="/2017/09/10/pure-functions.html">Pure functions</a></h1>
+  <p class="author">
+    <span class="date">2017-09-10 11:05:37 -0700</span>
+  </p>
+  <div class="content">
+    <p><a href="https://www.sitepoint.com/functional-programming-pure-functions/">Pure functions</a>
+have a return value determined only by its input values,
+and not other states.</p>
+
+<p>For example:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">capitalize_dict__pure</span><span class="p">(</span><span class="n">dict_of_strings</span><span class="p">):</span>
+	<span class="k">return</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">val</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">dict_of_strings</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s">'CEO'</span> <span class="k">else</span> <span class="n">val</span><span class="p">}</span>
+</code></pre>
+</div>
+<p>is a pure function as the return value depends only on the dictionary passed in.</p>
+
+<p>But</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">capitalize_dict__impure</span><span class="p">(</span><span class="n">dict_to_modify</span><span class="p">):</span>
+	<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dict_to_modify</span><span class="p">:</span>
+		<span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s">'CEO'</span><span class="p">:</span>
+			<span class="n">dict_to_modify</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+</code></pre>
+</div>
+<p>modifies one of the return value <code class="highlighter-rouge">dict_to_modify</code>,
+and thus changes some data outside the function,
+so is not pure.</p>
+
+<p>It is good practice to use pure functions where possible,
+as it is easier to test and maintain them.
+One does not have to worry about side effects.</p>
+
+<p>It is obvious how to test the first function:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_empty_dict_returns_empty</span><span class="p">():</span>
+	<span class="k">assert</span> <span class="n">capitalize_dict__pure</span><span class="p">({})</span> <span class="o">==</span> <span class="p">{}</span>
+
+<span class="k">def</span> <span class="nf">test_ceo_is_not_changed</span><span class="p">():</span>
+	<span class="n">company_people</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s">'CEO'</span><span class="p">:</span> <span class="s">'alice'</span><span class="p">,</span>
+		<span class="s">'COO'</span><span class="p">:</span> <span class="s">'bob'</span><span class="p">,</span>
+		<span class="s">'Manager'</span><span class="p">:</span> <span class="s">'charlie'</span>
+	<span class="p">}</span>
+	<span class="k">assert</span> <span class="n">capitalize_dict__pure</span><span class="p">(</span><span class="n">company_people</span><span class="p">)</span> <span class="o">!=</span> <span class="n">company_people</span>
+	<span class="n">expected_company_people</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s">'CEO'</span><span class="p">:</span> <span class="s">'alice'</span><span class="p">,</span> 
+		<span class="s">'COO'</span><span class="p">:</span> <span class="s">'Bob'</span><span class="p">,</span>
+		<span class="s">'Manager'</span><span class="p">:</span> <span class="s">'Charlie'</span>
+	<span class="p">}</span>
+	<span class="k">assert</span> <span class="n">capitalize_dict__pure</span><span class="p">(</span><span class="n">company_people</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_company_people</span>
+</code></pre>
+</div>
+
+<p>But the second function could exhibit different behavior depending on the functions that call it.
+For example, if we have this function that we want to test instead, because it is hard
+to test <code class="highlighter-rouge">capitalize_dict__impure</code> when it could change,
+we may instead test the functions that call it:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_ceo_name</span><span class="p">(</span><span class="n">company_people</span><span class="p">):</span>
+	<span class="n">capitalize_dict__impure</span><span class="p">(</span><span class="n">dict_to_modify</span><span class="p">)</span>
+	<span class="n">company_people</span><span class="p">[</span><span class="s">'CEO'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'Alison'</span>
+	<span class="k">return</span> <span class="n">company_people</span><span class="p">[</span><span class="s">'CEO'</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_ceo_name_formatted</span><span class="p">(</span><span class="n">company_people</span><span class="p">):</span>
+	<span class="k">return</span> <span class="n">capitalize_dict__impure</span><span class="p">(</span><span class="n">company_people</span><span class="p">)[</span><span class="s">'CEO'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Then we need separate tests for both the parent functions of <code class="highlighter-rouge">capitalize_dict__impure</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_ceo_name</span><span class="p">():</span>
+	<span class="n">company_people</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s">'CEO'</span><span class="p">:</span> <span class="s">'alice'</span><span class="p">,</span>
+		<span class="s">'COO'</span><span class="p">:</span> <span class="s">'bob'</span><span class="p">,</span>
+		<span class="s">'Manager'</span><span class="p">:</span> <span class="s">'charlie'</span>
+	<span class="p">}</span>
+	<span class="k">assert</span> <span class="n">get_ceo_name</span><span class="p">(</span><span class="n">company_people</span><span class="p">)</span> <span class="o">==</span> <span class="s">'Alice'</span> <span class="o">//</span> <span class="n">fails</span>
+
+<span class="k">def</span> <span class="nf">get_ceo_name_formatted</span><span class="p">():</span>
+	<span class="n">company_people</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s">'CEO'</span><span class="p">:</span> <span class="s">'alice'</span><span class="p">,</span>
+		<span class="s">'COO'</span><span class="p">:</span> <span class="s">'bob'</span><span class="p">,</span>
+		<span class="s">'Manager'</span><span class="p">:</span> <span class="s">'charlie'</span>
+	<span class="p">}</span>
+	<span class="k">assert</span> <span class="n">get_ceo_name</span><span class="p">(</span><span class="n">company_people</span><span class="p">)</span> <span class="o">==</span> <span class="s">'Alice'</span> <span class="o">//</span> <span class="n">correct</span>
+</code></pre>
+</div>
+
+<p>And it is easier to get unexpected behavior that requires
+more digging to fix.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/09/09/think-before-you-buy.html">Think before you buy</a></h1>
+  <p class="author">
+    <span class="date">2017-09-09 11:05:37 -0700</span>
+  </p>
+  <div class="content">
+    <p>Since moving from Singapore to the United States seven years ago,
+I’ve had to move around a lot,
+mostly on my own with no help.</p>
+
+<p>The biggest thing moving around has taught me,
+is to only buy something you’ll definitely use repeatedly, starting this week.
+Not next month, not next year, not next season,
+not when you lose weight or gain weight. Right now.
+Anything that you won’t use right now will probably never get used,
+and get thrown out several months or years from now.</p>
+
+<p>I learnt that the hard way.
+My parents came with me to set me up for freshman year of college,
+and of course they wanted to buy everything they thought I might need.
+We came over their three huge bags, and bought even more stuff
+that my mother insisted was useful.
+Over several years of occasional visits, my parents helped me acquire:
+Hair dryer, ironing board, iron , printer, 
+clothes hangers (thrown away after I decided to only buy wrinkle-free clothes),
+simple black high heel shoes 
+(worn them about 5 times in 7 years), 
+several pairs of jeans 
+(thrown away because they were too tight after gaining the Freshman Fifteen),
+dress shirt and pants 
+(thrown away because they were too loose after losing the Freshman Fifteen), 
+extra bottles of shampoo so I wouldn’t need to run to the store so often without a car.</p>
+
+<p>Honestly, they were quite reasonable compared to some other parents.
+One of my friend’s parents bought them a mini-fridge for their dorm room
+that they never used,
+and I had a friend in grad school whose mother
+bought her at least 20 pairs of shoes,
+and a giant wardrobe as well.
+It caused her a huge pain when she moved.</p>
+
+<p>Even then, I had 10 boxes of stuff at the end of freshman year.
+It was a real pain to arrange for storage and move everything again.
+Repeat several more times for each year of college,
+the first year after graduating,
+the move to grad school in a new state,
+then the move back to California after grad school…
+I learnt very quickly only to buy things I would definitely use very often. 
+Anything else could be borrowed.
+And to buy furniture that I wouldn’t mind throwing away after one year
+(a.k.a stuff that wasn’t too expensive).</p>
+
+<p>By the time I moved from Pennsylvania back to California for a new position
+after finishing grad school,
+I brought only two suitcases with me – the same two suitcases
+I had brought with me seven years ago during my initial move to college.
+Since I had booked temporary housing in Berkeley for six weeks
+to give me time to search for somewhere I could sign a lease on
+in San Francisco, I would have to move again in California.
+To minimize the amount of effort required to move, 
+I sold my furniture in Pittsburgh for next to nothing,
+and gave Goodwill two enormous bags full of rarely worn clothes.</p>
+
+<p>Looking back, its kind of scary how much stuff I manage to accumulate every few months,
+even with me consciously thinking before buying anything.
+I was so careful about only buying stuff I would use multiple times,
+that I slept on a pile of clothes for 10 days after moving to a new apartment 
+while waiting for my mattress to arrive,
+so I could avoid getting a sleeping bag that would contribute to clutter.
+Maybe I’m taking my minimalist ways to the extreme.</p>
+
+<p>On the other side of the spectrum,
+my mother has kept our Enid Blyton storybooks for over twenty years,
+awaiting the day my sister or I decide to procreate.
+Perhaps I’ll sneak them to a used books store the next time I visit.</p>
+
+  </div>
+
+  <h1><a href="/2017/09/03/python-dict-library.html">Accessing dictionary values in Python</a></h1>
+  <p class="author">
+    <span class="date">2017-09-03 10:37:34 -0700</span>
+  </p>
+  <div class="content">
+    <p>The last post was about dictionaries in Javascript.
+This one will be about dictionaries in Python.</p>
+
+<p>Given a dictionary that of form:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">alice_user_profile</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s">'first_name'</span><span class="p">:</span> <span class="s">'Alice'</span><span class="p">,</span>
+	<span class="s">'last_name'</span><span class="p">:</span> <span class="s">'Anderson'</span><span class="p">,</span>
+	<span class="s">'age'</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+	<span class="s">'gender'</span><span class="p">:</span> <span class="s">'female'</span><span class="p">,</span>
+	<span class="s">'owns_a_house: True,</span><span class="err">
+</span><span class="s">}</span><span class="err">
+</span></code></pre>
+</div>
+
+<p>You have to access dictionary values using bracket notation: 
+<code class="highlighter-rouge">user_profile['first_name'] = 'Alice</code>.
+Dot notation is not enabled for dictionaries, so
+<code class="highlighter-rouge">user_profile.first_name</code> throws an error.</p>
+
+<p>If we wanted to write a function that only does something if an attribute is present:
+for example, if these profiles are all possible:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">alice_user_profile</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s">'first_name'</span><span class="p">:</span> <span class="s">'Alice'</span><span class="p">,</span>
+	<span class="s">'last_name'</span><span class="p">:</span> <span class="s">'Anderson'</span><span class="p">,</span>
+	<span class="s">'age'</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+	<span class="s">'gender'</span><span class="p">:</span> <span class="s">'female'</span><span class="p">,</span>
+	<span class="s">'owns_a_house: True,</span><span class="err">
+</span><span class="s">}</span><span class="err">
+
+</span><span class="s">bob_user_profile = {</span><span class="err">
+</span><span class="s">	'</span><span class="n">first_name</span><span class="s">': '</span><span class="n">Bob</span><span class="s">',</span><span class="err">
+</span><span class="s">	'</span><span class="n">last_name</span><span class="s">': '</span><span class="n">Brown</span><span class="s">',</span><span class="err">
+</span><span class="s">	'</span><span class="n">age</span><span class="s">': 21,</span><span class="err">
+</span><span class="s">	'</span><span class="n">gender</span><span class="s">': '</span><span class="n">male</span><span class="s">',</span><span class="err">
+</span><span class="s">}</span><span class="err">
+
+</span><span class="s">charlie_user_profile = {</span><span class="err">
+</span><span class="s">	'</span><span class="n">first_name</span><span class="s">': '</span><span class="n">Charlie</span><span class="s">',</span><span class="err">
+</span><span class="s">	'</span><span class="n">last_name</span><span class="s">': '</span><span class="n">Chaplin</span><span class="s">',</span><span class="err">
+</span><span class="s">	'</span><span class="n">age</span><span class="s">': 35,</span><span class="err">
+</span><span class="s">	'</span><span class="n">gender</span><span class="s">': '</span><span class="n">male</span><span class="s">',</span><span class="err">
+</span><span class="s">	'</span><span class="n">owns_a_house</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>and we only want to send an advertisement for homeowner’s insurance to people
+who own a house, we could do something like this</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">send_advertisement_to_select_people</span><span class="p">(</span><span class="n">user_profile</span><span class="p">):</span>
+	<span class="k">if</span> <span class="p">(</span><span class="s">'college'</span> <span class="ow">in</span> <span class="n">user_profile</span><span class="p">)</span> <span class="ow">and</span> <span class="n">user_profile</span><span class="p">[</span><span class="s">'college'</span><span class="p">]:</span>
+		<span class="n">send_homeowner_ad</span><span class="p">(</span><span class="n">user_profile</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>but it would be more concise to do this:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">send_advertisement_to_select_people</span><span class="p">(</span><span class="n">user_profile</span><span class="p">):</span>
+	<span class="k">if</span> <span class="n">user_profile</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'owns_a_house'</span><span class="p">):</span>
+		<span class="n">send_homeowner_ad</span><span class="p">(</span><span class="n">user_profile</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>since the <code class="highlighter-rouge">.get</code> function will return <code class="highlighter-rouge">True</code> if the user owns a house,
+and <code class="highlighter-rouge">False</code> if he does not, or the attribute <code class="highlighter-rouge">owns_a_house</code> is not set.</p>
+
+<p>Good reason to <a href="https://www.tutorialspoint.com/python/python_dictionary.htm">read the docs</a> 
+more carefully.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/09/02/javascript-dot-or-bracket.html">Accessing dictionary values in Javascript</a></h1>
+  <p class="author">
+    <span class="date">2017-09-02 10:38:34 -0700</span>
+  </p>
+  <div class="content">
+    <p>Scripts for this are <a href="https://github.com/lkloh/javascriptPlayground/blob/master/accessingDictValues.js">here</a>.</p>
+
+<p>Given some dictionary in Javascript, such as</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'A'</span><span class="p">:</span> <span class="s1">'Alice'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span> <span class="s1">'Bob'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">:</span> <span class="s1">'Carol'</span><span class="p">}</span>
+</code></pre>
+</div>
+
+<p>There are two ways to access the values in the dictionary:</p>
+
+<p><em>Dot notation</em></p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">d</span><span class="p">.</span><span class="nx">A</span> <span class="o">=</span> <span class="s1">'Alice'</span><span class="p">;</span>
+<span class="nx">d</span><span class="p">.</span><span class="nx">B</span> <span class="o">=</span> <span class="s1">'Bob'</span><span class="p">;</span>
+<span class="nx">d</span><span class="p">.</span><span class="nx">C</span> <span class="o">=</span> <span class="s1">'Carol'</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>or</p>
+
+<p><em>Bracket notation</em></p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">d</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Alice'</span><span class="p">;</span>
+<span class="nx">d</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Bob'</span><span class="p">;</span>
+<span class="nx">d</span><span class="p">[</span><span class="s1">'C'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Carol'</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>Convention is to use dot notation if possible,
+since it is cleaner, and only use bracket notation if you need to.</p>
+
+<h2 id="limitations-of-dot-notation">Limitations of dot notation</h2>
+
+<p>Dot notation has some limitations in the types of keys it can store, however.</p>
+
+<p>Numbers cannot be used: <code class="highlighter-rouge">d.42 = 'Alice'</code> will fail.</p>
+
+<p>Also, calling keys in a loop required bracket notation.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">accessByDot</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'\n\n'</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="nx">key</span> <span class="k">in</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">key</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">accessByDot</span><span class="p">(</span><span class="nx">d</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>will print</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kc">undefined</span>
+<span class="kc">undefined</span>
+<span class="kc">undefined</span>
+</code></pre>
+</div>
+
+<p>To get it to print out the key-value pairs in the dictionary, we need:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">accessByBracket</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'\n\n'</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="nx">key</span> <span class="k">in</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">accessByBracket</span><span class="p">(</span><span class="nx">d</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>which will print</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Alice
+Bob
+Carol
+</code></pre>
+</div>
+
+<p>as desired.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/09/01/how-to-stop-spammers.html">Stopping Spammers</a></h1>
+  <p class="author">
+    <span class="date">2017-09-01 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>When you receive lots of mail from a <code class="highlighter-rouge">&lt;xxx@annoying-domain.com&gt;</code>,
+one thing you could do is to set a filter to automatically delete 
+anything coming from <code class="highlighter-rouge">annoying-domain.com</code>.
+That will stop annoying emails coming to <em>you</em>.</p>
+
+<p>To do something a little more drastic,
+you could mark the email as spam.
+<a href="https://support.google.com/inbox/answer/6070440?hl=en">Google</a> takes it pretty seriously,
+their info page says that someone on the 
+Gmail spam team will investigate that report.</p>
+
+<p>If you want to hit them where it hurts:
+complain to the general email spam reporting services,
+such as <a href="https://www.spamcop.net">SpamCop</a> 
+and <a href="https://www.spamhaus.org/">SpamHaus</a>.
+Almost all the email service providers rely on those. 
+So the spammer is further deterred use some other email provider such as 
+<code class="highlighter-rouge">annoying-domain-version-2.com</code> to spam you.</p>
+
+<p>Or you could also complain directly to their ISP.
+That would probably get you a really quick response.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/08/23/unix-philosophy.html">Unix Philosophy</a></h1>
+  <p class="author">
+    <span class="date">2017-08-23 11:05:37 -0700</span>
+  </p>
+  <div class="content">
+    <p>There’s a long list <a href="https://github.com/timoxley/best-practices">here</a>
+on programming best practices.
+The opening principle of that document is <code class="highlighter-rouge">never build large apps</code>.</p>
+
+<p>The most important one in the entire document is probably:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>write unit tests
+</code></pre>
+</div>
+
+<p>If you don’t remember the rest (there’s a lot in that document!)
+remember this one.
+It encompasses all the others in one way or another.</p>
+
+<p>It’s corollary is <code class="highlighter-rouge">write testable code</code>,
+meaning code should be written in testable, bite-size pieces.
+It would be more robust as well if you’ve designed tests for all sorts of edge cases.</p>
+
+<p>If the code can’t be easily tested, then some refactoring is in order… so it is more testable</p>
+
+<p>Your system should be designed defensively because you don’t know how it would grow
+before you built it…
+meaning you need tests to throw all sorts of scenarios that could break something.</p>
+
+<p>Try not the write classes unless necessary…
+because its easier to test a pure function than a class.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/08/22/dont-follow-the-crowd.html">Don't follow the crowd</a></h1>
+  <p class="author">
+    <span class="date">2017-08-22 11:05:37 -0700</span>
+  </p>
+  <div class="content">
+    <p>Obviously, you should not copy code for a homework assignment. 
+You will get <a href="https://theory.stanford.edu/~aiken/moss/">caught</a>.</p>
+
+<p>How about when developing a software product?
+Then you’re allowed to use anything you found on Stack Overflow/ elsewhere,
+as long as you can get it to work.</p>
+
+<p>But this article goes into mode detail about why <a href="https://medium.freecodecamp.org/the-benefits-of-typing-instead-of-copying-54ed734ad849">copying code</a> you don’t fully understand is bad.
+Copying code leads to unexpected side effects if you don’t know what it does.
+Or the style doesn’t fit in with the rest of the code base you copied it to.
+Same for blindly following the way code for a similar functionality is written,
+even if it was written by another team member. 
+If you don’t fully understand it,
+you can’t write effective unit tests for it.</p>
+
+<p>As an example, suppose you have this test you want to copy:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">def</span> <span class="nx">test_multiply_by_seven</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="err">:</span>
+	<span class="nx">assert</span> <span class="nx">multiply_by_seven</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">7</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span>
+
+<span class="nx">def</span> <span class="nx">test_add_seven</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="err">:</span>
+	<span class="nx">assert</span> <span class="nx">add_seve</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="nx">n</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>and we refactored them to</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">def</span> <span class="nx">test_multiply_by_seven</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="err">:</span>
+	<span class="nx">assert_equal</span><span class="p">(</span><span class="nx">multiply_by_seven</span><span class="p">(</span><span class="nx">n</span><span class="p">),</span> <span class="mi">7</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span>
+
+<span class="nx">def</span> <span class="nx">test_add_seven</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="err">:</span>
+	<span class="nx">assert_equal</span><span class="p">(</span><span class="nx">add_seven</span><span class="p">(</span><span class="nx">n</span><span class="p">),</span> <span class="nx">n</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="nx">def</span> <span class="nx">assert_equal</span><span class="p">(</span><span class="nx">actual</span><span class="p">,</span> <span class="nx">expected</span><span class="p">)</span><span class="err">:</span>
+	<span class="nx">actual</span> <span class="o">==</span> <span class="nx">expected</span>
+</code></pre>
+</div>
+
+<p>And the tests still pass!</p>
+
+<p>Problem with this now, is that the <code class="highlighter-rouge">assert</code> statement isn’t being called at all.
+Easy to gloss over because <code class="highlighter-rouge">assert_equal</code> looks so much like <code class="highlighter-rouge">assert</code>,
+and all the unit tests passed.</p>
+
+<p>We actually need</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">def</span> <span class="nx">assert_equal</span><span class="p">(</span><span class="nx">actual</span><span class="p">,</span> <span class="nx">expected</span><span class="p">)</span><span class="err">:</span>
+	<span class="nx">assert</span> <span class="nx">actual</span> <span class="o">==</span> <span class="nx">expected</span>
+</code></pre>
+</div>
+
+<p>Lesson learnt: Get a test to fail first when doing any writing/refactoring,
+then get it to pass. This is the best way to making sure the tests
+can actually catch errors when they happen.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/08/15/viewing-client-request.html">Viewing client requests in the browser</a></h1>
+  <p class="author">
+    <span class="date">2017-08-15 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p><img src="https://http://localhost:4000/assets/2017/August/15/network_inspector" alt="Network inspector" class="img-responsive" /></p>
+
+<p>To see what network requests are made,
+go to the Chrome DevTools Network panel and look at the requests there. 
+You’ll want to view “all” requests being made in order to inspect the headers.</p>
+
+<p>If you’re using this because you’re testing/developing something,
+remember to “disable cache”! 
+Otherwise you may get unexpected results.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/08/14/returning-updated-dict.html">Returning an updated Javascript Dictionary/object</a></h1>
+  <p class="author">
+    <span class="date">2017-08-14 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>Given this object:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">john</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="na">firstName</span><span class="p">:</span> <span class="err">`</span><span class="nx">John</span><span class="err">`</span><span class="p">,</span>
+	<span class="na">lastName</span><span class="p">:</span> <span class="err">`</span><span class="nx">Doe</span><span class="err">`</span><span class="p">,</span>
+	<span class="na">gender</span><span class="p">:</span> <span class="err">`</span><span class="nx">Male</span><span class="err">`</span><span class="p">,</span>
+	<span class="na">college</span><span class="p">:</span> <span class="err">`</span><span class="nx">Harvard</span><span class="err">`</span><span class="p">,</span>
+	<span class="na">citizenship</span><span class="p">:</span> <span class="err">`</span><span class="nx">United</span> <span class="nx">States</span><span class="err">`</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+
+<p>If I wanted to update this object and return a new one in the process
+– to avoid having a function mutate an input value, 
+I would used <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign</a> to do</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">returnUpdatedDict</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span> <span class="nx">fieldsToUpdate</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">fieldsToUpdate</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>So if John wants to become a female and move to Utopia, I would do:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">goToHeaven</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="na">firstName</span><span class="p">:</span> <span class="err">`</span><span class="nx">Jane</span><span class="err">`</span><span class="p">,</span>
+	<span class="na">gender</span><span class="p">:</span> <span class="err">`</span><span class="nx">Female</span><span class="err">`</span><span class="p">,</span>
+	<span class="na">citizenship</span><span class="p">:</span> <span class="err">`</span><span class="nx">Utopia</span><span class="err">`</span><span class="p">,</span>
+<span class="p">};</span>
+<span class="kr">const</span> <span class="nx">jane</span> <span class="o">=</span> <span class="nx">returnUpdatedDict</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span> <span class="nx">goToHeaven</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>that will return a new object, <code class="highlighter-rouge">jane</code>, which has form:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+	<span class="nl">firstName</span><span class="p">:</span> <span class="err">`</span><span class="nx">Jane</span><span class="err">`</span><span class="p">,</span>
+	<span class="nx">lastName</span><span class="err">:</span> <span class="err">`</span><span class="nx">Doe</span><span class="err">`</span><span class="p">,</span>
+	<span class="nx">gender</span><span class="err">:</span> <span class="err">`</span><span class="nx">Female</span><span class="err">`</span><span class="p">,</span>
+	<span class="nx">college</span><span class="err">:</span> <span class="err">`</span><span class="nx">Harvard</span><span class="err">`</span><span class="p">,</span>
+	<span class="nx">citizenship</span><span class="err">:</span> <span class="err">`</span><span class="nx">Utopia</span><span class="err">`</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+  </div>
+
+  <h1><a href="/2017/08/13/code-design-best-practices-copy.html">Code design best practices</a></h1>
+  <p class="author">
+    <span class="date">2017-08-13 01:57:45 -0700</span>
+  </p>
+  <div class="content">
+    <p>Things that are obviously good to do,
+but harder to implement in practice.</p>
+
+<ul>
+  <li>If anything is used twice, see if there’s a way to refactor it into a common function.
+  That will make it easier to avoid tweaking things if the code diverges.</li>
+  <li>Functions that are called multiple times should try to be pure functions,
+  those used only once can then easily use those pure functions.</li>
+  <li>If something is potentially reusable in more than once place,
+  even if you are only using it once now,
+  see if you can pull it out to a more accessible location
+  where it is more reusable.</li>
+  <li>If you need something else someone is working on that has not been merged it,
+  you can always copy their code if its not too long,
+  so you don’t get blocked on it.</li>
+</ul>
+
+  </div>
+
+
+<!-- Pagination links -->
+<div class="pagination">
+  
+    <a href="/" class="previous">Previous</a>
+  
+  <span class="page_number ">Page: 2 of 6</span>
+  
+    <a href="/posts/page3/" class="next">Next</a>
+  
+</div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Things I Should Know</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              LK Loh
+            
+            </li>
+            
+            <li><a href="mailto:lkloh2410@gmail.com">lkloh2410@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/lkloh"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">lkloh</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/lkloh1024"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">lkloh1024</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>but somehow only just learnt</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

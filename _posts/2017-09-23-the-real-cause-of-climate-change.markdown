@@ -25,7 +25,21 @@ and it's still going strong.
 Sure he has to wipe it down and oil it every few years,
 but that's all the maintainence he's had to do in over _half a century_!
 
+Of course, new fans break down a lot faster. 
+You'll be lucky if they last 5 years.
+They're made to break down after a set period on purpose
+so that manufacturers can turn a profit.
+If everything they made lasted 50 years,
+they'll be bankrupt very soon.
 
+And not just fans, of course.
+All other electronic equipment.
+My mother's kettle, bought before she married my father,
+lasted through 20 years of daily usage.
+My electric water boiler barely lasted me through college.  
 
-
+When such things break down, they tend to end up in a landfill.
+And they typically aren't biogradable.
+Imagine this compounded by every person/household.
+Now you know why everyone's carbon footprint is getting larger and larger.
 
