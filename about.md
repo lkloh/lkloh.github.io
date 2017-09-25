@@ -21,13 +21,10 @@ for teachers to assign to their students,
 and [the other](https://www.yup.com/) 
 matched students to tutors when they had trouble with their homework.
 
-I was warned about culture shock when I moved countries to attend
-[college](https://www.stanford.edu/),
-but it turns out that people tend to be the same everywhere.
-
 Fun facts: 
-1. I don't drink alcohol at all, but have gotten horrified
-	looks from housemates when drinking coffee at 10pm.
+1. I'm from a [place](https://en.wikipedia.org/wiki/Singapore) 
+	known internationally for its [strict laws](https://en.wikipedia.org/wiki/Chewing_gum_ban_in_Singapore),
+	but I'm much more bothered by it having only two seasons: hot and hotter.
 2. My mother's maiden name is "Na". Once when filling out parental information 
     on a form, I was chided for stating that her maiden name was _Not Applicable_.
 3. It took me _six_ tries in three different states and 
