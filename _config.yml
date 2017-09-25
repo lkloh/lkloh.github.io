@@ -26,7 +26,7 @@ markdown: kramdown
 
 plugins_dir: ["jekyll-paginate"]
 paginate: 10
-paginate_path: "/posts/page:num/"
+paginate_path: "/blog/page:num/"
 
 kramdown:
   input: GFM
