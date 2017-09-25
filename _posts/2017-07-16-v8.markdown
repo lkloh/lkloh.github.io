@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "V8"
+date:   2017-07-16 04:42:23 -0700
+---
+
+[V8](https://github.com/v8/v8/wiki) is a JavaScript engine developed by Google,
+for the purpose of executing JavaScript quickly.
+That speed is achieve by compiling JavaScript to machine code.
+Other interpreters compile it done to bytecode and interpret it instead (e.g. Rhino).
+
+JavaScript is the most popular language,
+but Python and Ruby are also very widely used.
+[Here](https://stackoverflow.com/questions/5168718/what-blocks-ruby-python-to-get-javascript-v8-speed)
+are some reasons why Python/Ruby compilers don't work as fast as V8. The summary is that:
+* JavaScript is meant to be run in real time while a 
+	human being is impatiently waiting to see the results live. 
+	Python/Ruby is not.
+* Google is paying people with decades of experience very well to develop V8,
+	while Python/Ruby is mostly developed by the open source community.
+* V8 developers' only goal is to run JavaScript quickly, while the Python/Ruby developers'
+	also develop other libraries and features.
+
+One gotcha with V8 is that `delete` works slowly,
+as described in more detail [here](https://www.nearform.com/blog/node-js-is-getting-a-new-v8-with-turbofan/).
+It's because V8 makes properly objects compile quickly 
+by depending on knowing what attributes they have.
+If an attribute is added/removed, the shape changes,
+so V8 can't used it to execute quickly.
+Instead, it has to rely on a slower hash table lookup.
+
+So for fast performance on V8, instead of deleting an attribute, 
+set it to `undefined`.
+

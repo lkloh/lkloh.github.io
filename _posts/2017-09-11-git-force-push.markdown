@@ -11,7 +11,3 @@ There are certainly [ways to recover it](https://stackoverflow.com/questions/397
 but its really troublesome to have to dig into it.
 I think I'll stick with saving comments I may want to go back and take a look by
 taking a screenshot instead.
-
-
-
-
