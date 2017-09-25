@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Jenkins"
+date:   2017-07-19 04:42:23 -0700
+---
+
+Jenkins is an automation serve that supports building, testing,
+deploying for most projects. 
+It can be used just to run tests on a project,
+or also to deploy it.
+
+The main product is [Jenkins Pipeline](https://jenkins.io/doc/pipeline/tour/hello-world/).
+which automatically delivers software to users as it is being developed. 
+The pipeline is written in a `Jenkinsfile` in the source code's repo.
+
+There are several possibilities to use in Pipeline to deploy code,
+but Docker images is the most common,
+as they allow the environment and dependencies to be automatically deployed.

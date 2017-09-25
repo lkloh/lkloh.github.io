@@ -1,0 +1,107 @@
+---
+layout: post
+title:  "ES6 Feature Performance"
+date:   2017-07-15 04:42:23 -0700
+---
+
+ES6 features tend to [perform worse](http://incaseofstairs.com/2015/06/es6-feature-performance/)
+than ES5 features.
+So depending on the scenario, or how time critical things are,
+it may be worthwhile to use the old ES5 version instead.
+Or the delay is small enough that it is not worth refactoring the code
+to use the faster ES5 peformance.
+
+Some examples of what works more slowly:
+
+## Arrow Functions
+
+```js
+var multiply = (a, b) => {
+	return a * b; 
+}
+```
+
+is slower than
+
+```js
+function multiply(a, b) {
+	return a * b;
+}
+```
+
+## Classes
+
+```js
+class Person {
+	firstName: string;
+	lastName: string;
+	gender: boolean;
+
+	constructor(firstName: string, lastName: string, gender: boolean) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.gender = gender;
+	}
+
+	toString() {
+		return this.firstName + " " + this.lastName + " is a " + this.getGender();
+	}
+
+	getGender() {
+		return this.gender ? `male` : `female`;
+	}
+}
+```
+
+is slower than
+
+```js
+function Person(firstName: string, lastName: string, gender: boolean) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.gender = gender;
+}
+
+Person.prototype.toString = function() {
+	return this.firstName + " " + this.lastName + " is a " + this.getGender();
+};
+
+Person.prototype.getGender = function() {
+	return this.gender ? `male` : `female`;
+};
+```
+
+
+## Template Strings
+
+```js
+const greetUser = `Hello, ${this.firstName}!`;
+```
+
+takes longer to compile than
+
+```js
+var greetUser = "Hello, " + this.firstName + "!";
+```
+
+Read more [here](http://incaseofstairs.com/2015/06/es6-feature-performance/).
+The article dates from 2015 so performance has probably improved since then.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

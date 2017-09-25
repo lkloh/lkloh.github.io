@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Docker"
+date:   2017-07-18 04:42:23 -0700
+---
+
+[Docker](https://www.docker.com/what-docker) 
+calls itself a containers as a service platform.
+The point of having Docker is to avoid software dependency hell
+when there are lots of people with different machines
+who are working on the same codebase.
+
+Instead, the sysadmin can package the software needed to develop the code
+such that if can run isolated.
+This may make you think of VMs,
+but a VM is essentially an entire operating system
+running on top of another.
+A container is not the entire operating system,
+but only the minimum needed to get code to run.
+
+So essentially,
+docker saves devs from setting up a new environment
+everytime a new hire comes in/ 
+someone accidentally installed a virus on their laptop.
+
+You could say that Docker allows for many stripped-down VMs
+to be run on a shared operating system.
+This [Stack Overflow post](https://stackoverflow.com/questions/28089344/docker-what-is-it-and-what-is-the-purpose) 
+has a nice summary.

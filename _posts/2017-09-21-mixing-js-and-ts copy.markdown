@@ -33,7 +33,7 @@ const femaleAlex = new Person({
     age: 21,
     isMale: false,
 });
-const maleAlex = performSexChangeSurgery({isMale: true});
+const maleAlex = femaleAlex.performSexChangeSurgery({isMale: true});
 ```
 
 Then the code will compile and work just fine.

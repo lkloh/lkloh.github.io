@@ -50,11 +50,10 @@ Anything else could be borrowed.
 And to buy furniture that I wouldn't mind throwing away after one year
 (a.k.a stuff that wasn't too expensive).
 
-By the time I moved from Pennsylvania in grad school
-back to San Francisco in California for a new position,
-I had only two suitcases with me -- the same two suitcases
-I had brought with me seven years ago during my
-initial move to college.
+By the time I moved from Pennsylvania back to California for a new position
+after finishing grad school,
+I brought only two suitcases with me -- the same two suitcases
+I had brought with me seven years ago during my initial move to college.
 Since I had booked temporary housing in Berkeley for six weeks
 to give me time to search for somewhere I could sign a lease on
 in San Francisco, I would have to move again in California.
