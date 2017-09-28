@@ -1,0 +1,111 @@
+---
+layout: post
+title:  "REST architecture and why it was designed that way"
+date:   2017-07-07
+---
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Representational_state_transfer): 
+REST web services allow systems to access resources
+using a predefined set of stateless operations.
+
+Goals of REST systems
+* Fast
+* Reliable
+* Decoupled system components - easier to manage
+
+## Client-Server 
+
+Separate user interface / data storage.
+
+Advantage: components to be managed/updated independently 
+	- easier to manage and update them separately
+
+## Stateless communication
+
+Every request from the client to the server must contain
+all the necessary information.
+The server cannot store anything.
+Only the client is allowed to store any information.
+
+Advantages: 
+* Easy to recover from failures. 
+* Server's job is simple => easy to scale 
+
+Disadvantage: 
+* Repetitive data sent to server 
+* More network overhead due to repetitive data being sent
+
+## Cache
+
+Data in a response to a request must be labeled as cacheable/non-cacheable.
+
+If cacheable: client cache may reuse that response data for later request.
+
+Advantage:
+* Improve performance
+
+Disavantage:
+* Less reliable due to stale data
+
+## Uniform Interface between components
+
+Advantages:
+* Simplified system architecture
+* Easy to update implementation, which is independent from service provided
+
+Disadvantage:
+* Less efficient - cannot optimize information transferred for specific use cases
+
+## Layered system
+
+Components cannot see beyond their immediate layer.
+
+Advantage:
+* System is more simple
+
+Disadvange:
+* More overhead when processing data (but caching can help)
+
+## Lazily add features
+
+(Optional)
+
+To minimized mandatory features that must be implemented,
+allow functionality to be extended by additional scripts when necessary.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
