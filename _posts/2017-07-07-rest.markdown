@@ -73,6 +73,10 @@ Disadvange:
 To minimized mandatory features that must be implemented,
 allow functionality to be extended by additional scripts when necessary.
 
+# Examples
+
+Used to define 
+
 
 
 
