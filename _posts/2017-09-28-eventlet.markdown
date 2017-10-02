@@ -29,7 +29,6 @@ def parallize_processing(file):
 
 This would speed up processing of a large file by 5 times.
 
-
 ## Gotchas
 
 GreenPool lets you specify the total number of threads in the entire program.
