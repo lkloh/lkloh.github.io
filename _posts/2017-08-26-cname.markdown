@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "What is a CNAME?"
+date:   2017-08-26
+---
+
+Summary from [here](https://support.dnsimple.com/articles/cname-record/).
+
+CNAME: Canonical name.
+Its records are used to alias names.
+
+Example
+* Canonical name: `google.com`
+* Alias: `googld.com` (in case someone made a typo)
+
+Then the person making a typo who entered `googld.com` still hit the google homepage.
