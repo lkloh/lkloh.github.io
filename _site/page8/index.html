@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Things I Should Know</title>
+  <meta name="description" content="but somehow only just learnt">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/page8/">
+  <link rel="alternate" type="application/rss+xml" title="Things I Should Know" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Things I Should Know</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!-- This loops through the paginated posts -->
+
+  <h1><a href="/2017/07/10/pdb.html">The Python debugger</a></h1>
+  <p class="author">
+    <span class="date">2017-07-10 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>Sure I’ve got by a lot with just looking at the error output of a Python program,
+but <a href="https://docs.python.org/2/library/pdb.html">PDB</a> is essentially 
+<a href="https://www.gnu.org/software/gdb/">GDB</a> for Python.</p>
+
+<p>Insert</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>import pdb
+pdb.set_trace()
+</code></pre>
+</div>
+<p>into the region of the program you want to break at and you can step through.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/07/08/rest-elements.html">REST elements</a></h1>
+  <p class="author">
+    <span class="date">2017-07-08 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    
+
+  </div>
+
+  <h1><a href="/2017/07/07/rest.html">REST architecture and why it was designed that way</a></h1>
+  <p class="author">
+    <span class="date">2017-07-07 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>From <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">Wikipedia</a>: 
+REST web services allow systems to access resources
+using a predefined set of stateless operations.</p>
+
+<p>Goals of REST systems</p>
+<ul>
+  <li>Fast</li>
+  <li>Reliable</li>
+  <li>Decoupled system components - easier to manage</li>
+</ul>
+
+<h2 id="client-server">Client-Server</h2>
+
+<p>Separate user interface / data storage.</p>
+
+<p>Advantage: components to be managed/updated independently 
+	- easier to manage and update them separately</p>
+
+<h2 id="stateless-communication">Stateless communication</h2>
+
+<p>Every request from the client to the server must contain
+all the necessary information.
+The server cannot store anything.
+Only the client is allowed to store any information.</p>
+
+<p>Advantages:</p>
+<ul>
+  <li>Easy to recover from failures.</li>
+  <li>Server’s job is simple =&gt; easy to scale</li>
+</ul>
+
+<p>Disadvantage:</p>
+<ul>
+  <li>Repetitive data sent to server</li>
+  <li>More network overhead due to repetitive data being sent</li>
+</ul>
+
+<h2 id="cache">Cache</h2>
+
+<p>Data in a response to a request must be labeled as cacheable/non-cacheable.</p>
+
+<p>If cacheable: client cache may reuse that response data for later request.</p>
+
+<p>Advantage:</p>
+<ul>
+  <li>Improve performance</li>
+</ul>
+
+<p>Disavantage:</p>
+<ul>
+  <li>Less reliable due to stale data</li>
+</ul>
+
+<h2 id="uniform-interface-between-components">Uniform Interface between components</h2>
+
+<p>Advantages:</p>
+<ul>
+  <li>Simplified system architecture</li>
+  <li>Easy to update implementation, which is independent from service provided</li>
+</ul>
+
+<p>Disadvantage:</p>
+<ul>
+  <li>Less efficient - cannot optimize information transferred for specific use cases</li>
+</ul>
+
+<h2 id="layered-system">Layered system</h2>
+
+<p>Components cannot see beyond their immediate layer.</p>
+
+<p>Advantage:</p>
+<ul>
+  <li>System is more simple</li>
+</ul>
+
+<p>Disadvange:</p>
+<ul>
+  <li>More overhead when processing data (but caching can help)</li>
+</ul>
+
+<h2 id="lazily-add-features">Lazily add features</h2>
+
+<p>(Optional)</p>
+
+<p>To minimized mandatory features that must be implemented,
+allow functionality to be extended by additional scripts when necessary.</p>
+
+<h1 id="examples">Examples</h1>
+
+<p>Used to define</p>
+
+
+  </div>
+
+  <h1><a href="/2017/07/07/foundations-of-software-architecture.html">Foundations for the study of Software Architecture</a></h1>
+  <p class="author">
+    <span class="date">2017-07-07 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>Find the original 1992 paper <a href="https://dl.acm.org/citation.cfm?id=141884">here</a>.
+This is a summary of key points</p>
+
+<h2 id="software-architectural-components">Software architectural components</h2>
+
+<ol>
+  <li>Elements - data / processing elements</li>
+  <li>Form - relationships among elements</li>
+  <li>Rationale - System requirements</li>
+</ol>
+
+<h2 id="software-design">Software design</h2>
+
+<ul>
+  <li>Design is separate from implementation</li>
+  <li>Design has its own unique tools/notations</li>
+</ul>
+
+<h2 id="programming-in-the-large">Programming-in-the-large</h2>
+
+<ul>
+  <li>Integrates software design + implementation</li>
+  <li>Implementation language is a superset of software design notations</li>
+</ul>
+
+<h2 id="software-architecture-vs-sofware-design">Software architecture (vs sofware design)</h2>
+
+<ul>
+  <li>Has set standards</li>
+  <li>Needs formal training</li>
+</ul>
+
+<h2 id="software-architecture">Software architecture</h2>
+
+<ul>
+  <li>
+    <h1 id="design-elements-many">design elements: many</h1>
+  </li>
+  <li>Scaling: add more distinct design elements</li>
+  <li>Configurations: pipelined processing; multi-processor systems</li>
+</ul>
+
+<h2 id="hardware-architecture">Hardware architecture</h2>
+
+<ul>
+  <li>
+    <h1 id="design-elements--few">design elements:  few</h1>
+  </li>
+  <li>Scaling: replicate the design elements</li>
+  <li>Configurations: pipelined machines; multi-processor machines</li>
+</ul>
+
+<h2 id="building-architecture">Building architecture</h2>
+
+<ul>
+  <li>Multiple views needed to categorize all aspects</li>
+  <li>Styles are importent</li>
+  <li>Engineering principles are needed</li>
+</ul>
+
+<h2 id="why-software-is-expensive">Why software is expensive</h2>
+
+<ul>
+  <li>Evolution - systems evolve and are adapted to new uses</li>
+  <li>Customization - no standard templates to use</li>
+</ul>
+
+<h2 id="how-to-decrease-the-cost-of-software">How to decrease the cost of software</h2>
+
+<ul>
+  <li>Separate “must-haves” from “nice-to-haves”</li>
+  <li>Describe different parts of the architecture with the appropriate view</li>
+  <li>Determine interdependencies between different components of the system</li>
+</ul>
+
+<h2 id="modeling-software-architecture">Modeling Software architecture</h2>
+
+<h3 id="elements">Elements</h3>
+
+<ul>
+  <li>processing</li>
+  <li>data</li>
+  <li>connecting</li>
+</ul>
+
+<h3 id="form">Form</h3>
+
+<ul>
+  <li>properties - constraints elements</li>
+  <li>relationships - constraing how elements interact</li>
+</ul>
+
+<h3 id="rationale">Rationale</h3>
+
+<p>Why were various design choices made?</p>
+
+<h2 id="what-is-architectural-style">What is architectural Style?</h2>
+
+<p>Architecture: formal arrangement of elements</p>
+
+<p>Architectural Style: Abstracts elements from various specific architectures.</p>
+
+<p>Less constrained than architecture</p>
+
+<h2 id="multi-phase-architectural-style---compiler">Multi-phase Architectural Style - Compiler</h2>
+
+<ol>
+  <li>Lexical analysis - characters =&gt; tokens</li>
+  <li>Syntactic analysis - tokens =&gt; phrases</li>
+  <li>Semantic analysis - phrases =&gt; correlated phrases</li>
+  <li>Optimization (optional) - correlated phrases =&gt; annotations as hints</li>
+  <li>Code deneration - annotations =&gt; object code</li>
+</ol>
+
+<h3 id="elements-1">Elements</h3>
+
+<p>Processing</p>
+<ul>
+  <li>lexer</li>
+  <li>parser</li>
+  <li>semantor</li>
+  <li>optimizer</li>
+  <li>code generator</li>
+</ul>
+
+<p>Data</p>
+<ul>
+  <li>Chracters</li>
+  <li>Tokens</li>
+  <li>Phrases</li>
+  <li>Correlate phrases</li>
+  <li>Annotated Phrases</li>
+  <li>Object code</li>
+</ul>
+
+<p>Connecting</p>
+<ul>
+  <li>N/A</li>
+</ul>
+
+<h3 id="form-1">Form</h3>
+
+<ul>
+  <li>Preferred elements - optimizer + annotated phrases</li>
+  <li>Linear relationship: tokens - sequence of characters</li>
+  <li>Linear relationship: phrases - sequence of tokens</li>
+  <li>Nonlinear: phases &amp; correlated phrases</li>
+  <li>Tokens and characters have an order that must be preserved</li>
+</ul>
+
+<h3 id="rationale-1">Rationale</h3>
+
+<p>Source code =&gt; object code</p>
+
+<h2 id="benefits-of-software-architecture">Benefits of software architecture</h2>
+
+<ul>
+  <li>Software architecture: <em>Framework to satisfy system requirements</em></li>
+  <li>Clear documentation</li>
+  <li>Automated analysis - consistency with system requirements</li>
+  <li>Describe expected problems</li>
+  <li>Reuse previous work - easier to reuse when there are less constraints</li>
+  <li>Understand important properties/relationships for systems</li>
+</ul>
+
+
+  </div>
+
+  <h1><a href="/2017/07/06/commit-the-yarnlock-file.html">Commit the yarn.lock file</a></h1>
+  <p class="author">
+    <span class="date">2017-07-06 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>Yarn is a package manager.
+It records all the package dependencies for a project
+you’re developing to ensure consistency for someone else
+checks out what you’ve done.
+This helps avoid the ‘works on my machine’ problem.</p>
+
+<p>Yarn needs to know which version you developed on
+to make sure that package dependencies are installed
+in the correct place and order on a machine,
+to avoid having installation issues with dependencies.</p>
+
+<p>The yarn.lock file is automatically generated
+and tracks the version number of each dependency.
+It may be updated if you upgraded a package locally
+or added a new dependency.
+In that case, it should be committed to the repo.</p>
+
+  </div>
+
+  <h1><a href="/2017/07/05/chmod.html">Chmod</a></h1>
+  <p class="author">
+    <span class="date">2017-07-05 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p><code class="highlighter-rouge">chmod</code> on files should be used sparingly,
+even if it’s more convenient to give everyone access to the files.</p>
+
+<p>Causes lots of issues with security 
+(anyone with user access can read and execute files),
+and its hard to recover the system when something goes wrong.</p>
+
+<p>Example <a href="https://askubuntu.com/questions/43621/what-if-i-accidentally-run-command-chmod-r-on-system-directories-etc">here</a>:
+someone ran <code class="highlighter-rouge">sudo chmod 755 -R /</code> and started getting permissions issues on everything.
+He basically had to reinstall the system,
+because resetting all permissions back to exactly what they were like before
+(and allowing too many privileges somewhere) is too hard to be worth it.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/07/04/variable-name-clashes.html">Variable naming</a></h1>
+  <p class="author">
+    <span class="date">2017-07-04 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>Different from the name of a library name/function.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">dateutil.relativedelta</span> <span class="kn">import</span> <span class="n">relativedelta</span>
+
+<span class="k">def</span> <span class="nf">get_difference_in_seconds</span><span class="p">(</span><span class="n">years_since_i_started_college</span><span class="p">):</span>
+  <span class="n">time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">time_i_started_school</span>
+  <span class="k">return</span> <span class="n">relativedelta</span><span class="p">(</span><span class="n">time</span><span class="p">)</span><span class="o">.</span><span class="n">years</span>
+</code></pre>
+</div>
+
+<p>The variable <code class="highlighter-rouge">time</code> is also the name of a popular 
+<a href="https://docs.python.org/2/library/time.html">library</a>.
+Try not to do this, 
+even if scoping ensures it won’t cause problems.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/07/03/toeplitz-matrix.html">Detecting a toepliz matrix</a></h1>
+  <p class="author">
+    <span class="date">2017-07-03 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>Two separate interviewers tried to give me this same question.
+I answered it correctly at the phone screen, 
+and told the interviewer at the onsite that I had already seen this question.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Find</span> <span class="n">out</span> <span class="n">whether</span> <span class="n">a</span> <span class="n">matrix</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">Toeplitz</span> <span class="n">Matrix</span><span class="o">.</span>
+</code></pre>
+</div>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Toeplitz_matrix">Toeplitz matrix</a> 
+has the same integers on all of its diagonals.
+It can be of any dimension, not necessarily square.
+For example,</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
+<span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span>
+<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
+</code></pre>
+</div>
+
+<p>is a Toeplitz matrix, but</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
+<span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span>
+<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
+</code></pre>
+</div>
+
+<p>is not a Toeplitz matrix.</p>
+
+<p>Let’s gain an insight by looking at the example of a Toeplitz matrix above.
+Notice that when displacing the rows, we get a pattern:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>      <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
+   <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span>
+<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
+</code></pre>
+</div>
+
+<p>It seems that for any row <code class="highlighter-rouge">i</code> and row <code class="highlighter-rouge">i+1</code> in a Toeplitz matrix with <code class="highlighter-rouge">n</code> rows and <code class="highlighter-rouge">m</code> columns
+shifting row <code class="highlighter-rouge">i</code> by one position would result in
+elements <code class="highlighter-rouge">0, 1, ..., m-2</code> of row <code class="highlighter-rouge">i</code> being the same
+as elements <code class="highlighter-rouge">1, ..., m-1</code> of row <code class="highlighter-rouge">i+1</code>.</p>
+
+<p>However, in the non-Toeplitz matrix, this is not the case.</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>      <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span>
+   <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span>
+<span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span>
+</code></pre>
+</div>
+
+<p>Thus we want something like:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">is_toeplitz_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+  <span class="p">[</span><span class="n">nrows</span><span class="p">,</span> <span class="n">ncols</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span>
+  <span class="k">if</span> <span class="n">nrows</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">ncols</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">True</span>
+  <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">centers_align</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</code></pre>
+</div>
+
+<p>where <code class="highlighter-rouge">centers_align</code> checks whether two adjacent rows could be rows of a Toeplitz matrix.</p>
+
+<p>To check if two adjacent rows are rows of a Toeplitz matrix:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">centers_align</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">next_row</span><span class="p">,</span> <span class="n">ncols</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="nf">array_equal</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">0</span><span class="p">:(</span><span class="n">ncols</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">matrix</span><span class="p">[</span><span class="n">next_row</span><span class="p">,</span> <span class="mi">1</span><span class="ss">:ncols</span><span class="p">])</span></code></pre></figure>
+
+<p>Putting them together, we get the solution.
+We have to examine almost all the numbers in each row, so this is an <code class="highlighter-rouge">O(nm)</code> solution in time.
+Depending on implementation, the space could be constant if you
+passed the rows of the matrix to <code class="highlighter-rouge">centers_align</code> by reference.</p>
+
+<p>See the full solution in python with test cases 
+<a href="https://github.com/lkloh/technical-interview-questions/blob/master/detecting_toepitz_matrix.py">here</a>.</p>
+
+<p>To scale the solution when given a very large matrix, one way is to
+break up the matrix into several contiguous blocks,
+then check each block on a different machine.
+If any of the blocks was not a Toeplitz, then the matrix is not a Toeplitz matrix.
+If each block was also a Toeplitz matrix,
+then we could check if putting them together would make a toeplitz matrix. 
+then merge them together.
+Assuming we broke the matrix into <code class="highlighter-rouge">b</code> blocks,
+that is <code class="highlighter-rouge">n / b</code> matrices to check on each machine,
+so <code class="highlighter-rouge">O(nm / b)</code> time to check the blocks separately.
+To merge them, we have to merge <code class="highlighter-rouge">n / b</code> blocks,
+so its <code class="highlighter-rouge">O(nm / b)</code> time to merge.
+So you could check this in <code class="highlighter-rouge">O(nm / b)</code> time
+and get time savings depending on what <code class="highlighter-rouge">b</code> is.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/07/02/median-of-a-long-running-stream.html">Median of a long running stream</a></h1>
+  <p class="author">
+    <span class="date">2017-07-02 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>“What is the best way find the approximate median of a huge stream of numbers,
+so large that they can’t all fit into memory at the same time?”</p>
+
+<p>The smart way to do this when the stream can fit into memory, is to
+use a max heap and a min heap. 
+That would give an efficient answer in <code class="highlighter-rouge">O(n log n)</code> time and <code class="highlighter-rouge">O(n)</code> space.
+But now there’s not enough space.</p>
+
+<p>The answer to this needs you to remember that computers have a maximum 
+number of digits they can represent.
+Lets say 4 bytes to a number, meaning that numbers must fit within 32 bits. 
+So the integers can only range from -2^31 to 2^31-1,
+a.k.a. -2 147 483 648 to 2 147 483 647.
+So that’s a maximum of <code class="highlighter-rouge">2^32</code> possible digits.
+Given that 2^10 = 1024 ~ 1000 = 1kb, therefore (2^10) * (2^10) * (2^10) * 4
+would only be 4000kb, a.k.a. 4MB, which would fit into memory.</p>
+
+<p>So the right way to do things is to keep track of the number of times
+every possible integer in the stream was seen,
+and also the number of integers seen so far.
+Then when someone queries for the median, it would be fairly easy to 
+compute the median in a reasonable amount of time.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/07/01/selling-mode.html">Sell mode</a></h1>
+  <p class="author">
+    <span class="date">2017-07-01 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>The last post I wrote was about using <a href="https://pramp.com/#/">Pramp</a> 
+to prepare for technical interviews
+with other people who are also doing the same.</p>
+
+<p>Pramp was awesome for preparation of course, 
+because I could schedule interviews every two hours. 
+Only sad thing was the interviews could only be scheduled between 11am - 11pm
+(I was on the East Coast in Pittsburgh),
+in other to ensure that I had a peer to be matched too.
+It’s likely because most of the users are in California,
+where the headquarters of many tech companies are. 
+While I did get one onsite interview with a hiring manager from Amazon,
+it’s not built specifically for the purpose of matching users
+to places they may be interested in working at.</p>
+
+<p>Now let’s talk about <a href="https://interviewing.io/">interviewing.io</a>,
+which matches people preparing for technical interviews,
+to experienced engineers to give them proper feedback. 
+Both parties are anonymous during the interview session
+to remove as much unconscious bias as possible.
+After the interview, if both parties want to unmask their identities,
+they can do so. 
+If you do well, you might get invited to onsite interviews
+at the places where those engineers work.</p>
+
+<p>I tried siging up for it while job hunting, 
+but got an automated message stating that they were still in beta
+and that I would be up later.
+So I emailed <code class="highlighter-rouge">hello@interviewing.io</code>, 
+and one of the cofounders got back to me and let me onto the platform immediately.
+It seems that for small startups of &lt;10 people,
+the cofounders themselves are often monitoring the emails coming in from users,
+so asking for something might actually be pretty effective.</p>
+
+<p>Well, I tried to book a slot, but the earliest one was a week later.
+So I continued practising with Pramp until then.
+The first interviewer gave me a pretty tough problem 
+(that could be solved using a graph traversal algorithm)
+that was a scaled up version of one of the problems I got on Pramp,
+and I took almost 90 min (a.k.a. double the time of a regular 45 min long interview session)
+to solve it. Even then, I’m not sure if I got a complete working solution,
+but the interviewer was sufficiently impressed to ask to be introduced to me.</p>
+
+<p>I had to wait another week to book the next interview.
+I got a generic dynamic programming question at that one,
+which I should have known how to solve immediately, but didn’t.</p>
+
+<p>So I had to wait another week to book another interview.
+I was getting annoyed at this point,
+because the site said that it was meant to help people practice their
+technical interviewing skills,
+but waiting a week between each practice isn’t very helpful.
+At the third interview, I got a pretty simple question that was
+a scaled down version of a real world problem</p>
+<ul>
+  <li>how would one generate a unique id for each additional machine added to a data center
+in a scalable way?</li>
+</ul>
+
+<p>Perhaps I practised technical interviews a bit too much.
+For that question, I stated the obvious:
+to have a global counter tracking the highest numerical id
+of all the machines in the data center.
+When a new machine is added, increment the global counter by 1
+and set that to be the unique id of the new machine. 
+I figured we wouldn’t run into integer overflow problems
+on a modern 64-bit machine because data centers are not that large right now.</p>
+
+<p>I should have stopped there.
+But instead I tried to be smart and talk about further ways of optimization,
+because the problem reminded me of some hacky technical challenge problem
+I had seen in the past.
+The interviewer actually didn’t like that,
+because he advised me to focus on demonstrating real life engineering skills
+instead of trying to impress people with how clever I was theoretically. 
+He even said he could tell that I was in “interviewing mode” then,
+and advised me to try and act more like a genuine human instead of some
+algorithm solving machine.</p>
+
+<p>I’m guessing he works for a relatively small start-up.
+At most bigger companies, being in “interviewing mode”
+is exactly what you want to be at to get the job. 
+Because these places have the resources to train you from scratch
+and just care that you know the fundamentals well.</p>
+
+<p>At smaller start-ups I interview at, 
+I got a lot more focus on real skills that I would be 
+expected to apply if I actually got the job and started working there.
+Things like system design, or code refactoring,
+or HTML/JavaScript specific exercises.</p>
+
+<p>It’s hard to remain in interview mode for long once you have a job,
+because the types of traditional algorithm challenges given out at
+large companies tend to be far removed from what a software engineer really does.
+Soon after accepting an offer, 
+I scheduled another practice at interviewing.io just to see how I would do.
+The interviewer told me I “needed more practice”.</p>
+
+
+  </div>
+
+
+<!-- Pagination links -->
+<div class="pagination">
+  
+    <a href="/page7/" class="previous">Previous</a>
+  
+  <span class="page_number ">Page: 8 of 9</span>
+  
+    <a href="/page9/" class="next">Next</a>
+  
+</div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Things I Should Know</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              LK Loh
+            
+            </li>
+            
+            <li><a href="mailto:lkloh2410@gmail.com">lkloh2410@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/lkloh"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">lkloh</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/lkloh1024"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">lkloh1024</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>but somehow only just learnt</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

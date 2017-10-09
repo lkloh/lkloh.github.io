@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Things I Should Know</title>
+  <meta name="description" content="but somehow only just learnt">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/page2/">
+  <link rel="alternate" type="application/rss+xml" title="Things I Should Know" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Things I Should Know</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!-- This loops through the paginated posts -->
+
+  <h1><a href="/2017/09/28/eventlet.html">Eventlet</a></h1>
+  <p class="author">
+    <span class="date">2017-09-28 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p><a href="http://eventlet.net/">Eventlet</a> is a Python library to allow you to run code concurrently.
+It uses green threads for concurrent work.
+Green threads are better than normal threads as they are cheap,
+and shared data structures don’t need locks.</p>
+
+<p>Usage example:</p>
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">eventlet.greenpool</span> <span class="kn">import</span> <span class="n">GreenPile</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
+	<span class="o">//</span> <span class="n">process_data</span>
+	<span class="k">return</span> <span class="n">array</span>
+
+<span class="o">//</span> <span class="k">return</span> <span class="n">processes</span> <span class="n">array</span> <span class="n">quickly</span>
+<span class="k">def</span> <span class="nf">parallize_processing</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
+	<span class="n">pile</span> <span class="o">=</span> <span class="n">GreenPile</span><span class="p">(</span><span class="n">size_or_pool</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+	<span class="n">files</span> <span class="o">=</span> <span class="n">divide_up_files</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">num_divided_files</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+		<span class="n">pile</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">process_data</span><span class="p">,</span> <span class="n">files</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+	<span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">arr</span> <span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="n">pile</span><span class="p">])</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<p>This would speed up processing of a large file by 5 times.</p>
+
+<h2 id="gotchas">Gotchas</h2>
+
+<p>GreenPool lets you specify the total number of threads in the entire program.
+This would limit the resources the entire program uses.</p>
+
+<p>GreenPile lets you specify the number of threads you want to use to do something.
+Many greenpiles can be produced in a same program,
+so doing so does not limit the resources the entire program can use.</p>
+
+<p>When in doubt, use a GreenPool as a global variable 
+to limit the resoures the entire program consumes.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/09/27/formatting-python-strings-gotchas.html">Gotchas when formatting Python Strings</a></h1>
+  <p class="author">
+    <span class="date">2017-09-27 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>Given a name stored as a unicode variable, <code class="highlighter-rouge">name = u'John Doe</code>,
+and a desired to print a welcome message, there are three ways to do it right now:</p>
+
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="n">username</span> <span class="o">=</span> <span class="s">u'John Doe'</span>
+<span class="n">welcome_message_1</span> <span class="o">=</span> <span class="s">'Hello, </span><span class="si">%</span><span class="s">s'</span> <span class="o">%</span> <span class="n">username</span>
+<span class="n">welcome_message_2</span> <span class="o">=</span> <span class="s">'Hello, '</span> <span class="o">+</span> <span class="n">username</span>
+<span class="n">welcome_message_3</span> <span class="o">=</span> <span class="s">'Hello, {name}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Which should you choose?</p>
+
+<p>Python 3 will require you to use <code class="highlighter-rouge">.format()</code>,
+but there are some gotchas.
+First of all,
+all of the welcome messages will give you <code class="highlighter-rouge">Hello, John Doe</code> as expected.
+But the difference is that we have
+<code class="highlighter-rouge">welcome_message_1 = u'Hello, John Doe' = welcome_message_2</code>
+so the entire message is converted unicode as the <code class="highlighter-rouge">username</code> is in unicode.</p>
+
+<p>However, <code class="highlighter-rouge">welcome_message_3 = 'Hello, John Doe'</code> is still a string.
+This can cause issues in certain functions if they are expecting unicode 
+but you’re passing in a string.
+I just spent almost an entire day debugging this because I wanted
+to be clever and optimize for the future of Python.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/09/26/mutable-objects-in-python.html">Python object representation</a></h1>
+  <p class="author">
+    <span class="date">2017-09-26 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>According to the <a href="https://docs.python.org/2/reference/datamodel.html">python datamodel</a>, 
+all data in Python is an object/relation between objects. 
+In particular, <em>an object’s identity never changes once it has been created.</em>
+The <code class="highlighter-rouge">id()</code> function returns an integer representing the identity of an object
+(it’s unique address in memory).
+But the value of certain objects can change.</p>
+
+<p>For example given a list <code class="highlighter-rouge">a = [7, 8, 9]</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code> -----
+|  7  | &lt;---- a (list) at 4320001280
+ -----
+|  8  |
+ -----
+|  9  |
+ -----
+</code></pre>
+</div>
+<p>it is always stored at address 4320001280
+and currently has values <code class="highlighter-rouge">a[0] = 7, a[1] = 8, a[2] = 9</code>,
+but after assignment</p>
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre>
+</div>
+<p>the representation in memory looks like</p>
+<div class="highlighter-rouge"><pre class="highlight"><code> -----
+|  5  | &lt;---- a (list) at 4320001280
+ -----
+|  8  |
+ -----
+|  9  |
+ -----
+</code></pre>
+</div>
+<p>so the value of <code class="highlighter-rouge">a</code> changed, though it’s identity is still 4320001280.</p>
+
+<p>The value of list a could change because lists in python are mutable.
+Thus if we do something like</p>
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre>
+</div>
+<p>then the value of <code class="highlighter-rouge">a</code> will be <code class="highlighter-rouge">[5, 8, 9]</code>.</p>
+
+<p>And when we print <code class="highlighter-rouge">b</code>, because <code class="highlighter-rouge">b</code> is pointing
+to the representation of <code class="highlighter-rouge">a</code> in memory, 
+then we get</p>
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>as well.
+This can be illustrated by verifying that <code class="highlighter-rouge">id(a) = 4320001280 = id(b)</code>.</p>
+
+<p>But integers are immutable objects in python, so after doing</p>
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+</code></pre>
+</div>
+<p>We see that <code class="highlighter-rouge">id(x) = 140243129881624 = id(y)</code>.
+By now if we reassign <code class="highlighter-rouge">x</code>, since <code class="highlighter-rouge">x</code> is an immutable integer,
+it gets assigned to a new location in memory.
+Thus
+<code class="highlighter-rouge">x = 8</code>
+and then <code class="highlighter-rouge">id(x) = 140243129881600</code>.
+And still we have <code class="highlighter-rouge">y</code> pointing to the old object <code class="highlighter-rouge">x</code> was assigned to,
+so we still have <code class="highlighter-rouge">id(y) = 140243129881624</code> and <code class="highlighter-rouge">y = 7</code>.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/09/25/writing-readable-code.html">Writing readable code</a></h1>
+  <p class="author">
+    <span class="date">2017-09-25 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>Today I saw some code that looked a little bit like this:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Student</span> <span class="p">{</span>
+    <span class="nl">firstName</span><span class="p">:</span> <span class="nb">String</span><span class="p">;</span>
+    <span class="nl">lastName</span><span class="p">:</span> <span class="nb">String</span><span class="p">;</span>
+    <span class="nl">age</span><span class="p">:</span> <span class="nx">number</span><span class="p">;</span>
+    <span class="nl">isFreshman</span><span class="p">:</span> <span class="kr">boolean</span><span class="p">;</span>
+
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">firstName</span><span class="err">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">lastName</span><span class="err">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">age</span><span class="err">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">isFreshman</span><span class="err">:</span> <span class="kr">boolean</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">firstName</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">lastName</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">isFreshman</span> <span class="o">=</span> <span class="nx">isFreshman</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">isNonTraditionalStudent</span><span class="p">()</span><span class="err">:</span> <span class="kr">boolean</span> <span class="p">{</span>
+    	<span class="kr">const</span> <span class="nx">under18</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">;</span>
+    	<span class="kr">const</span> <span class="nx">aFreshman</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">isFreshman</span><span class="p">;</span>
+    	<span class="k">return</span> <span class="p">(</span><span class="nx">under18</span> <span class="nx">and</span> <span class="nx">not</span> <span class="nx">aFreshman</span><span class="p">)</span> <span class="nx">or</span> <span class="p">(</span><span class="nx">not</span> <span class="nx">under18</span> <span class="nx">and</span> <span class="nx">aFreshman</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Traditional freshmen are usually 18 years old.
+Any student who is under 18 and not a freshman (unusually young to start college),
+or above 18 but still a freshman (ususually old to start college),
+is considered to be a non-traditional student. 
+On this post anyway.</p>
+
+<p>The function <code class="highlighter-rouge">isNonTraditionalStudent</code> could be rewritten more concisely as:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">isNonTraditionalStudent</span><span class="p">()</span><span class="err">:</span> <span class="kr">boolean</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">)</span> <span class="o">^</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">isFreshman</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<p>since it just checks that (this.age &lt; 18) and (isFreshman)
+must have the same truth value,
+but then it’s not immediately obvious what this function is checking for,
+though it uses less lines of code.</p>
+
+<p>So optimize for readability over conciseness.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/09/24/why-escape-was-replaced-with-two-functions.html">Why escape was deprecated in JavaScript.</a></h1>
+  <p class="author">
+    <span class="date">2017-09-24 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>According to its <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape">documentation</a>,
+the <code class="highlighter-rouge">escape</code> function takes in a string and returns a new string in which 
+certain characters are replaced with a hexadecimal sequence.
+For example,</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">escape</span><span class="p">(</span><span class="s2">"abc123"</span><span class="p">)</span> <span class="o">=</span> <span class="s2">"abc123"</span><span class="p">;</span>
+<span class="nx">escape</span><span class="p">(</span><span class="s2">"?%"</span><span class="p">)</span> <span class="o">=</span> <span class="o">%</span><span class="mi">3</span><span class="nx">F</span><span class="o">%</span><span class="mi">25</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">escape</code> has since been deprecated and replaced with two functions,
+<code class="highlighter-rouge">encodeURI</code> and <code class="highlighter-rouge">encodeURIComponent</code>.
+This is because <code class="highlighter-rouge">escape</code> was mainly for encoding url parameters,
+perhaps when making a GET request for instance.
+Now why are two functions needed to replace it? Take a look at these results:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"abc123"</span><span class="p">)</span> <span class="o">=</span> <span class="s2">"abc123"</span><span class="p">;</span>
+<span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"?%"</span><span class="p">)</span> <span class="o">=</span> <span class="s2">"?%25"</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>and</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"abc123"</span><span class="p">)</span> <span class="o">=</span> <span class="s2">"abc123"</span><span class="p">;</span>
+<span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"?%"</span><span class="p">)</span> <span class="o">=</span> <span class="s2">"%3F%25"</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>Essentially, <code class="highlighter-rouge">encodeURIComponent</code> does the same thing as <code class="highlighter-rouge">escape</code>. 
+So why does <code class="highlighter-rouge">encodeURI</code> exist as well?</p>
+
+<p>Take a look at what happens when encoding a URL with these:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">escape</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span> 
+	<span class="o">=</span> <span class="s2">"https%3A//www.collegefashion.net/search%3Fquery%3Dblazers"</span>
+<span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"https://www.collegefashion.net/search?query=blazers"</span><span class="p">)</span> 
+	<span class="o">=</span> <span class="nx">https</span><span class="err">:</span><span class="c1">//www.collegefashion.net/search?query=blazers</span>
+<span class="nb">encodeURIComponent</span><span class="p">(</span><span class="s2">"https://www.collegefashion.net/search?query=blazers"</span><span class="p">)</span> 
+	<span class="o">=</span> <span class="nx">https</span><span class="o">%</span><span class="mi">3</span><span class="nx">A</span><span class="o">%</span><span class="mi">2</span><span class="nx">F</span><span class="o">%</span><span class="mi">2</span><span class="nx">Fwww</span><span class="p">.</span><span class="nx">collegefashion</span><span class="p">.</span><span class="nx">net</span><span class="o">%</span><span class="mi">2</span><span class="nx">Fsearch</span><span class="o">%</span><span class="mi">3</span><span class="nx">Fquery</span><span class="o">%</span><span class="mi">3</span><span class="nx">Dblazers</span>
+</code></pre>
+</div>
+
+<p>It’s so that you can now pass in the entire URL with parameters to <code class="highlighter-rouge">encodeURI</code>
+to return the properly formatted URL,
+instead of formatting the parameters with 
+just <code class="highlighter-rouge">encodeURIComponent</code> or <code class="highlighter-rouge">escape</code>
+and having to think about how to format it properly.</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"https://www.collegefashion.net/search?query=blazers"</span><span class="p">)</span> 
+	<span class="o">=</span> <span class="nx">https</span><span class="err">:</span><span class="c1">//www.collegefashion.net/search?query=blazers</span>
+</code></pre>
+</div>
+
+
+  </div>
+
+  <h1><a href="/2017/09/23/the-real-cause-of-climate-change-copy.html">The real cause of climate change</a></h1>
+  <p class="author">
+    <span class="date">2017-09-23 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>They don’t make them like they used to…</p>
+
+<p>Or so grandpa complains.</p>
+
+<p>Maybe he’s just being a grumpy old man.
+Or maybe he’s right.</p>
+
+<p>My grandparents have a fan they bought when my mother was 6 years old.
+They used it all the time at home, before lending it to my aunt when she headed off to college.
+She returned it when she was done, since it was still working.
+My grandfather decided to being it to his shop, 
+where he turned it on whenever he was there, at least 40 hours a week.</p>
+
+<p>They’ve had it for over 50 years now and it’s still going strong.
+Sure he has to wipe it down and oil it every few years,
+but that’s all the maintainence he’s had to make it
+last for over <em>half a century</em>!</p>
+
+<p>Of course, new fans break down a lot faster. 
+You’ll be lucky if they last 5 years.
+They’re made to break down after a set period on purpose
+so that manufacturers can turn a profit.
+If everything they made lasted 50 years,
+they’ll be bankrupt very soon.</p>
+
+<p>And not just fans, of course.
+All other electronic equipment.
+My mother’s kettle, bought before she married my father,
+lasted through 20 years of daily usage.
+My electric water boiler barely lasted me through college.</p>
+
+<p>When such things break down, they tend to end up in a landfill.
+And they typically aren’t biogradable.
+Imagine this compounded by every person/household.
+Now you see why everyone’s carbon footprint is getting larger and larger.</p>
+
+<p>Perhaps building a reliable product that can last 50 years,
+but requiring customers to “pay” to extend its life every 5 years or so 
+would be an environmentally-friendly compromise?
+Tesla has done <a href="http://www.slate.com/blogs/future_tense/2017/09/10/tesla_unlocked_florida_drivers_60kwh_batteries_before_irma_not_everyone.html">something similar</a>.
+<a href="https://blockgeeks.com/guides/what-is-blockchain-technology/">Blockchain technology</a> 
+may help ensure everyone is acting fairly.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/09/22/designing-interfaces.html">Designing Interfaces</a></h1>
+  <p class="author">
+    <span class="date">2017-09-22 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>Interfaces should be designed to abstract 
+away as much of the functionality as possible,
+but sometimes it’s tempting to include details of the implenentation
+if it would consolidate things.</p>
+
+<p>Here’s an example:</p>
+
+<p>Extending the Person class from yesterday, people here can
+transition their gender and update their name to reflect their new identify.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Person</span> <span class="p">{</span>
+    <span class="nl">firstName</span><span class="p">:</span> <span class="nb">String</span><span class="p">;</span>
+    <span class="nl">lastName</span><span class="p">:</span> <span class="nb">String</span><span class="p">;</span>
+    <span class="nl">age</span><span class="p">:</span> <span class="nx">number</span><span class="p">;</span>
+    <span class="nl">isMale</span><span class="p">:</span> <span class="kr">boolean</span><span class="p">;</span>
+
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">firstName</span><span class="err">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">lastName</span><span class="err">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">age</span><span class="err">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">isMale</span><span class="err">:</span> <span class="kr">boolean</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">firstName</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">lastName</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">isMale</span> <span class="o">=</span> <span class="nx">isMale</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">updatePerson</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span><span class="err">:</span> <span class="nx">Person</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="k">this</span><span class="p">,</span> <span class="nx">params</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Now, given the person below:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">female</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">({</span>
+    <span class="na">firstName</span><span class="p">:</span> <span class="err">`</span><span class="nx">Jane</span><span class="err">`</span><span class="p">,</span>
+    <span class="na">lastName</span><span class="p">:</span> <span class="err">`</span><span class="nx">Roe</span><span class="err">`</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="na">isMale</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>to transition this person from a female to a male and rename them, we could do:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">male</span> <span class="o">=</span> <span class="nx">female</span><span class="p">.</span><span class="nx">updatePerson</span><span class="p">({</span><span class="na">firstName</span><span class="p">:</span> <span class="err">`</span><span class="nx">John</span><span class="err">`</span><span class="p">,</span> <span class="na">isMale</span><span class="p">:</span> <span class="kc">false</span><span class="p">});</span>
+</code></pre>
+</div>
+
+<p>But this isn’t the greatest thing to do, since it requires the person
+using the <code class="highlighter-rouge">People</code> class to understand the underlying details of how
+<code class="highlighter-rouge">updatePerson</code> is implemented.
+And it isn’t so clear to a new reader about what the above is doing.</p>
+
+<p>Now contrast with this implementation of Person:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Person</span> <span class="p">{</span>
+    <span class="nl">firstName</span><span class="p">:</span> <span class="nb">String</span><span class="p">;</span>
+    <span class="nl">lastName</span><span class="p">:</span> <span class="nb">String</span><span class="p">;</span>
+    <span class="nl">age</span><span class="p">:</span> <span class="nx">number</span><span class="p">;</span>
+    <span class="nl">isMale</span><span class="p">:</span> <span class="kr">boolean</span><span class="p">;</span>
+
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">firstName</span><span class="err">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">lastName</span><span class="err">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">age</span><span class="err">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">isMale</span><span class="err">:</span> <span class="kr">boolean</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">firstName</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">lastName</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">isMale</span> <span class="o">=</span> <span class="nx">isMale</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">performSexChangeSurgery</span><span class="p">(</span><span class="nx">isMale</span><span class="err">:</span> <span class="kr">boolean</span><span class="p">)</span><span class="err">:</span> <span class="nx">Person</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="k">this</span><span class="p">,</span> <span class="p">{</span><span class="nx">isMale</span><span class="p">}));</span>
+<span class="p">}</span>
+
+<span class="nx">changeFirstName</span><span class="p">(</span><span class="nx">firstName</span><span class="err">:</span> <span class="nb">String</span><span class="p">)</span><span class="err">:</span> <span class="nx">Person</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="k">this</span><span class="p">,</span> <span class="p">{</span><span class="nx">firstName</span><span class="p">}));</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Now to transition the person, we could do</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">male</span> <span class="o">=</span> <span class="nx">female</span>
+    <span class="p">.</span><span class="nx">performSexChangeSurgery</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">changeFirstName</span><span class="p">(</span><span class="err">`</span><span class="nx">John</span><span class="err">`</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>And its clear that the gender was changed, and so was the first name.
+Furthermore, it’s clear how to update the person’s characteristics:
+just call the function that changes a particular characteristic.
+It’s obvious from just looking the function signature, what
+the type of the characteristic is.</p>
+
+  </div>
+
+  <h1><a href="/2017/09/21/mixing-js-and-ts-copy.html">Mixing Javascript and Typescript</a></h1>
+  <p class="author">
+    <span class="date">2017-09-21 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>Suppose this is in TypeScript:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Person</span> <span class="p">{</span>
+    <span class="nl">firstName</span><span class="p">:</span> <span class="nb">String</span><span class="p">;</span>
+    <span class="nl">lastName</span><span class="p">:</span> <span class="nb">String</span><span class="p">;</span>
+    <span class="nl">age</span><span class="p">:</span> <span class="nx">number</span><span class="p">;</span>
+    <span class="nl">isMale</span><span class="p">:</span> <span class="kr">boolean</span><span class="p">;</span>
+
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">firstName</span><span class="err">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">lastName</span><span class="err">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">age</span><span class="err">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">isMale</span><span class="err">:</span> <span class="kr">boolean</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">firstName</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">lastName</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">isMale</span> <span class="o">=</span> <span class="nx">isMale</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">performSexChangeSurgery</span><span class="p">(</span><span class="nx">isMale</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span><span class="err">:</span> <span class="nx">Person</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="k">this</span><span class="p">,</span> <span class="nx">isMale</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>And this bit of code uses that TypeScript model, but is written in JavaScript:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">femaleAlex</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">({</span>
+    <span class="na">firstName</span><span class="p">:</span> <span class="err">`</span><span class="nx">Alex</span><span class="err">`</span><span class="p">,</span>
+    <span class="na">lastName</span><span class="p">:</span> <span class="err">`</span><span class="nx">Roe</span><span class="err">`</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="na">isMale</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="p">});</span>
+<span class="kr">const</span> <span class="nx">maleAlex</span> <span class="o">=</span> <span class="nx">femaleAlex</span><span class="p">.</span><span class="nx">performSexChangeSurgery</span><span class="p">({</span><span class="na">isMale</span><span class="p">:</span> <span class="kc">true</span><span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Then the code will compile and work just fine.</p>
+
+<p>The problem is that this is wrongly typed.
+<code class="highlighter-rouge">performSexChangeSurgery</code> is called with a JavaScript object <code class="highlighter-rouge"><span class="p">{</span><span class="err">isMale:</span><span class="w"> </span><span class="err">true</span><span class="p">}</span></code>,
+but the function signature (in TypeScript) requires the argument to be a boolean.</p>
+
+<p>But this bit of code is not caught by the compiler,
+since JavaScript is dynamically typed, and this <code class="highlighter-rouge">performSexChangeSurgery</code>
+just needs to be given some sort of Object.
+And the function <code class="highlighter-rouge">performSexChangeSurgery</code> demands an argument that is an object.
+In particular, it demands a boolean, which is a JavaScript Object.</p>
+
+<p>The right way to write the JavaScript portion is</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">femaleAlex</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">({</span>
+    <span class="na">firstName</span><span class="p">:</span> <span class="err">`</span><span class="nx">Alex</span><span class="err">`</span><span class="p">,</span>
+    <span class="na">lastName</span><span class="p">:</span> <span class="err">`</span><span class="nx">Roe</span><span class="err">`</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="na">isMale</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="p">});</span>
+<span class="kr">const</span> <span class="nx">maleAlex</span> <span class="o">=</span> <span class="nx">performSexChangeSurgery</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>The pains of transitioning to new technology halfway in a large codebase.</p>
+
+
+  </div>
+
+  <h1><a href="/2017/09/20/code-flux.html">How often should you rebase your branch with master?</a></h1>
+  <p class="author">
+    <span class="date">2017-09-20 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p><a href="https://stackoverflow.com/questions/32681850/is-there-a-fast-way-to-rebase-a-long-history-of-commits-to-master-branch">According</a> 
+to the <a href="https://coderwall.com/p/7aymfa/please-oh-please-use-git-pull-rebase">internet</a>, 
+you should do it at least once a day.
+Or more often.
+Reason being that its better to fix your conflicts in stages
+(divide up the hard labor),
+than do it all at once.</p>
+
+<p>Problem is, sometimes it’s unavoidable that two people or more
+are touching the same bits of code.
+Perhaps you didn’t realize that there was so much interdependence
+when the tasks were assigned, 
+and it’s too late when you did: everyone’s already done too much work in parallel.</p>
+
+<p>If there’s a lot of code changing that affects what you’re working on,
+it may be better to just work off a dev branch and not rebase until you are done with
+your bit, then squash all your commits into one commit and rebase with master.</p>
+
+<p>Obviously try to get smaller and more frequent pull requests out when
+working on an active project with lots of developers.
+In that case code churn should probably be expected.</p>
+
+<p>Reserve your large pull requests (sometimes that’s unavoidable too!) 
+for when you know no one else is likely
+working the same bits of code.</p>
+
+  </div>
+
+  <h1><a href="/2017/09/19/git-squash.html">Git Squash</a></h1>
+  <p class="author">
+    <span class="date">2017-09-19 00:00:00 -0700</span>
+  </p>
+  <div class="content">
+    <p>It’s probably a lot easier to squash lots of commits together,
+than have a huge git workflow.
+Suppose you checked out a branch called <code class="highlighter-rouge">dev</code>,
+and made 5 commits to it.
+Now you want those 5 commits to be merge to 1 on your branch.
+The best way to do this is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git reset --soft HEAD~5 &amp;&amp;
+git commit
+</code></pre>
+</div>
+
+<p>You’ll need to write a new commit message.
+Things will be harder if you want all of your old commit messages to be
+prepopulated.
+But why would you need that unless your branch is trying to accomplish <code class="highlighter-rouge">x</code> 
+different tasks at the same time?
+Even if it is, there’s probably a way to 
+rephrase what you’re doing in a more concise way.</p>
+
+<p>Thanks <a href="https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git">Stack Overflow</a>!</p>
+
+  </div>
+
+
+<!-- Pagination links -->
+<div class="pagination">
+  
+    <a href="/" class="previous">Previous</a>
+  
+  <span class="page_number ">Page: 2 of 9</span>
+  
+    <a href="/page3/" class="next">Next</a>
+  
+</div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Things I Should Know</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              LK Loh
+            
+            </li>
+            
+            <li><a href="mailto:lkloh2410@gmail.com">lkloh2410@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/lkloh"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">lkloh</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/lkloh1024"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">lkloh1024</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>but somehow only just learnt</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
