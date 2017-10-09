@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "V8's bytecode"
+date:   2017-07-25
+---
+
+[This post](https://medium.com/dailyjs/understanding-v8s-bytecode-317d46c94775) 
+tells us about V8's bytecode. Here is a summary.
+
+When V8 compiles JavaScript, this happens:
+* JS code == parser ==> syntax tree
+* syntax tree == interpreter ==> bytecode
+* bytecode == optimizing compiler ==> optimized machine code
+
+## What is bytecode
+
+* An abstraction of machine code.
+* Bytecode -> machine code is easy: bytecode has the same model as CPU
+* V8's bytecodes are small building blocks of JavaScript's functionality.
+	There are bytecodes for operators like `add`, `TypeOf`, or `LdaNamedProperty`.
+
+## Accumulator register
+
+* Each bytecode specifies its inputs and outputs as register operands
+* The interpreter for V8 USES `r0, r1, r2, ...` and an accumulator register.
+* Accumulator register keeps bytecodes shorter and saves memory:
+	`add r1` adds the value in register `r1` to the accumulator
+
+
+## Looking at bytecode
+
+`node --print-bytecode <my-filename>.js`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
