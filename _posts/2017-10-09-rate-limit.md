@@ -5,7 +5,8 @@ date:   2017-10-09
 ---
 
 Rate limiting is done for a reason: because it has caused trouble in the past.
-This article describes [more](https://blog.codinghorror.com/rate-limiting-and-velocity-checking/).
+This article describes [more](https://blog.codinghorror.com/rate-limiting-and-velocity-checking/),
+and here is a summary:
 
 ## Why you must rate limit your website's UI
 
