@@ -30,7 +30,7 @@ plugins_dir:
   - jekyll-paginate
 
 
-paginate: 10
+paginate: 50
 paginate_path: "/page:num/"
 
 kramdown:
