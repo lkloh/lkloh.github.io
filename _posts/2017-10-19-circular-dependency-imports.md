@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Circular Dependency Imports"
+title:  "Circular Dependency Import Gotchas"
 date:   2017-10-19
 ---
 
@@ -30,7 +30,7 @@ bobby.py
 
 Will throw an error as both files depend on each other.
 
-To fix this, do
+To fix this, put the import inside the function instead.
 
 ```
 alice.py
