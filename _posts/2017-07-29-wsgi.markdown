@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Web Server Gateway Interface (WSGI)"
-date:   2017-07-289
+date:   2017-07-29
 ---
 
 Summarize from [here](https://www.fullstackpython.com/wsgi-servers.html).
