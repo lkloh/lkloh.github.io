@@ -1,0 +1,69 @@
+---
+layout: post
+title:  "How work on a remote filesystem with Sublime Text"
+date:   2017-07-30
+---
+
+My intro to programming class was taught in Java,
+so my first text editor was Eclipse.
+The next class was in C++, 
+and the recommended text editor was VisualStudio,
+which I used.
+After that was a class on computer systems,
+and you could use either Vim or Emacs.
+I went with Emacs because it seemed slightly easier to learn than Vim.
+It wasn't stable when I had to SSH into the remote servers
+to do the work though.
+Vim was a lot more stable, but the work was tough enough without learning 
+a new text editor like Vim.
+So Emacs it was for that class, but I never liked it much.
+My first dev job after college was at a startup,
+where I was introduced to Sublime Text.
+I never used anything else again,
+they just made it too easy to use and the messages asking me to 
+pay up aren't too annoying. 
+Maybe I'll learn Vim if Sublime Text makes them more irritating. 
+
+In the meantime, if you need to work on a codebase in a remote server,
+and want to use your favourite text editor on your laptop,
+[sshfs](https://github.com/libfuse/sshfs) is your friend.
+
+Install it. Make a directory called `mountpoint` on your laptop. Run
+```
+sshfs user@hostname:directory mountpoint 
+```
+Now you can work off the codebase in `mountpoint` like
+everything is actually located on your laptop,
+but changes you make in Sublime Text will reflect
+in the remote directory when you press `Save`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
