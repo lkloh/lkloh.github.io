@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "CRUD"
+date:   2017-08-17
+---
+
+Summary from [here](https://stackify.com/what-are-crud-operations/).
+
+## What is CRUD
+
+* Create/Read/Update/Delete
+* Similar to what a database/most applications do
+* REST implements CRUD over HTTP
+
+## How it works
+
+User visiting an ecommerce website
+* Create an account
+* Read information from that account
+* Update billing information
+
+## Why use CRUD instead of SQL
+
+* Performance caching of execution plan in a SQL server
+* Prevent SQL injection attacks
+* Easier to set up cccess control
