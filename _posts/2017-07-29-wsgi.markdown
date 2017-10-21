@@ -1,0 +1,104 @@
+---
+layout: post
+title:  "Web Server Gateway Interface (WSGI)"
+date:   2017-07-289
+---
+
+Summarize from [here](https://www.fullstackpython.com/wsgi-servers.html).
+
+## What it is
+
+* [Interface specification](https://www.python.org/dev/peps/pep-3333/) about how a server and application (written in Python) should communicate.
+
+## Why WSGI had to be specified
+
+* Traditional web servers don't understand Python applications
+* Grisha Trubetskoy wrote `mod_python` to execute aribtrary Python code in the 1990s,
+	but it wasn't a standard specification
+	and had security vulnerabilities.
+* WSGI is the standardized way to run Python web application
+
+```
+                       ------------------
+                      |                  |
+ -------------         ----------        |
+| WSGI Server |------>| Callable |       |
+ -------------        |  Object  |       |
+                       ----------        |
+                      | WSGI Application |
+                       ------------------
+```
+
+## Why we can't just point the web server at an application
+
+* Framework independence
+* Encapsulate serving requests to the server, not framework
+* Abstraction - WSGI is simple.
+	Your web server passes request to the WSGI container
+	running your web application,
+	and the response is sent back the the requester. 
+
+## Configuring a web server
+
+Web server configuration specifies
+which requests are send to the WSGI server to process. 
+
+## Gunicon
+
+Most commonly used [WSGI web server](http://docs.gunicorn.org/en/stable/).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
