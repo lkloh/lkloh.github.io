@@ -66,34 +66,3 @@ let produce = arr.reduce((acc, val) => acc * val, 1);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

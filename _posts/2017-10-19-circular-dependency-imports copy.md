@@ -12,10 +12,10 @@ alice.py
 | from bob import bobby             |
 |                                   |
 | def wonderland():                 |
-|	return bobby() + ' loves Alice' |
+|   return bobby() + ' loves Alice' |
 |                                   |
 | if __name__ == '__main__':        |
-| 	print wonderland()              |
+|   print wonderland()              |
  -----------------------------------
 
 
@@ -25,7 +25,7 @@ bobby.py
 |                              |
 | def bobby():                 |
 |   return 'Bob'               |
-  ------------------------------
+ ------------------------------
 ```
 
 Will throw an error as both files depend on each other.
@@ -38,10 +38,10 @@ alice.py
 | from bob import bobby             |
 |                                   |
 | def wonderland():                 |
-|	return bobby() + ' loves Alice' |
+|   return bobby() + ' loves Alice' |
 |                                   |
 | if __name__ == '__main__':        |
-| 	print wonderland()              |
+|   print wonderland()              |
  -----------------------------------
 
 
