@@ -2,7 +2,6 @@
 layout: post
 title:  "Clean Slate"
 date:   2017-06-29
-categories: wiping your harddrive
 ---
 
 When you work with software, you may end up [installing a lot of packages](https://medium.com/friendship-dot-js/i-peeked-into-my-node-modules-directory-and-you-wont-believe-what-happened-next-b89f63d21558). 
