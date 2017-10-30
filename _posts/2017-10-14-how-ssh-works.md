@@ -13,13 +13,12 @@ Summarized from [here](https://www.digitalocean.com/community/tutorials/understa
 
 ## Encryption tools
 
-* Asymmetric key: 
-...* Used during initial key exchange process to set up the symmetric encryption.
-...* SSH key pais are used to authenticate a client to a server.
-	Client uploads public key to the server it wants to access.
-	Server's `~/.ssh/authorized_keys` file contains the client's public key.
+Asymmetric key: 
+* Used during initial key exchange process to set up the symmetric encryption.
+* SSH key pais are used to authenticate a client to a server. Client uploads public key to the server it wants to access. Server's `~/.ssh/authorized_keys` file contains the client's public key.
 
-* Symmetric key: Used to encrypt data sent between server and client during a session.
+Symmetric key:
+* Used to encrypt data sent between server and client during a session.
 
 ## Symmetrical cipher systems recognized
 
@@ -32,17 +31,17 @@ Server and client can decide on a list of supported ciphers to use
 
 ## How it works
 
-* Server 
-...* listens on a port for connections
-...* Negotiates secure connection
-...* Authenticates client
-...* Spawn environment if credentials accepted
+Server 
+* listens on a port for connections
+* Negotiates secure connection
+* Authenticates client
+* Spawn environment if credentials accepted
 
-* Client
-...* Begin TCP handshake with server
-...* Negotiate secure connection
-...* Verify server's identify
-...* Provide authentication credentials
+Client
+* Begin TCP handshake with server
+* Negotiate secure connection
+* Verify server's identify
+* Provide authentication credentials
 
 ## Negotiating encryption for session
 
