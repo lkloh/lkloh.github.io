@@ -11,7 +11,9 @@ The latest Chrome, Firefore, Safari and Microsoft Edge now support ES6.
 
 Problem is that not everyone uses those browsers,
 and not everyone upgrades their browsers. 
-Lots of people use old devices that may make upgrading a browser problematic.
+Lots of people use old devices that may make upgrading a browser problematic due to
+problems of using old hardware to run newer software.
+
 Think someone who has a 5 year old device.
 The new browser versions probably would run really slowly
 on the old hardware, or even not at all.

@@ -14,9 +14,15 @@ and potentially other negative consequences.
 Some of the countries that have been sanctioned now/in the past are:
 Cuba, Syria, North Korea, Syria, Burma.
 
-Some consequences are that educational websites
-such as Coursera get [blocked in Iran](https://www.thedailybeast.com/how-american-economic-sanctions-are-hurting-innocent-students-in-iran-cuba-and-sudan).
-So Iranian residents can't view the content provided by Coursera.
+If you are just distributing educational content for free
+(e.g. an academic making your lecture notes free on your work/personal website), thats fine.
+If you run a website that makes money from users in any way,
+you might need to find a way to comply with the sanctions.
+For example, Coursera provides mostly free online education,
+but since they've tried to make money recently by
+doing licencing and certificates,
+they had no choice but to [block users in Iran](https://www.thedailybeast.com/how-american-economic-sanctions-are-hurting-innocent-students-in-iran-cuba-and-sudan)
+in order to comply with the law.
 
 If you're a U.S. based service provider,
 [here](https://www.sitepoint.com/how-to-block-entire-countries-from-accessing-website/)
