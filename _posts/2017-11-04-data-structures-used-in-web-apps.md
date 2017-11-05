@@ -99,7 +99,7 @@ def find_unique_tree(n):
 	elif n == 1:
 		return ['*']
 	else:
-		all_unique_trees = []
+		all_unique_trees = set
 		tree_minus_one_set = find_unique_tree(n-1)
 		for subtree in tree_minus_one_set:
 			all_unique_trees += ['L(' + subtree + ')*']
@@ -108,7 +108,6 @@ def find_unique_tree(n):
 		for subtree in tree_minus_two_set:
 			all_unique_trees += ['**L(' + subtree + ')']
 			all_unique_trees += ['L(' + subtree + ')**']
-
 		return all_unique_trees
 
 print find_unique_tree(0) # []
