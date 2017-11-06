@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Data Structures Used in Web Apps"
+title:  "Shortest substring containing all given characters"
 date:   2017-11-05
 ---
 
