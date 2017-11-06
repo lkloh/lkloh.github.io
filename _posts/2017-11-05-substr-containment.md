@@ -51,9 +51,21 @@ the first time I saw it on Pramp.
 I'm not sure how anyone can come up with it without hints in 15 min
 if they haven't seen something similar in the past.
 
+It involves two pointers to the head and tail of the substring. 
+
+Pseudocode
+```
+while start, end < len(s):
+	if s[start:end] contains everything in alphabet:
+		keep incrementing start while s[start+1:end] contains everything in alphabet
+	else
+		increment end
+```
+
 It took me at least 2 hours to figure a correctly coded
 solution by myself after the interview.
 
+Python
 ```
 def contains_all_alphabets(char_counts):
 	for ch in char_counts:
