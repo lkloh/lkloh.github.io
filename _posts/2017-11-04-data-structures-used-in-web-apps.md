@@ -67,7 +67,9 @@ Obviously a recursive solution would be required.
 
 
 Here are the unique trees you want:
-'''
+
+
+```
      o
     / 
 find_unique_tree(n-1)
@@ -83,8 +85,7 @@ find_unique_tree(n-1)
                        o
                       / \
  find_unique_tree(n-2)   o
-
-'''
+```
 
 
 And here's the code,
@@ -92,7 +93,7 @@ which uses a hash set to store the trees,
 `*` to represent nodes in the tree,
 and also records the structure of the tree.
 
-'''
+```
 def find_unique_tree(n):
 	if n == 0:
 		return []
@@ -115,9 +116,7 @@ print find_unique_tree(1) # ['*'']
 print find_unique_tree(2) # ['L(*)*', '*L(*)']
 print find_unique_tree(3) # ['L(L(*)*)*', '*L(L(*)*)', 'L(*L(*))*', '*L(*L(*))', '**L(*)', 'L(*)**']
 print find_unique_tree(4) # ['L(L(L(*)*)*)*', '*L(L(L(*)*)*)', 'L(*L(L(*)*))*', '*L(*L(L(*)*))', 'L(L(*L(*))*)*', '*L(L(*L(*))*)', 'L(*L(*L(*)))*', '*L(*L(*L(*)))', 'L(**L(*))*', '*L(**L(*))', 'L(L(*)**)*', '*L(L(*)**)', '**L(L(*)*)', 'L(L(*)*)**', '**L(*L(*))', 'L(*L(*))**']
-'''
-
-
+```
 
 Could probably use some dynamic programming to avoid computing everything again,
 but I only had 30 minute to think of everything.
