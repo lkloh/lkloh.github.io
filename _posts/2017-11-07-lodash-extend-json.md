@@ -34,7 +34,7 @@ var dictB = {
 	d: 4,
 	e: 5,
 }
-var dict = .extend(dictA, dictB);
+var dict = .extend({}, dictA, dictB);
 console.log(dict); 
 // returns {a: 1, b: 2, c:3, d: 4, e: 5};
 ```
