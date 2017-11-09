@@ -1,36 +1,32 @@
 ---
 layout: post
-title:  "What is constant in ES6"
-date:   2017-11-07
+title:  "Pug: Using variables to declare the class name"
+date:   2017-11-08
 ---
 
-ES5 called all variables `var`.
+In Pug, 
 
-ES6 introduced `const` and `let`.
-
-```js
-// Constant
-const MEANING_OF_LIFE = 42;
-
-// Not constant!!!
-const dict = {a: 1, b: 2};
-dict[c] = 3;
+```
+// Pug, wrong
+- var myClassName = 'exciting_name'
+div.=myClassName My dog is a Pug!
 ```
 
-Does that mean I should have written 
-```js
-const MEANING_OF_LIFE = 42;
-
-const DICT = {a: 1, b: 2};
-DICT[c] = 3;
+would compile to
 ```
-if I wanted [good style](https://google.github.io/styleguide/jsguide.html#naming-constant-names)?
+<!-- HTML, wrong -->
+<div> myClassName My dog is a Pug! </div>
+```
 
-Not necessarily, as a `const` variable [can change](https://mathiasbynens.be/notes/es6-const).
+instead of
+```
+<!-- HTML, correct -->
+<div class='myClassName'> My dog is a Pug! </div>
+```
 
-You only use ALL CAPS TO DECLARE A VARIABLE if it can never get updated.
-
-
-
-
+Instead do
+```
+// Pug, correct
+div(class=myClassName) My dog is a Pug!
+```
 
