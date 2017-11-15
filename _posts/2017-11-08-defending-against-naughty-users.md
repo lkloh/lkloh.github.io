@@ -43,8 +43,6 @@ The form below mostly defends against accidental mistakes.
 
 	<h2> No copying and pasting </h2>
 	<input type="number" placeholder="Enter a number between 0 and 5" , min=0, max=5, onkeypress="return event.charCode >= 48", onpaste="return false;">
-
-
 </body>
 
 </html>
