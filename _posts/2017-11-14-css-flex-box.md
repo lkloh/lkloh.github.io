@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "CSS Flex Box"
+title:  "CSS Flex Box really improves alignment"
 date:   2017-11-14
 ---
 
