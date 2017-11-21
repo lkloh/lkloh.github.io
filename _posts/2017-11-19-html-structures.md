@@ -98,4 +98,28 @@ if attendedCollege // Repeated if stmt!
 
 Because you should not let the conditionals compromise the HTML structure, even for clarity.
 
+Oh, and don't do this:
+```
+.content_styles
+  .row
+    .input.name
+    .input.birthday
+  - var attendedCollege // Beware of indentation
+  if attendedCollege 
+    .row
+      .input.college
+      .input.graduation_year
+      .input.gpa
+if attendedCollege // It's used in the outer indentation!
+  .divider
+  .content_styles
+    .row
+      .input.student_debt_amount
+      .input.montly_loan_amount
+    .row
+      .input.apply_for_loan_forgiveness
+```
+
+
+
 
