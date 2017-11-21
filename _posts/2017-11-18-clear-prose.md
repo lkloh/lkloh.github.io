@@ -14,8 +14,8 @@ if ((prevLoc !== 'home') && (currLoc === 'home')) {
 	this.putOnShoes();
 }
 ```
+which is quite hard to understand. 
 
-Hard to understand. 
 Someone suggested in code reviews that I write it this way instead for clarity:
 
 ```js
@@ -27,10 +27,8 @@ if ((prevLoc !== currLoc) {
 	}
 }
 ```
-Which is bad as the `else` branch could mean transitioning between an `airplane` and a `party`
-
-
-I changed it to
+Which is bad as the `else` branch could mean transitioning between an `airplane` and a `party`.
+So instead I changed it to
 ```js
 if (prevLoc !== currLoc) {
 	if ((prevLoc !== 'home') && (currLoc === 'home')) {
@@ -40,7 +38,7 @@ if (prevLoc !== currLoc) {
 	}
 }
 ```
-instead.
+
 
 I really should have thought more deeply before telling people why their way doesn't work.
 This would have done the trick:
