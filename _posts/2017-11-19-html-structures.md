@@ -18,7 +18,7 @@ Shows info for college and student loan debt only for users that actually went t
       .input.college
       .input.graduation_year
       .input.gpa
-  if attendedCollege // Repeated if stmt!
+if attendedCollege // Repeated if stmt!
   .divider
   .content_styles
     .row
@@ -86,7 +86,7 @@ But that compromised the CSS structure. I ended up switching it back to
       .input.college
       .input.graduation_year
       .input.gpa
-  if attendedCollege // Repeated if stmt!
+if attendedCollege // Repeated if stmt!
   .divider
   .content_styles
     .row
