@@ -4,10 +4,7 @@ title:  "Eventlet"
 date:   2017-09-28
 ---
 
-[Eventlet](http://eventlet.net/) is a Python library to allow you to run code concurrently.
-It uses green threads for concurrent work.
-Green threads are better than normal threads as they are cheap,
-and shared data structures don't need locks.
+[Eventlet](http://eventlet.net/) is a Python library to allow you to run code concurrently. It uses green threads to perform concurrent work. Green threads are cheaper than normal threads, and shared data structures don't need locks when acted upon by them.
 
 Usage example:
 ```py
@@ -31,13 +28,9 @@ This would speed up processing of a large file by 5 times.
 
 ## Gotchas
 
-GreenPool lets you specify the total number of threads in the entire program.
-This would limit the resources the entire program uses.
+GreenPool lets you specify the total number of threads in the entire program. This would limit the resources the entire program uses.
 
-GreenPile lets you specify the number of threads you want to use to do something.
-Many greenpiles can be produced in a same program,
-so doing so does not limit the resources the entire program can use.
+GreenPile lets you specify the number of threads you want to use to do something. Many greenpiles can be produced in a same program, so doing so does not limit the resources the entire program can use.
 
-When in doubt, use a GreenPool as a global variable 
-to limit the resoures the entire program consumes.
+When in doubt, use a GreenPool as a global variable to limit the resoures the entire program consumes.
 

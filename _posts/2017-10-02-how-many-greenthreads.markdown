@@ -11,7 +11,7 @@ since that gives some leeway for extra concurrent work to be done
 by putting more threads to work.
 
 In the example below, only 2 threads are technically needed,
-by the example with 20 allowable threads runs consistently faster.
+but when using 20 allowable threads, it runs consistently faster.
 
 ```py
 import eventlet

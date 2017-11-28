@@ -18,8 +18,7 @@ Which should you choose?
 
 Python 3 will require you to use `.format()`,
 but there are some gotchas.
-First of all,
-all of the welcome messages will give you `Hello, John Doe` as expected.
+First of all, all of the welcome messages will give you `Hello, John Doe` as expected.
 But the difference is that we have
 `welcome_message_1 = u'Hello, John Doe' = welcome_message_2`
 so the entire message is converted unicode as the `username` is in unicode.
