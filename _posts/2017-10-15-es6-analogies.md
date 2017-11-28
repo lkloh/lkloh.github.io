@@ -10,7 +10,7 @@ Cut boilerplate!
 
 # map
 
-Applies a function to all elemens in the input.
+Applies a function to all elements in the input.
 
 Python:
 ```py
@@ -58,7 +58,7 @@ from functools import reduce
 product = reduce((lambda n, m: n * m), range(1, 5))
 ```
 
-
+ES6
 ```js
 let arr = [1,2,3,4];
 let produce = arr.reduce((acc, val) => acc * val, 1);

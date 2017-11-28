@@ -13,48 +13,9 @@ The libraries, which are supported by Python 3:
 * ujson
 * python-rapidjson
 
-According to the post `ujson` is the fasted but isn't always accurate.
-If everything must be accurate, use `json`. 
+According to the post `ujson` is the fastest but can be buggy. `json` is a lot more through. 
 
-Json is used to send information over a network,
-so the amount of information can get quite large.
-Thus using a quick library can be important. 
+Json is used to send information over a network, so the amount of information can get quite large. Thus using a quick library can be important. 
 
-According to this other post,
-no json library is obviously better than the others.
-Which probably explains why so many exist to solve 
-almost the same problem.
-Libraries working quickly for big files worked badly for small files and vice versa.
-So chose the librarie that fits your expected use cases best.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Libraries working quickly for big files work badly on small files and vice versa. So chose the library that fits your expected use cases best.
 

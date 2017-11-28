@@ -4,9 +4,8 @@ title:  "Patching random"
 date:   2017-10-04
 ---
 
-You can patch the random library to make it always return the same value like this.
+You can patch the random library to make it return the same value, which is useful for testing.
 There are two obvious ways to do it:
-
 
 ```py
 import random
@@ -29,7 +28,6 @@ if __name__ == '__main__':
 
 
 Read more [here](https://stackoverflow.com/questions/18191275/using-pythons-mock-patch-object-to-change-the-return-value-of-a-method-called-w).
-
 
 If you're patching more than one function, you have to do it in reverse order:
 ```py

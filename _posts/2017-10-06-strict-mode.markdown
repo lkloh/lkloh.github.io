@@ -8,12 +8,12 @@ date:   2017-10-06
 "use strict";
 ```
 
-What is [strict mode]()?
-* Introduced in EC5 (c. 2009)
+What is strict mode?
+* Introduced in ES5 (c. 2009)
 * Prevents some poorly designed features from being used
-* Throws more exceptions - blocks some unsafe actions: fail fast and loudly
+* Throws more exceptions - it blocks some unsafe actions, failing fast and loudly
 * Strict mode is not a subset of javascript, but has different semantics from normal code
-* Supported in all major browser (except IE9 and below)
+* Supported in all major browsers (except IE9 and below)
 
 Read more from [here](https://www.nczonline.net/blog/2012/03/13/its-time-to-start-using-javascript-strict-mode/).
 
@@ -24,35 +24,35 @@ Read more from [here](https://www.nczonline.net/blog/2012/03/13/its-time-to-star
 
 ## Unique properties in objects/functions
 
-This throws a syntax error
+Throws error:
 ```js
 "use strict";
 
 const object = {
     foo: `bar`,
-    foo: `bar`.
+    foo: `bar`,
 }
 ```
 
-No error
+No error:
 ```js
 const object = {
     foo: `bar`,
-    foo: `bar`.
+    foo: `bar`,
 }
 ```
 
-## Eval is safer
+## Eval is unsafe!
 
-Throws error
+Throws error:
 ```js
 "use strict";
 
 eval("var x = 10;");
-console.log(x)
+console.log(x);
 ```
 
-No error
+No error:
 ```js
 eval("var x = 10;");
 console.log(x);
@@ -61,7 +61,8 @@ console.log(x);
 ## Best practices
 
 `"use strict";` in functions only, not global context when dealing with large codebases
-that were developed over many years. 
+that were developed over many years. Otherwise you may find that old code starts breaking.
+
 ```js
 function myFunc() {
     "use strict";
@@ -69,8 +70,7 @@ function myFunc() {
 }
 ```
 
-Start using it in new stuff that is being built out,
-to help avoid more errors/unsafe practices.
+Start using it in new stuff that is being built out, to help avoid more errors/unsafe practices.
 
 
 

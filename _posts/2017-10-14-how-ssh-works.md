@@ -13,11 +13,11 @@ Summarized from [here](https://www.digitalocean.com/community/tutorials/understa
 
 ## Encryption tools
 
-Asymmetric key: 
+Asymmetric key 
 * Used during initial key exchange process to set up the symmetric encryption.
 * SSH key pais are used to authenticate a client to a server. Client uploads public key to the server it wants to access. Server's `~/.ssh/authorized_keys` file contains the client's public key.
 
-Symmetric key:
+Symmetric key
 * Used to encrypt data sent between server and client during a session.
 
 ## Symmetrical cipher systems recognized
@@ -52,9 +52,10 @@ Client
 
 ## How a server authenticates a client
 
-Method 1 (inscure)
+Method 1 (insecure)
 * Server asks client for password
-* Client sends password over, encrypted with the `session key `
+* Client sends password over, encrypted with the session key
+* Not secure due to potential replay attack of the client's communication
 
 Method 2 (secure)
 * Client sends his public key over
@@ -65,59 +66,4 @@ Method 2 (secure)
 * Client uses his private key to recover `nonce`
 * Client calculates `client_secret = MD5(nonce + session key)` and send `client_secret` it to the server
 * Server checks that `client_secret = MD5(nonce + session key)`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
