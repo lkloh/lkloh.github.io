@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pug classes"
+title:  "Concise Pug class"
 date:   2017-11-27
 ---
 
