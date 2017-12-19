@@ -39,3 +39,4 @@ Instead we should do this:
 
 for readability and so that we don't have to worry about potential exceptions
 and timeouts in the JavaScript code that sets `showElement`.
+
