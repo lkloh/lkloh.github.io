@@ -19,7 +19,6 @@ Remember to remove it.
 
 ## Don't
 
-Obsess over the code being perfectly intuitive to read.
-Its temporary.
+Obsess over the code being perfectly intuitive to read. It's temporary.
 
 
