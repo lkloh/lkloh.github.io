@@ -6,9 +6,9 @@ date:   2017-12-17
 
 This article outlines the best arguments I've seen for how _you_, the average human being, can look on the bright side of net neutrality being struck down.
 
-## No more #tooMuchInformation
+## Less #tooMuchInformation
 
-In this Social Media age, many people post stuff without thinking it through, and the results aren't always pretty. Perhaps if we need to pay more to read Twitter, we only following users who tweet with care.
+In this Social Media age, many people post stuff without thinking it through, and the results aren't always pretty. Perhaps if we need to pay more to read Twitter, we would only follow users who tweet with care.
 
 ## Less online shopping
 
