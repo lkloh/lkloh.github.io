@@ -17,3 +17,16 @@ help prevent the code from breaking because your users will still be
 using your app while the freeze is in place.
 
 
+Commenters stated it is still worth it before a holiday season,
+so that developers prioritize getting large features out before the freeze to mitigate risk.
+It also helps prevent burnout - devs get to wind down before the holiday season
+instead of rushing to get stuff done,
+and potentially worrying about whether their deploy causes any issues
+while on vacation.
+
+Of course people may rush to deploy stuff before the freeze 
+and end up not testing stuff as well as they should
+
+Personally I think a deploy freeze against major features should be
+implemented before a long holiday,
+but fixing small bugs as they pop up should be saidf to be ok over the break.
