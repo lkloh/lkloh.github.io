@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Deploy freezes - debate"
-date:   2017-12-19
+date:   2017-12-20
 ---
 
 Deploy freezes 
