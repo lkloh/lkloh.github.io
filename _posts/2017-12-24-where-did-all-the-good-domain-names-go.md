@@ -34,7 +34,8 @@ and the domain is yours for a year.
 If your bakery does well,
 presumably you'll keep renewing the domain name delicious-bakery.com every year.
 
-But wait a minute, "Delicious Bakery" is hardly a surprising name for a bakery.
+But wait a minute, "Delicious Bakery" is hardly a surprising name for a bakery,
+since it suggests something positive about the baked goods being churned out.
 There's a good chance that someone else also decided to name their bakery "Delicious Bakery".
 In fact, here's [another bakery](https://www.yelp.com/biz/delicious-greensboro) 
 in Greensboro, NC, also called "Delicious Bakery".
@@ -66,7 +67,8 @@ for much more than they purchased the domain name from the domain name registrar
 GoDaddy (another domain name registrar) in fact has an [official page](https://www.godaddy.com/garage/5-tried-and-true-tips-for-buying-and-selling-domain-names-for-profit/)
 dedicated to explaining how to make money by buying and selling domain names.
 The people in the business of flipping internal real estate
-have caused a shortage of desirable domain names, making their price hike.
+have caused a shortage of desirable domain names that a serious business
+might want to use for marketing themselves.
 
 
 
