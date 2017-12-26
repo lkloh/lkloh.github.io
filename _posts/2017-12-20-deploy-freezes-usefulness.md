@@ -12,7 +12,8 @@ argues that deploy freezes are bad because
 there are more dependencies because everyone is deploying stuff at the same time,
 and people have to rebase on top of each others code - and that takes time
 because something is going to be a breaking change.
-If the end, less work got done due to the freeze, which did not even
+
+In the end, less work got done due to the freeze, which did not even
 help prevent the code from breaking because your users will still be
 using your app while the freeze is in place.
 
@@ -25,8 +26,9 @@ and potentially worrying about whether their deploy causes any issues
 while on vacation.
 
 Of course people may rush to deploy stuff before the freeze 
-and end up not testing stuff as well as they should
+and end up not testing stuff as well as they should.
 
 Personally I think a deploy freeze against major features should be
 implemented before a long holiday,
-but fixing small bugs as they pop up should be saidf to be ok over the break.
+but fixing small bugs as they pop up should be ok over the break.
+Assuming people are still working.

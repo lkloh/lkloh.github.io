@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Special Christmas post: Why you should buy rental properties in Denver if you can"
+title:  "Christmas Special: Should you buy a rental property in Denver?"
 date:   2017-12-25
 ---
 

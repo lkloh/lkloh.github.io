@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git grep <phrase> **/<filename>"
+title:  "Git grep for a phrase in particular files"
 date:   2017-12-23
 ---
 
