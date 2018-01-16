@@ -7,6 +7,8 @@ date:   2018-01-03
 Known as the [CA/Browser Forum](https://cabforum.org/),
 which counts as members Certificate Authorities and Browsers,
 with the aim of proposing industry best practices to enhance online security.
+It's job is to facilitate discussed and set standards,
+but it has no regulatory power over its members.
 
 Summarized from [here](https://www.globalsign.com/en/blog/what-is-the-ca-browser-forum/).
 
