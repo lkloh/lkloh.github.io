@@ -1,6 +1,6 @@
 ---
 type: post
-title: "Fake timeers in JavaScript"
+title: "Fake timers in JavaScript"
 date: 2018-01-15
 ---
 
