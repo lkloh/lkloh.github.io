@@ -1,7 +1,7 @@
 ---
 type: post
 title: "How Instagram moved to Python 3"
-date: 01-23-2018
+date: 2018-01-23
 ---
 
 Summarized from [here](https://thenewstack.io/instagram-makes-smooth-move-python-3/).
