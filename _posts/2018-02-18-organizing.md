@@ -33,7 +33,7 @@ var saySomething = Backbone.View.extend({
   className: 'containingDiv',
 
   initialize() {
-    this.$el.find(`.thirdButton`).on('click, this.sayHello.bind(this));
+    this.$el.find(`.thirdButton`).on('click', this.sayHello.bind(this));
   },
 
   sayNo: function(e) {
@@ -68,7 +68,7 @@ var saySomething = Backbone.View.extend({
   initialize() {
     this.$el.find('.thirdButton').on('change', function(e) {
       if (e.originalEvent.detail.action === 'hello') {
-        this.sayHello.bind(this);
+        this.sayHello(e);
       }
     });
   },
