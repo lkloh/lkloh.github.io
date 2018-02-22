@@ -70,7 +70,7 @@ var saySomething = Backbone.View.extend({
       if (e.originalEvent.detail.action === 'hello') {
         this.sayHello(e);
       }
-    });
+    }.bind(this));
   },
 
   sayNo: function(e) {
