@@ -33,7 +33,7 @@ vs
 # Python 3
 print 'The \u2600 is hidden by \u2601 so bring an \u2602 just in case.'
 ```
-which returns: The &#9728 is hidden by &#9729 so bring an &#9730 just in case.
+which returns: The &#9728; is hidden by &#9729; so bring an &#9730; just in case.
 
 This really helps as due to globalization,
 as more people realize the not everyone speaks just English.
