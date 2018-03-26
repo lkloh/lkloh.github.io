@@ -21,4 +21,4 @@ and its hex representation is `U+058D`.
 
 Unfortunately, browsers do not support all existing entity names,
 so best to use hex or decimal names unless its for something really common
-like &amp;.
+like &amp;
