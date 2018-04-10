@@ -1,6 +1,6 @@
 ---
 type: post
-title: Unicode and string equality in Python
+title: "Unicode and string equality in Python"
 date: 2018-04-05
 ---
 
