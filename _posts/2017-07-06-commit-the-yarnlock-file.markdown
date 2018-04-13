@@ -20,3 +20,10 @@ and tracks the version number of each dependency.
 It may be updated if you upgraded a package locally
 or added a new dependency.
 In that case, it should be committed to the repo.
+
+## Edit, Feb 2018
+
+But don't commit the yarn.lock file if you're working on a shared repo 
+and it changed without you updating a dependency.
+It's probably a problem with your local environment that became out of sync
+with the master version. 
