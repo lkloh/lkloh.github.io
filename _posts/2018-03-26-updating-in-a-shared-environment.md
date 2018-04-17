@@ -23,3 +23,9 @@ so only rebase when necessary to avoid being
 the first to debug a breaking change,
 and getting blocked by it.
 
+## Update
+
+I've found that even when rebasing only when necessary, 
+I still end up updating things at least once a week. Usually more often.
+There's a team of people working on a project, and you end up touching each other's code pretty often.
+

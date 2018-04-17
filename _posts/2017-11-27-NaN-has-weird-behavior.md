@@ -52,8 +52,8 @@ For example, `NaN != NaN`.
 ## Conclusion
 
 Use `null` in JavaScript to represent a variable that has no value.
-Not an empty string, not a NaN, not -1...
-all those have potential for misintepretation
+Not an empty string, not a NaN, not -1, and certainly not Undefined.
+All those have potential for misintepretation
 and can cause problems when using them for comparison later on.
 
 
