@@ -1,6 +1,6 @@
 ---
 type: post
-title: "expect(<sth>, 'message').to.equal(<sth>)"
+title: "expect({sth}, 'message').to.equal({sth})"
 date: 2018-03-09
 ---
 

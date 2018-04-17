@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DOTADIW"
+title:  "Floats in Python don't work well even with small number of significant digits"
 date:   2017-09-12
 ---
 
