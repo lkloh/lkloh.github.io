@@ -6,7 +6,9 @@ date: 2018-04-11
 
 ## Docstrings
 
-Are use for modules and functions, for instance
+Are use for describing what a module or  function does,
+and should only appear as the first statement,
+as described in [PEP 257](https://www.python.org/dev/peps/pep-0257/).
 
 ```py
 def update_user_gender(self, user_id, new_gender):
@@ -20,7 +22,8 @@ def update_user_gender(self, user_id, new_gender):
 
 ## Comments
 
-Are for commenting within a function, for instance
+Are for commenting within a function.
+They can appear outside the first statement.
 
 ```py
 def test_update_user_gender(self):
