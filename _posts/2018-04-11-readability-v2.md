@@ -4,30 +4,41 @@ title: "Readability"
 date: 2018-04-11
 ---
 
-Given a schema for JSON like this:
+Given a function like this:
 ```py
-validate = Schema({
-  Required('name'): str,
-  Require('gender'): In('male', 'FEMALE'),
-  Required('ssn'): int,
-  Optional('age'): int,
-})
+def capitalize_person_fields(person):
+  new_person = {}
+  for field in person:
+    new_person[field] = person[field].capitalize() if type(person[field]) == 'string' else person[field]
+  return new_person
 ```
 
-If I wanted to transform all valid JSON objects 
-that have gender `male` to gender `MALE`,
-I could either choose to do this:
+Now suppose I want `capitalize_person_fields` to additionally transform all valid JSON objects 
+that have gender `male` to gender `MALE` as well.
+
+One could do this:
 
 ```py
-validate(person)
-for field in person:
-  person[field] = 'MALE' if field == 'gender' and person.get(field) == 'male' else person.get('gender')
+def capitalize_person_fields(person):
+  new_person = {}
+  for field in person:
+    if type(person[field]) == 'string':
+      new_person[field] = 'MALE' if person[field] == 'male' else person[field].capitalize()
+    else:
+      new_person[field] = person[field]
+  return new_person
 ```
 
-but this is likely more readable and efficient:
+but this is more readable since transforming just the gender field for a particular value is a one-off event
+and should be treated as such:
 ```py
-if person.get('gender') == 'male':
-  person['gender'] = 'MALE'
+def capitalize_person_fields(person):
+  new_person = {}
+  for field in person:
+    new_person[field] = person[field].capitalize() if type(person[field]) == 'string' else person[field]
+  if new_person.gets('gender') == 'male':
+    new_person['gender'] = 'MALE'
+  return new_person
 ```
 
 

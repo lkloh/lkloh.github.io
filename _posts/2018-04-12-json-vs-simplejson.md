@@ -20,6 +20,8 @@ type(json.loads('"foo"'))  # returns <type 'unicode'>
 
 ## SimpleJson
 
+Follows [Principle of Least Surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment).
+
 ```py
 import simplejson
 
