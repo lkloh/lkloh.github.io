@@ -73,4 +73,5 @@ function destructure({z=30, y=20, x=10}) {
 destructure({x: 11, y: 22, z: 33}); // all arguments present
 destructure({x: 11, y: 22}); // one argument missing
 ```
+Also known as `option bagging` arguments for readability.
 
