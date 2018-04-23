@@ -32,4 +32,7 @@ Use PUSH when performance is important.
 CONCAT is better for readability in general, and to 
 avoid contaiminating previous data structures.
 
+See this [JSPerf test](https://jsperf.com/concatperftest/6) as well for
+comparisons on `push` vs `concat` in various browsers.
+
 
