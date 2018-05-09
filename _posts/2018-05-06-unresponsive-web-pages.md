@@ -5,7 +5,8 @@ date: 2018-05-06
 ---
 
 ```
-The following page(s) have become unresponsive. You can wait for them to become responsive or kill them.
+The following page(s) have become unresponsive.
+You can wait for them to become responsive or kill them.
 ```
 
 What to do when you get that message while browsing the web?

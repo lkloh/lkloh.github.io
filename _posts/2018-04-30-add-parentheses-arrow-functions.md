@@ -29,18 +29,21 @@ You need to write
 const returnObj = arg => {
   return {foo: arg};
 };
+```
 
 This is because curly braces are used to denote the function body,
-and thus the parse gets confused if you try to write
-`const returnObj = arg => {foo: arg};`.
+and thus the parser gets confused if you try to write
+```js
+const returnObj = arg => {foo: arg};
+```
 
-You need to enclose the return value in parentheses to keep the parse happy.
+You need to enclose the return value in parentheses to keep the parser happy.
 ```js
 const returnObj = arg => ({foo: arg});
 ```
-would work just fine to write an inline function.
+would work for inlining function.
 
-See moere [here](https://www.nczonline.net/blog/2013/09/10/understanding-ecmascript-6-arrow-functions/).
+See more [here](https://www.nczonline.net/blog/2013/09/10/understanding-ecmascript-6-arrow-functions/).
 
 
 
