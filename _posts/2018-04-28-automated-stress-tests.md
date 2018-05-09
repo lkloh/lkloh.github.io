@@ -10,3 +10,6 @@ add an automated performance test for it.
 
 The performance test should use automatically created test data,
 NOT seeded using customer data. #gdpr.
+
+Also, ensure the performance test fails on the old (pre-fixed) codebase.
+That's how you use tests to avoid regressions.
