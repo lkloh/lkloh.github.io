@@ -11,12 +11,12 @@ spinning spinner.
 
 How to kill the webapp?
 
-## Method 1: Force quit
+## Method 1: Force quit the entire Chrome Browser
 
 On a Mac, type `option-command-esc` to force an app 
 (in this case the browser) to quit.
 
-## Method 2: Force just the tab quit
+## Method 2: Force only the offending tab to quit
 
 You do use tabs and not open a new browser window for each website you're looking at right?
 In Chrome, go to the menu, click on `more tools`,
