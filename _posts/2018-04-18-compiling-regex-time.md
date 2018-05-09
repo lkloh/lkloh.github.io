@@ -10,7 +10,8 @@ if you use it in a function.
 
 Thus, write
 ```js
-const POSSIBLE = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+const REGEX = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(n);
+
 function isUSPhoneNumberOptimized(n) {
   return REGEX.test(n);
 }
