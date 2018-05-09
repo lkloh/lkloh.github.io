@@ -1,6 +1,6 @@
 ---
 type: post
-title: "Pragmatic programmer: Broken window"
+title: "The importance of fixing broken things quickly"
 date: 2018-04-22
 ---
 

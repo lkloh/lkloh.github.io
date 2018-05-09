@@ -41,7 +41,7 @@ You need to enclose the return value in parentheses to keep the parser happy.
 ```js
 const returnObj = arg => ({foo: arg});
 ```
-would work for inlining function.
+would work for inlining functions.
 
 See more [here](https://www.nczonline.net/blog/2013/09/10/understanding-ecmascript-6-arrow-functions/).
 

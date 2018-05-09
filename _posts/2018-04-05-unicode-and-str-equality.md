@@ -20,6 +20,7 @@ In fact, the root cause of the confusion was a completely different matter altog
 
 Oh well, when Jan 1, 2020 rolls around and everyone cuts over to Python 3
 for security reasons by then, no one will get confused, obviously.
+
 In theory, if everyone makes the enormous effort needed to migrate to Python 3.
 
 
