@@ -39,7 +39,7 @@ crucial condition does not hold?
 Returning early also prevents deeply nested `if` statements,
 which enhances readability.
 
-Read moere [here](https://www.tomdalling.com/blog/coding-tips/coding-tip-have-a-single-exit-point/)
+Read more [here](https://www.tomdalling.com/blog/coding-tips/coding-tip-have-a-single-exit-point/)
 on the case for having a single exit point.
 
 

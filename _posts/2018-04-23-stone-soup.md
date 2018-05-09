@@ -1,6 +1,6 @@
 ---
 type: post
-title: "Stone soup"
+title: "Convince people to support a large change my showing them how much a small change can improve things"
 date: 2018-04-23
 ---
 
