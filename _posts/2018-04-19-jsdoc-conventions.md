@@ -12,24 +12,26 @@ I work with both often enough that sometimes I forget which language I'm writtin
 or snake_case in JavaScript.
 Unfortunately, the linter can't catch all wrong conventions.
 
-## Doc strings are place BEFORE a function, not just after the function definition
+## Docstrings must be placed BEFORE a function, not after the function definition
 
-Python:
-```
+### Python
+```py
 def double(n):
   '''Doubles the number passed in'''
   return 2 * n
 ```
 
-JavaScript:
-```
+### JavaScript
+```js
 /** Doubles the number passed in */
 function double(n) {
   return 2 * n;
 }
+```
 
-## When the Doc string spans multiple lines, the start and end of the Doc string must be empty
+## When the docstring spans multiple lines, the start and end of the docstring must be empty
 
+### Correct
 ```js
 /**
  * Doubles the number passed in
@@ -41,7 +43,7 @@ function double(n) {
 }
 ```
 
-and not
+### Wrong
 ```js
 /** Doubles the number passed in
  * @param {number} n - number to be doubled
