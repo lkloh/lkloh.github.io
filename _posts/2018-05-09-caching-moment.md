@@ -50,4 +50,30 @@ function processRow(arr) {
 }
 ```
 
+One more thing: rename `formatAndCacheDateStr` to `formatDateStr` as 
+caching is an implementation detail the caller does not need to care about.
+
+
+```js
+const moment = require(`moment`);
+
+const dateStrCache = new Cache();
+
+function formatDateStr(dateStr) {
+  if (dateStrCache.fetch(dateStr)) {
+    // Avoid needing to use the memory intensive moment library
+    return dateStrCache.fetch(dateStr);
+  }
+  const formattedDate = moment(dateStr).format(`YYYY-MM-DD`);
+  dateStrCache.set(dateStr, formattedDate);
+  return formattedDate;
+}
+
+function processRow(arr) {
+  return arr.map(([dateStr, val]) => {
+    const formattedDate = formatDateStr(dateStr);
+    return [formattedDate, value];
+  });
+}
+```
 
