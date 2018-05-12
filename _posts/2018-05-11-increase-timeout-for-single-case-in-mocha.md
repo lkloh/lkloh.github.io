@@ -8,13 +8,13 @@ To increase the timeout for ONE Mocha test (maybe it is being used to do load te
 you can write
 
 ```js
-it(`returns an empty array when given undefined values, function() {
+it(`returns an empty array when given undefined values`, function() {
   // default 2 second timeout
   const result = doubleValues(null);
   expect(result).to.eql.([]);
 });
 
-it(`doubles the value of every element in an array, function() {
+it(`doubles the value of every element in an array`, function() {
   // default 2 second timeout
   const arr = [1, 2, 3];
   const result = doubleValues(arr);
