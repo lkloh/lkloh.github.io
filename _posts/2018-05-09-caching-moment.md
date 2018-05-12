@@ -26,7 +26,12 @@ function processRow(arr) {
 ```
 
 That took a long time to process a huge array of data.
-To fix this, one thing to try is:
+
+## Using caching to minimize calls to a processing intensive function
+
+Calling `moment` causes a performance hit,
+so cache the formatted timestamps to save on calling "moment".
+
 ```js
 const moment = require(`moment`);
 
@@ -37,7 +42,12 @@ function formatAndCacheDateStr(dateStr) {
     // Avoid needing to use the memory intensive moment library
     return dateStrCache.fetch(dateStr);
   }
-  const formattedDate = moment(dateStr).format(`YYYY-MM-DD`);
+  const date = moment(dateStr);
+  if (date) {
+    // moment returns null for invalid date strings
+    return null;
+  }
+  const formattedDate = date.format(`YYYY-MM-DD`);
   dateStrCache.set(dateStr, formattedDate);
   return formattedDate;
 }
@@ -50,7 +60,9 @@ function processRow(arr) {
 }
 ```
 
-One more thing: rename `formatAndCacheDateStr` to `formatDateStr` as 
+## Leaving implementaion details out of function names
+
+Rename `formatAndCacheDateStr` to `formatDateStr` as 
 caching is an implementation detail the caller does not need to care about.
 
 
@@ -64,7 +76,12 @@ function formatDateStr(dateStr) {
     // Avoid needing to use the memory intensive moment library
     return dateStrCache.fetch(dateStr);
   }
-  const formattedDate = moment(dateStr).format(`YYYY-MM-DD`);
+  const date = moment(dateStr);
+  if (date) {
+    // moment returns null for invalid date strings
+    return null;
+  }
+  const formattedDate = date.format(`YYYY-MM-DD`);
   dateStrCache.set(dateStr, formattedDate);
   return formattedDate;
 }
@@ -76,4 +93,23 @@ function processRow(arr) {
   });
 }
 ```
+
+## Caching invalid date strings as well
+
+Now invalid `dateStr` will always be parsed again.
+Cache the invalid `dateStr` to avoid double parsing.
+
+```js
+function formatDateStr(dateStr) {
+  if (dateStrCache.fetch(dateStr)) {
+    // Avoid needing to use the memory intensive moment library
+    return dateStrCache.fetch(dateStr);
+  }
+  const date = moment(dateStr);
+  const formattedDate = date ? date.format(`YYYY-MM-DD`) : `invalid_date`;
+  dateStrCache.set(dateStr, formattedDate);
+  return formattedDate;
+}
+```
+
 
