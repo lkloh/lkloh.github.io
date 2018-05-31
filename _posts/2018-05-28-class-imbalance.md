@@ -73,7 +73,7 @@ Combine several classes of biological markers for different dieases
 (e.g. cancer, HIV) together as you care about predicting whether a student is healthy,
 not the type of disease they have.
 
-## Use Anomaly detection
+### Use Anomaly detection
 
 Majority profile: majority class
 
