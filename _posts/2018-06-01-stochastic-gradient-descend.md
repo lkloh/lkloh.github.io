@@ -44,6 +44,10 @@ To find the parameters `m` and `c` of the model `y = mx + c`.
 * Dataset size: use stocastic on large datasets, batch on smaller datasets.
 * Its easier to parallalize batch datasets as you need to get feedback
   from one small iteration to another.
+* Batch gradient descend minimizes the error better than Stochastic,
+  but stochastic converges much faster for large datasets.
+* In practice stochastic gradient descend is recommended as it usually does a
+  good enough job and is more efficient.
 
 
 
