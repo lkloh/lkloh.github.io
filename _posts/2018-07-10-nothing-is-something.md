@@ -9,6 +9,10 @@ In summary, code is full of hidden assumptions,
 and the talk explains how to expose those hidden assumptions to make the code easier to understand.
 By being explicit about hidden ideas, your code becomes simpler and clearer.
 
+If you're talking to a NULL object, you're talking to something, not nothing.
+NULL refers to the empty value, not "nothing".
+So you should use a NilClass to handle null objects instead of doing a check for `if (obj)` everywhere.
+
 Null object pattern is called the "Active nothing",
 and it can be used to reduce the number of `if` statements used in your code,
 which will make your life easier the next time you do a big refactor.
