@@ -34,6 +34,11 @@ _.each(animals, animal => {
 
 which makes your code cleaner.
 
+Oh, and don't use function inheritance, but instead function composition,
+as its easier to combine the functionality of two children that inherited
+from a parent, than to try and duplicate code from both the children.
+It's known as dependency injection.
+
 
 
 
