@@ -9,7 +9,9 @@ In summary, code is full of hidden assumptions,
 and the talk explains how to expose those hidden assumptions to make the code easier to understand.
 By being explicit about hidden ideas, your code becomes simpler and clearer.
 
-Null object pattern is called the "Active nothing".
+Null object pattern is called the "Active nothing",
+and it can be used to reduce the number of `if` statements used in your code,
+which will make your life easier the next time you do a big refactor.
 
 In short, instead of writing
 
