@@ -1,7 +1,7 @@
 ---
 type: post
 title: "for vs forEach in Javascript"
-date: 2018-05-11
+date: 2018-07-11
 ---
 
 Modified from [here](https://thejsguy.com/2016/07/30/javascript-for-loop-vs-array-foreach.html).
