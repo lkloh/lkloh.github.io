@@ -5,7 +5,7 @@ date: 2018-07-21
 ---
 
 If you have an iPhone, you might notice that your text messages to Alice
-and blue, while text messages to Bob are green.
+are blue, while text messages to Bob are green.
 Though I didn't really notice until someone pointed it out to me,
 the difference between the blue and green is so innocuous that I never cared to figure out why.
 
@@ -13,8 +13,8 @@ Apparently [blue chat messages are sent using iMessage](https://www.payetteforwa
 while green chat messages are sent using the regular SMS service.
 Apple tries to use iMessage to send texts between two users when possible,
 assuming they are both connected to wifi and have iPhones.
-Otherwise, if one or both users are not connected to wifi/ don't use iPhone,
-the it sends the message using the regular SMS.
+Otherwise, if one or both users are not connected to wifi, or don't have an iPhone,
+then Apple sends the message using the cellular service.
 
 iMessage is superior as it can send more infomation than SMS can,
 such as photos/videos/files, and emojis. 
