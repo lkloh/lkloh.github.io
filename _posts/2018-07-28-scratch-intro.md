@@ -1,6 +1,6 @@
 ---
 type: post
-title: "Scratch"
+title: "Introduction to Scratch"
 date: 2018-07-28
 ---
 
