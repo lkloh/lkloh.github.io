@@ -79,4 +79,6 @@ function formatElements(fruits) {
   }
   return formatted;
 }
+```
+
 
