@@ -1,7 +1,7 @@
 ---
 type: post
 title: "Debugging git"
-date: 2018-06-04
+date: 2018-06-03
 ---
 
 ```
