@@ -56,7 +56,7 @@ for fruit in fruits
 with a simple HTML file as desired and most of the logic shifted into a JS function
 which is also more easily testable.
 
-```
+```js
 .js file
 
 function formatElements(fruits) {
