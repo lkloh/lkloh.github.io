@@ -1,7 +1,7 @@
 ---
 type: post
 title: "Message queue"
-date: 2018-08-13
+date: 2018-08-02
 ---
 
 Summarized from [here](https://aws.amazon.com/message-queue/).
