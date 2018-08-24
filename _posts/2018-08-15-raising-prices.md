@@ -18,9 +18,12 @@ While just _anyone_ can enroll in an MOOC.
 People value what they worked for/ paid for, not things they can get without any effort.
 
 Also, higher prices attract better customers,
-not customers looking to squeeze you for a buck.
+not customers looking to squeeze you for a buck,
+who will complain about anything at the drop of a hat.
 You'll also have more leeway to provide more and better services for the customers
 that can pay your prices, so they get the most leverage out of your product.
 
-Takeaway: Don't offer good things for free or cheap. If it's valuable, they will pay.
+Takeaways: Don't offer a product for free or less that it's fair market value.
+If it's valuable, they will pay. If they won't, it probably means
+the product needs a little refinement to fit the market's demands better.
 
