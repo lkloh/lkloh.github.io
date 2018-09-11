@@ -1,6 +1,6 @@
 ---
 type: post
-title: "Terminating if...elseIf constructs with an else clause
+title: "Terminating if...elseIf constructs with an else clause"
 date: 2018-09-08
 ---
 

@@ -10,8 +10,7 @@ the animations are still running and using CPU when it does not need to.
 
 Also, `setTimeout` does not update the screen efficiently.
 For example, when several elements are animated, 
-the screen must be repainted whenever any one element is updated, which drains resources
-unnecessarily.
+the screen must be repainted whenever any one element is updated, which drains resources unnecessarily.
 
 `requestAnimationFrame` uses less CPU by only updating when the system resources
 are not being overloaded, so it optimizes performance by taking into account the surroundings,
