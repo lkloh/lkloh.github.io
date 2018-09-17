@@ -6,7 +6,7 @@ date: 2018-01-25
 
 Summarized from [here](https://hackernoon.com/in-simple-terms-css-vs-javascript-abc9d709399d).
 
-## What hakes up the frontend
+## What makes up the frontend
 
 * HTML: What things are
 * CSS: How they look
