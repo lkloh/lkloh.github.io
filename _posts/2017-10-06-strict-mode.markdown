@@ -72,5 +72,13 @@ function myFunc() {
 
 Start using it in new stuff that is being built out, to help avoid more errors/unsafe practices.
 
+## "use strict" is turned on by default in JavaScript modules
 
+As described [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#Strict_mode_for_modules)
+
+```js
+export function foo() {
+  x = 3; // throws an error as "x" is not declared
+}
+```
 
