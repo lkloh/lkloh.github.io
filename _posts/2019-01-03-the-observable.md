@@ -1,7 +1,7 @@
 ---
 type: post
 title: "The observable"
-date: 2018-01-05
+date: 2018-01-03
 ---
 
 The [Observable](https://egghead.io/lessons/rxjs-introducing-the-observable)
