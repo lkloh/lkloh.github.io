@@ -24,5 +24,5 @@ when I tried clicking on it.
 A bit of Googling [told me](https://www.w3schools.com/css/css_pseudo_classes.asp)
 that the `:hover` state had to come 
 before the `:active` state, probably because you need to
-hover over a button before you can click on in.
+hover over a button before you can click on it.
 

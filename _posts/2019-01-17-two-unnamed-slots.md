@@ -29,7 +29,7 @@ results in this flattened tree:
 ```
 <custom>
   #shadow-root
-    <h1="come-into-the-shadows"> The Light </h1>
+    <h1 slot="come-into-the-shadows"> The Light </h1>
 </custom>
 ```
 
@@ -58,6 +58,6 @@ will again result in the flattened tree
 ```
 <custom>
   #shadow-root
-    <h1="come-into-the-shadows"> The Light </h1>
+    <h1 slot="come-into-the-shadows"> The Light </h1>
 </custom>
 ```
