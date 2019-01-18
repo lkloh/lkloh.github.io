@@ -11,7 +11,7 @@ Summarized from [here](https://developers.google.com/web/updates/2016/06/css-con
 Changing any part of the DOM can affect other parts,
 so every time the DOM changes, all of the DOM needs to be recomputed for styling purposes.
 
-Allows you to [limit the scope of the browser' styles and layout](https://developers.google.com/web/updates/2016/06/css-containment), helping to improve performance as some parts of the webapp do not need to be
+Allows you to [limit the scope of the browser's styles and layout](https://developers.google.com/web/updates/2016/06/css-containment), helping to improve performance as some parts of the webapp do not need to be
 recomputed when a change to the DOM is made.
 
 
@@ -95,6 +95,6 @@ div {
 <div id="container3">
   Section 3
 </div>
-
+```
 
 
