@@ -10,3 +10,4 @@ Stateless, hence the phrase 'forget'.
 Useful when building a scalable messaging system as you don't need to store any state.
 Only problem is that there is no error handling possible as the sender does not
 wait for any acknowledgement from the recipient.
+

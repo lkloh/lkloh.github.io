@@ -5,8 +5,9 @@ date: 2018-11-15
 ---
 
 I was making a component that took in some data and produced a bar chart as a visualization.
-Making the bar chart required the component to do a bit of processing on the raw data fed in,
-so initially I did something like this:
+Making the bar chart required the component to do a bit of processing on the raw data fed in, so I tried this
+
+## Before
 
 ```js
 class FruitHarvestChart {
@@ -41,7 +42,7 @@ class FruitHarvestChart {
 }
 ```
 
-but in the end refactored it to
+## After refactor to factor out the reusable bit
 
 ```js
 // does all the preprocess of fruit data
@@ -75,8 +76,11 @@ class FruitHarvestChart {
     return this.barChart.render();
   }
 }
+```
 
-// generic bar chart application that can be reused
+With a generic bar chart application that can be reused
+```
+// Needs to be generalized!
 class BarChart {
   initialize(data) {
     this.state.data = data;
