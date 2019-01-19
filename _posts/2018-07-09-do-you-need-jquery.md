@@ -10,7 +10,10 @@ during a [time when browsers were not standardized](https://hackernoon.com/you-t
 But now the trend seems to be to migrate away from it,
 as there are now more tools to do the things jQuery was supposed to be used for.
 See [here](http://youmightnotneedjquery.com/) for some of them.
-So try to avoid using jQuery in new projects, 
-to avoid having an additional dependency that needs to be updated,
-and extra code in general.
+
+So try to avoid using jQuery in new projects for the following reasons:
+* Avoid having an additional dependency that needs to be periodically updated
+* Avoid having extra code (JQuery library) that your webapp needs to load
+* Get faster performance by using the default JavaScript selectors
+all without losing any functionality.
 
