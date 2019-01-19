@@ -1,12 +1,15 @@
 ---
 type: post
-title: "Controlling from the parent or child"
+title: "Avoid using display:none to hide your element"
 date: 2018-11-22
 ---
 
-What's a better way to decide whether to show a component?
+Not rendering it at all is usually a better idea,
+as it saves on load time and computation errors due to 
+potentially missing or null data.
 
-This might work
+## Using display:none
+
 ```
 // jade file
 .parent
@@ -27,7 +30,7 @@ with a style file that does
   display none
 ```
 
-but really one should be doing
+## Not rendering it
 
 ```
 // jade file
@@ -44,8 +47,6 @@ but really one should be doing
             .professor ${class.instructor}
 ```
 
-so you only render the elements in `records` if absolutely necessary.
-This saves on load time, and potentially also any missing data errors
-if you try to pull some data that doesn't exist.
+Less elements to load (only loads a student records if the student is actively studying), and also you get to avoid dealing with errors due to missing data for an inactive student.
 
 
