@@ -1,6 +1,6 @@
 ---
 type: post
-title: ""Absolute vs Relative URLs"
+title: "Absolute vs Relative URLs"
 date: 2019-01-23
 ---
 

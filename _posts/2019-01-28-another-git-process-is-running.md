@@ -1,7 +1,7 @@
 ---
 type: post
 title: "Another git process is running in the repository"
-date: 2019-01-29
+date: 2019-01-28
 ---
 
 If you get such a warning on running a git command:
