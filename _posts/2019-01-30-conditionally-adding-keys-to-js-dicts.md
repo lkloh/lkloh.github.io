@@ -44,6 +44,19 @@ and `myKey` is only added to the object if `condition` evaluates to true.
 This works because in JavaScript, the `&&` and `||` operators
 return the value of the last expression that is evaluated in the statement.
 
+## Edit
+
+Turns out a clearer way to do this is
+```js
+function processDict(d) {
+  return {
+    sweets: d.fruits,
+    greens: d.vegetables,
+    ...(d.moneyInUSD ? {moneyInEuros: usdToEuro(d.moneyInUSD)} : {}),
+  };
+}
+```
+
 
 
 
