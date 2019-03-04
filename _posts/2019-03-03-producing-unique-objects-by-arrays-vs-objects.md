@@ -4,7 +4,9 @@ title: "Creating lists of unique objects using ES6 arrays vs sets"
 date: 2019-03-03
 ---
 
-## Creating lists of unique objects using sets
+Remember that the keys of objects are always of string type in ES6.
+
+What happens if you forgot?
 
 This class checks for existence of a value of a set in O(1) time. 
 ```js
@@ -21,7 +23,7 @@ class ObjSet {
   // tries to add unique val in  O(1) time
   function add(val) {
     if (!this.has(val)) {
-      this.obj.add(val);
+      this.obj[val] = 1;
     }
   }
 }
@@ -41,7 +43,7 @@ That's why
 ```js
 console.log({x: 1} + ''); // [object Object]
 ```
-and therefore we ended up with `this.obj = "[object Object]"`.
+and therefore we ended up with `this.obj = {"[object Object]": 1}`.
 
 To fix this problem, modify the class to:
 ```js
@@ -73,9 +75,6 @@ console.log(arrSet.has({x: 2})); // false
 ```
 as expected.
 
-Unfortunately using `ArrSet` takes O(N) time while
-`ObjSet` takes O(1) time, but then sometimes you still need `ArrSet` 
-if you're trying to create unique objects (that are not numbers or strings).
 
 
 
