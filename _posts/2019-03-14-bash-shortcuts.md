@@ -98,3 +98,36 @@ Piping formatted json responses to make it easier to read
 curl https://swapi.co/api/people/1 | jsome
 ```
 [jsome](https://www.npmjs.com/package/jsome) helps format JSON responses, you need it installed first.
+
+## Creating multiple files
+
+```
+mkdir -p package/{p1,p2,p3}/src
+```
+creates a parent directory `package` with three children `p1`, `p2`, `p3`,
+and each `px` has a `src` folder inside.
+
+and 
+```
+touch test-{1..10}
+```
+creates these files
+```
+test-1  test-10 test-2  test-3  test-4  test-5  test-6  test-7  test-8  test-9
+```
+
+Similarly, 
+```
+touch letters-{a..z}
+```
+creates these files:
+```
+letters-a	letters-g	letters-m	letters-s	letters-y
+letters-b	letters-h	letters-n	letters-t	letters-z
+letters-c	letters-i	letters-o	letters-u
+letters-d	letters-j	letters-p	letters-v
+letters-e	letters-k	letters-q	letters-w
+letters-f	letters-l	letters-r	letters-x
+```
+
+
