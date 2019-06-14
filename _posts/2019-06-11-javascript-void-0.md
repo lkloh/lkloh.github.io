@@ -4,6 +4,8 @@ title: "JavaScript:void(0) evaluates an expression and returns UNDEFINED"
 date: 2019-06-11
 ---
 
+Summarized from [here](https://www.quackit.com/javascript/tutorial/javascript_void_0.cfm).
+
 Sometimes you see something like this:
 ```js
 <a href="javascript:void(0);" ondblclick="alert('YOLO')">
