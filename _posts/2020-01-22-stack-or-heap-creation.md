@@ -1,7 +1,7 @@
 ---
 type: post
 date: 2020-01-22
-title: "Static casts in C++"
+title: "Stack or heap?"
 ---
 
 Modified from [here](https://stackoverflow.com/questions/3987640/variable-creation-on-heap-or-stack-in-c).
