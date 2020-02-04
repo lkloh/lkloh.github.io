@@ -54,4 +54,9 @@ Using `const` globals could lead to namespace pollution - for example you could 
  
 Since local variables can only be used by one tiny part of a larger program, it is easier to reason about them; while
  global variables can be used by any part of a program so you have to think about a larger scope of possible use cases.
+ 
+So the best thing to do is to _not_ use global variables; use `static const` where necessary.
+
+If you absolutely need a global variable, declare them as `extern` in the header file and define them in the
+ implementation, as described [here](https://stackoverflow.com/questions/10422034/when-to-use-extern-in-c). 
 
