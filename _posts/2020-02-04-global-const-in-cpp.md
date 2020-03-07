@@ -1,8 +1,8 @@
----
+~~---
 type: post
 date: 2020-02-04
 title: "Global const in C++"
----
+---~~
 
 Any introductory computer science class probably taught you not to do this:
 
